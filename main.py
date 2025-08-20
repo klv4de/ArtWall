@@ -25,10 +25,14 @@ class ArtWallManager:
             'min_image_height': 600,  # Reduced from 800
             'preferred_aspect_ratios': [(16, 10), (16, 9), (4, 3), (3, 2), (5, 4)],  # Common desktop ratios
             'aspect_ratio_tolerance': 0.4,  # Increased from 0.2 to 0.4 (40% variance)
-            'exclude_keywords': ['fragment', 'fragments', 'shard', 'shards', 'piece of', 'part of'],
-            'preferred_departments': ['American Decorative Arts', 'American Paintings and Sculpture', 
-                                    'European Paintings', 'Modern Art', 'Contemporary Art', 'Asian Art',
-                                    'European Sculpture and Decorative Arts', 'Islamic Art'],
+            'exclude_keywords': ['fragment', 'fragments', 'shard', 'shards', 'piece of', 'part of',
+                                'coin', 'weight', 'button', 'bead', 'sample', 'textile sample',
+                                'bowl', 'cup', 'vessel', 'pot', 'jar', 'plate', 'dish'],
+            'preferred_departments': ['American Paintings and Sculpture', 'European Paintings', 
+                                    'Modern Art', 'Contemporary Art', 'Drawings and Prints',
+                                    'Photographs', 'The American Wing'],
+            'avoid_departments': ['Arms and Armor', 'Egyptian Art', 'Greek and Roman Art', 
+                                'Medieval Art', 'Musical Instruments'],
             'same_image_all_displays': True  # For multi-monitor setup
         }
     
@@ -67,17 +71,44 @@ class ArtWallManager:
         if not artwork.get("isPublicDomain"):
             return False, "Not public domain"
         
-        # Check title for fragments/pieces
+        # Check title for fragments/pieces and small objects
         title = artwork.get("title", "").lower()
         for keyword in self.settings['exclude_keywords']:
             if keyword in title:
                 return False, f"Contains excluded keyword: {keyword}"
+        
+        # Check object name for small objects and utilitarian items
+        object_name = artwork.get("objectName", "").lower()
+        for keyword in self.settings['exclude_keywords']:
+            if keyword in object_name:
+                return False, f"Object type excluded: {object_name}"
+        
+        # Exclude very small objects that are likely museum specimens
+        dimensions = artwork.get("dimensions", "")
+        if dimensions and any(term in dimensions.lower() for term in ['cm', 'inches']):
+            # Look for very small dimensions (less than 6 inches / 15 cm in any direction)
+            import re
+            numbers = re.findall(r'(\d+(?:\.\d+)?)\s*(?:cm|inches|in\.)', dimensions.lower())
+            if numbers:
+                try:
+                    sizes = [float(num) for num in numbers]
+                    # If any dimension is very small (likely a coin, button, etc.)
+                    if any(size < 6 for size in sizes) and 'cm' in dimensions.lower():
+                        return False, f"Object too small: {dimensions}"
+                    if any(size < 2.5 for size in sizes) and ('inches' in dimensions.lower() or 'in.' in dimensions.lower()):
+                        return False, f"Object too small: {dimensions}"
+                except ValueError:
+                    pass
         
         # Prefer paintings if setting is enabled
         if self.settings['focus_on_paintings']:
             classification = artwork.get("classification", "").lower()
             object_name = artwork.get("objectName", "").lower()
             department = artwork.get("department", "")
+            
+            # Avoid certain departments known for small objects
+            if department in self.settings['avoid_departments']:
+                return False, f"Department avoided: {department}"
             
             # Accept paintings, drawings, prints, and works from preferred departments
             is_visual_art = any(term in classification for term in ['painting', 'drawing', 'print', 'photograph']) or \
