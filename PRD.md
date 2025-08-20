@@ -105,26 +105,34 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **App Store Distribution**: macOS App Store, Microsoft Store, Linux package managers
 - **Installer Package**: Simple `.dmg`/`.exe`/`.deb` installers
 
-### 3. Enhanced Art APIs Integration
+### 3. Automatic Wallpaper Configuration
+- **macOS Integration**: AppleScript/System Events to automatically configure Desktop & Screen Saver settings
+- **Wallpaper Folder Setup**: Programmatically add ArtWall folder to System Settings without user intervention
+- **Rotation Configuration**: Automatically enable rotation and set preferred intervals
+- **Display Settings**: Configure wallpaper scaling (Fill Screen, Fit to Screen, etc.) automatically
+- **Multi-Monitor Support**: Detect and configure wallpapers for multiple displays
+- **Permission Handling**: Request and manage system permissions for desktop modification
+
+### 4. Enhanced Art APIs Integration
 - **Multi-Museum Support**: Integrate all major museum APIs listed above
 - **Smart Curation**: AI-powered selection based on user preferences
 - **Regional Preferences**: Focus on specific museums or geographic regions
 - **Art Movement Filtering**: Filter by artistic periods, styles, or movements
 
-### 4. Rich Metadata Display
+### 5. Rich Metadata Display
 - **Artwork Information Overlay**: Display title, artist, and year on desktop
 - **Wikipedia Integration**: Direct links to Wikipedia pages for artworks and artists
 - **Museum Links**: Links back to original museum collection pages
 - **Art History Context**: Brief descriptions and historical context
 
-### 5. Advanced Features
+### 6. Advanced Features
 - **Favorites System**: Save and prioritize preferred artworks
 - **Custom Collections**: Create themed collections (Impressionism, Ancient Art, etc.)
 - **Social Sharing**: Share favorite discoveries with friends
 - **Learning Mode**: Educational information about art history and techniques
 - **Calendar Integration**: Special collections for holidays or cultural events
 
-### 6. Code Professionalization
+### 7. Code Professionalization
 - **Development Environment**: Virtual environments, proper dependency management
 - **Code Quality**: Black formatting, flake8 linting, type hints with mypy
 - **Testing Suite**: Comprehensive unit tests with pytest, integration tests
@@ -134,7 +142,7 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Configuration**: YAML/TOML config files instead of hardcoded values
 - **Logging**: Structured logging with configurable levels
 
-### 7. Tech Stack Modernization
+### 8. Tech Stack Modernization
 - **Package Management**: Move from pip to Poetry or pipenv for dependency management
 - **Build System**: Modern Python packaging with pyproject.toml
 - **Distribution**: Professional installers (.dmg, .exe, .deb) and package managers
@@ -142,7 +150,7 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Performance**: Async/await for concurrent API calls, optimized image processing
 - **Security**: Input validation, secure API key management, sandboxing
 
-### 8. Automated Collection Management
+### 9. Automated Collection Management
 - **Scheduled Refresh**: Built-in scheduler for weekly/monthly collection updates
 - **Background Service**: Run as system service/daemon for automatic management
 - **Smart Curation**: Remove duplicate or similar artworks automatically
@@ -150,7 +158,7 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Update Notifications**: Optional system notifications for collection updates
 - **Rollback System**: Ability to restore previous collections if new ones are unsatisfactory
 
-### 9. Technical Enhancements
+### 10. Technical Enhancements
 - **Offline Mode**: Cache images for offline wallpaper rotation
 - **Performance Optimization**: Lazy loading and smart caching
 - **Bandwidth Management**: Configurable download limits and scheduling
