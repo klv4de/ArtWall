@@ -12,6 +12,12 @@
 - **One decision point at a time** - Let Kevin process and respond to each piece before moving to the next
 - **Clear separation of concerns** - Technical analysis vs business decisions vs user preferences
 - **Wait for answers** before proceeding to implementation
+- **CRITICAL: File Change Approval Process**:
+  1. Make changes to files
+  2. Show Kevin what changed
+  3. Wait for Kevin's approval
+  4. ONLY THEN commit and push
+  5. Never commit without explicit approval
 
 ## Project Vision & Scaling Strategy
 **Phase 1 MVP**: Personal fine art wallpaper system for Kevin's MacBook (48 images, 24 hours)
