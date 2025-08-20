@@ -25,9 +25,15 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - Support common desktop resolutions and aspect ratios
 
 ### 3. Basic Configuration
-- Configurable number of artworks to download
+- Configurable number of artworks to download (default: 10)
 - Simple command-line interface
 - Respectful API usage with rate limiting
+
+### 4. Collection Management
+- **Initial Download**: Fetch 10-20 artworks on first run
+- **Refresh Strategy**: Weekly automatic refresh with 5-10 new artworks
+- **Storage Management**: Maintain collection of 50-100 images maximum
+- **Rotation Logic**: Remove oldest images when collection reaches limit
 
 ## Major Art APIs Available
 
@@ -91,7 +97,6 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Wikipedia Integration**: Direct links to Wikipedia pages for artworks and artists
 - **Museum Links**: Links back to original museum collection pages
 - **Art History Context**: Brief descriptions and historical context
-- **Notification System**: Gentle notifications when wallpaper changes with artwork info
 
 ### 5. Advanced Features
 - **Favorites System**: Save and prioritize preferred artworks
