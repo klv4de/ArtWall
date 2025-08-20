@@ -11,6 +11,25 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Legal & Ethical**: Only use public domain or properly licensed artwork
 - **Beautiful Experience**: Curate visually stunning, high-resolution images optimized for desktop display
 
+## Tech Stack
+
+### Current (MVP)
+- **Language**: Python 3.7+
+- **HTTP Client**: `requests` library for API calls
+- **Image Processing**: `Pillow` (PIL) for image manipulation
+- **System Integration**: Native macOS system calls/AppleScript
+- **APIs**: REST APIs (Met Museum, future museum APIs)
+- **Storage**: Local filesystem (`~/Pictures/ArtWall/`)
+- **Platform**: macOS (with future cross-platform plans)
+
+### Future Professional Stack
+- **Packaging**: PyInstaller for standalone executables, proper setup.py/pyproject.toml
+- **GUI Framework**: Electron, PyQt, or native Swift/SwiftUI for consumer applications
+- **Backend**: FastAPI or Flask for web services (if needed)
+- **Database**: SQLite for local metadata, PostgreSQL for cloud services
+- **CI/CD**: GitHub Actions for automated testing and releases
+- **Distribution**: App stores, package managers, professional installers
+
 ## MVP Features
 
 ### 1. Art Fetching
@@ -105,12 +124,38 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Learning Mode**: Educational information about art history and techniques
 - **Calendar Integration**: Special collections for holidays or cultural events
 
-### 6. Technical Enhancements
+### 6. Code Professionalization
+- **Development Environment**: Virtual environments, proper dependency management
+- **Code Quality**: Black formatting, flake8 linting, type hints with mypy
+- **Testing Suite**: Comprehensive unit tests with pytest, integration tests
+- **Documentation**: Sphinx documentation, code comments, API documentation
+- **Version Management**: Semantic versioning, proper release management
+- **Entry Points**: Professional CLI with `artwall` command instead of `python main.py`
+- **Configuration**: YAML/TOML config files instead of hardcoded values
+- **Logging**: Structured logging with configurable levels
+
+### 7. Tech Stack Modernization
+- **Package Management**: Move from pip to Poetry or pipenv for dependency management
+- **Build System**: Modern Python packaging with pyproject.toml
+- **Distribution**: Professional installers (.dmg, .exe, .deb) and package managers
+- **Cross-Platform**: Refactor platform-specific code for Windows/Linux compatibility
+- **Performance**: Async/await for concurrent API calls, optimized image processing
+- **Security**: Input validation, secure API key management, sandboxing
+
+### 8. Automated Collection Management
+- **Scheduled Refresh**: Built-in scheduler for weekly/monthly collection updates
+- **Background Service**: Run as system service/daemon for automatic management
+- **Smart Curation**: Remove duplicate or similar artworks automatically
+- **Storage Monitoring**: Automatic cleanup when disk space is low
+- **Update Notifications**: Optional system notifications for collection updates
+- **Rollback System**: Ability to restore previous collections if new ones are unsatisfactory
+
+### 9. Technical Enhancements
 - **Offline Mode**: Cache images for offline wallpaper rotation
 - **Performance Optimization**: Lazy loading and smart caching
-- **Background Updates**: Automatic new artwork fetching
 - **Bandwidth Management**: Configurable download limits and scheduling
 - **Multi-Monitor Support**: Different artworks on different displays
+- **Image Optimization**: Automatic resizing for different screen resolutions
 
 ## Success Metrics
 
