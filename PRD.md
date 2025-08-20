@@ -92,6 +92,16 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
   - High resolution available
   - No API key required
 
+## Immediate Improvements (Next Sprint)
+
+### 1. Image Quality & Curation
+- **Deal with Image Issues**: Address problematic images that don't work well as wallpapers
+- **Select Better Images from Jump**: Implement smarter filtering to choose more suitable artworks initially
+- **Image Quality Filters**: Filter out images that are too dark, too light, or have poor composition for desktop use
+- **Aspect Ratio Filtering**: Prioritize images that work well with common desktop aspect ratios
+- **Content Appropriateness**: Ensure images are suitable for desktop/workplace environments
+- **Resolution Requirements**: Set minimum resolution thresholds for crisp display quality
+
 ## Potential Future Next Steps
 
 ### 1. Cross-Platform Support
