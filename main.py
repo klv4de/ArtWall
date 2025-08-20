@@ -33,7 +33,14 @@ class ArtWallManager:
                                     'Photographs', 'The American Wing'],
             'avoid_departments': ['Arms and Armor', 'Egyptian Art', 'Greek and Roman Art', 
                                 'Medieval Art', 'Musical Instruments'],
-            'same_image_all_displays': True  # For multi-monitor setup
+            'same_image_all_displays': True,  # For multi-monitor setup
+            
+            # Rate limiting and collection size settings
+            'api_delay_seconds': 2.0,  # Increased from 0.5 to 2 seconds between API calls
+            'max_retries': 3,  # Number of times to retry failed API calls
+            'weekly_target': 336,  # Images needed for 30-min rotation, 24/7 for a week
+            'batch_size': 20,  # How many to try to get in each run
+            'max_api_calls_per_session': 200  # Limit API calls to avoid rate limiting
         }
     
     def get_random_artwork_ids(self, count=10):
@@ -61,6 +68,18 @@ class ArtWallManager:
         if response.status_code == 200:
             return response.json()
         return None
+    
+    def get_current_collection_size(self):
+        """Count how many images we currently have"""
+        image_files = list(self.wallpaper_dir.glob("*.jpg")) + list(self.wallpaper_dir.glob("*.jpeg")) + list(self.wallpaper_dir.glob("*.png"))
+        return len(image_files)
+    
+    def get_collection_progress(self):
+        """Get progress toward weekly target"""
+        current = self.get_current_collection_size()
+        target = self.settings['weekly_target']
+        percentage = (current / target) * 100 if target > 0 else 0
+        return current, target, percentage
     
     def is_suitable_artwork(self, artwork):
         """Filter artwork based on our quality criteria"""
@@ -198,24 +217,45 @@ class ArtWallManager:
         print(f"3. Select: {self.wallpaper_dir}")
         print("4. Enable 'Rotate' and set your preferred interval")
     
-    def fetch_artworks(self, count=5):
-        """Main method to fetch and save artworks with quality filtering"""
-        print(f"Fetching {count} high-quality paintings from The Met...")
-        print("Filtering for: paintings, good aspect ratios, high resolution")
+    def fetch_artworks(self, count=None):
+        """Main method to fetch and save artworks with quality filtering and rate limiting"""
+        # Check current progress
+        current, target, percentage = self.get_collection_progress()
+        print(f"🎨 ArtWall Collection Progress: {current}/{target} images ({percentage:.1f}%)")
         
-        # Get more IDs since we'll be filtering heavily
-        artwork_ids = self.get_random_artwork_ids(count * 10)
+        if count is None:
+            count = self.settings['batch_size']
+        
+        if current >= target:
+            print(f"✅ Collection complete! You have {current} images for a full week of 30-minute rotations.")
+            return 0
+        
+        remaining_needed = target - current
+        actual_count = min(count, remaining_needed)
+        
+        print(f"Fetching {actual_count} high-quality paintings from The Met...")
+        print("Filtering for: paintings, good aspect ratios, high resolution, no small objects")
+        print(f"Rate limiting: {self.settings['api_delay_seconds']}s between API calls")
+        
+        # Get more IDs since we'll be filtering heavily, but limit total API calls
+        max_to_check = min(self.settings['max_api_calls_per_session'], actual_count * 20)
+        artwork_ids = self.get_random_artwork_ids(max_to_check)
         print(f"Retrieved {len(artwork_ids)} artwork IDs from the API")
         
         if not artwork_ids:
-            print("ERROR: No artwork IDs retrieved from Met API")
+            print("ERROR: No artwork IDs retrieved from Met API (possible rate limiting)")
+            print("Try again in a few minutes, or the API may be temporarily unavailable.")
             return 0
         
         downloaded = 0
         checked = 0
         
         for artwork_id in artwork_ids:
-            if downloaded >= count:
+            if downloaded >= actual_count:
+                break
+            
+            if checked >= max_to_check:
+                print("Reached maximum API calls for this session to avoid rate limiting.")
                 break
             
             checked += 1
@@ -227,12 +267,16 @@ class ArtWallManager:
             # First filter: basic artwork suitability
             suitable, reason = self.is_suitable_artwork(artwork)
             if not suitable:
+                # Rate limiting between API calls
+                time.sleep(self.settings['api_delay_seconds'])
                 continue
             
             # Second filter: image quality
             image_url = artwork["primaryImage"]
             quality_ok, quality_reason = self.check_image_quality(image_url)
             if not quality_ok:
+                # Rate limiting between API calls
+                time.sleep(self.settings['api_delay_seconds'])
                 continue
             
             # If we get here, the artwork passed all filters
@@ -249,12 +293,23 @@ class ArtWallManager:
             
             if self.download_image(image_url, filename):
                 downloaded += 1
+                # Update progress after each successful download
+                new_current, _, new_percentage = self.get_collection_progress()
+                print(f"  Progress: {new_current}/{target} images ({new_percentage:.1f}%)")
             
-            # Be nice to the API
-            time.sleep(0.5)
+            # Rate limiting between API calls
+            time.sleep(self.settings['api_delay_seconds'])
         
-        print(f"\nDownloaded {downloaded} high-quality artworks to {self.wallpaper_dir}")
+        final_current, _, final_percentage = self.get_collection_progress()
+        print(f"\n📊 Session Summary:")
+        print(f"Downloaded {downloaded} high-quality artworks to {self.wallpaper_dir}")
         print(f"Checked {checked} total artworks to find {downloaded} suitable ones")
+        print(f"Collection progress: {final_current}/{target} images ({final_percentage:.1f}%)")
+        
+        if final_current < target:
+            remaining = target - final_current
+            print(f"Still need {remaining} more images for a full week of wallpapers.")
+            print("Run the script again to continue building your collection!")
         
         if self.settings['same_image_all_displays']:
             print("\nNote: For multi-monitor setup, manually select the same image for all displays")
@@ -265,13 +320,28 @@ class ArtWallManager:
 def main():
     art_manager = ArtWallManager()
     
-    # Fetch some initial artworks
-    count = art_manager.fetch_artworks(10)
+    # Show current collection status
+    current, target, percentage = art_manager.get_collection_progress()
+    
+    if current == 0:
+        print("🎨 Welcome to ArtWall! Building your fine art collection...")
+        print(f"Target: {target} images for 30-minute rotations, 24/7 for a week")
+        print("This will take multiple runs due to API rate limiting and selective filtering.")
+    
+    # Fetch artworks using default batch size
+    count = art_manager.fetch_artworks()
     
     if count > 0:
         art_manager.set_wallpaper_folder()
-    else:
-        print("No artworks were downloaded. Please check your internet connection.")
+    elif current == 0:
+        print("No artworks were downloaded. The API may be rate-limited.")
+        print("Please try again in a few minutes.")
+    
+    # Show final status
+    final_current, _, final_percentage = art_manager.get_collection_progress()
+    if final_current >= target:
+        print(f"\n🎉 Congratulations! Your collection is complete with {final_current} images!")
+        print("You can now enjoy a full week of rotating fine art wallpapers!")
 
 if __name__ == "__main__":
     main()

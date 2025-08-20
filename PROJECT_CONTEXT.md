@@ -7,6 +7,12 @@
 - **Kevin's Role**: Product vision, user experience, business direction
 - **Communication Style**: Direct technical feedback, challenge assumptions, propose better approaches when needed
 
+## Working Style
+- **Break conversations into digestible chunks** - Don't overwhelm with multiple complex topics at once
+- **One decision point at a time** - Let Kevin process and respond to each piece before moving to the next
+- **Clear separation of concerns** - Technical analysis vs business decisions vs user preferences
+- **Wait for answers** before proceeding to implementation
+
 ## Project Vision
 **Current**: Personal fine art wallpaper system for Kevin's MacBook
 **Future**: Potential product for non-technical users with one-click setup
@@ -14,8 +20,9 @@
 ## Core Problem We're Solving
 - Kevin wants rotating fine art wallpapers on his Mac
 - Museum APIs have poor image curation for wallpaper use (fragments, catalog photos, small objects)
-- Need 336+ high-quality images for 30-minute rotations, 24/7 for a week
+- **NEW MVP SCOPE**: Need 48 high-quality images for 30-minute rotations (24 hours of content)
 - API rate limiting makes real-time fetching impractical
+- Multi-monitor setup needs same image on all displays
 
 ## Key Technical Decisions Made
 
@@ -47,10 +54,12 @@
 
 ## Current Status
 - ✅ MVP working with quality filtering
-- ✅ Rate limiting implemented
-- ✅ Progress tracking (0/336 images currently)
-- ❌ Database architecture not yet implemented
-- ❌ Two-tier image storage (thumbnails + full-res) not built
+- ✅ Rate limiting implemented  
+- ✅ Department sampling script created (`department_sampler.py`)
+- ✅ All 20 Met departments identified and mapped
+- ❌ **NEXT SESSION**: Run department sampling to let Kevin choose departments
+- ❌ **NEXT SESSION**: Update main script to use API department filtering
+- ❌ **NEXT SESSION**: Add multi-monitor and automated rotation setup
 
 ## Next Major Architecture Change
 **Moving to Database-Driven Approach:**
@@ -62,10 +71,12 @@
 ## Key Files & Structure
 ```
 ArtWall/
-├── main.py              # Current working script
-├── PRD.md              # Product requirements document  
-├── PROJECT_CONTEXT.md  # This file
-└── requirements.txt    # Python dependencies
+├── main.py                 # Current working script (336 image target)
+├── department_sampler.py   # NEW: Sample all 20 departments for Kevin to review
+├── TOMORROW_PLAN.md       # NEW: Detailed action plan for next session
+├── PRD.md                 # Product requirements document  
+├── PROJECT_CONTEXT.md     # This file - read every session
+└── requirements.txt       # Python dependencies
 ```
 
 ## Critical User Feedback Patterns

@@ -48,11 +48,11 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - Simple command-line interface
 - Respectful API usage with rate limiting
 
-### 4. Collection Management
-- **Initial Download**: Fetch 10-20 artworks on first run
-- **Refresh Strategy**: Weekly automatic refresh with 5-10 new artworks
-- **Storage Management**: Maintain collection of 50-100 images maximum
-- **Rotation Logic**: Remove oldest images when collection reaches limit
+### 4. Collection Management (Updated MVP Scope)
+- **MVP Target**: 48 high-quality images for 30-minute rotations (24 hours of content)
+- **Department-Based Selection**: Use Met API department filtering for higher success rates
+- **Quality Over Quantity**: Focus on perfect wallpaper suitability vs. large collection
+- **Future Expansion**: Can scale to weekly collection (336 images) after MVP validation
 
 ## Major Art APIs Available
 
