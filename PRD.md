@@ -129,20 +129,39 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Regional Preferences**: Focus on specific museums or geographic regions
 - **Art Movement Filtering**: Filter by artistic periods, styles, or movements
 
-### 5. Rich Metadata Display
+### 5. Visual Category Expansion
+**Beyond Fine Art - Future Collections:**
+- **Public Art**: Street art, murals, graffiti collections
+- **Album Covers**: Classic vinyl, modern releases, genre-specific collections
+- **Movie Content**: Vintage posters, iconic stills, international cinema
+- **Nature Photography**: Landscapes, wildlife, macro photography (Unsplash API)
+- **Architecture**: Modern buildings, historical structures, interior design
+- **Fashion Photography**: Editorial shoots, runway, street style
+- **Sports Photography**: Action shots, iconic sporting moments
+- **Space/Astronomy**: NASA images, telescope photography, space art
+- **Abstract Art**: Digital art, generative art, contemporary abstracts
+- **Historical Photography**: Vintage photos, historical moments
+- **Travel Photography**: Cities, cultures, landmarks worldwide
+
+**Technical Implementation:**
+- Each category requires different API integrations
+- Unified filtering and curation pipeline across all categories
+- User preference system for category selection and weighting
+
+### 6. Rich Metadata Display
 - **Artwork Information Overlay**: Display title, artist, and year on desktop
 - **Wikipedia Integration**: Direct links to Wikipedia pages for artworks and artists
 - **Museum Links**: Links back to original museum collection pages
 - **Art History Context**: Brief descriptions and historical context
 
-### 6. Advanced Features
+### 7. Advanced Features
 - **Favorites System**: Save and prioritize preferred artworks
 - **Custom Collections**: Create themed collections (Impressionism, Ancient Art, etc.)
 - **Social Sharing**: Share favorite discoveries with friends
 - **Learning Mode**: Educational information about art history and techniques
 - **Calendar Integration**: Special collections for holidays or cultural events
 
-### 7. Code Professionalization
+### 8. Code Professionalization
 - **Development Environment**: Virtual environments, proper dependency management
 - **Code Quality**: Black formatting, flake8 linting, type hints with mypy
 - **Testing Suite**: Comprehensive unit tests with pytest, integration tests
@@ -152,7 +171,7 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Configuration**: YAML/TOML config files instead of hardcoded values
 - **Logging**: Structured logging with configurable levels
 
-### 8. Tech Stack Modernization
+### 9. Tech Stack Modernization
 - **Package Management**: Move from pip to Poetry or pipenv for dependency management
 - **Build System**: Modern Python packaging with pyproject.toml
 - **Distribution**: Professional installers (.dmg, .exe, .deb) and package managers
@@ -160,15 +179,15 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Performance**: Async/await for concurrent API calls, optimized image processing
 - **Security**: Input validation, secure API key management, sandboxing
 
-### 9. Automated Collection Management
+### 10. Automated Collection Management
 - **Scheduled Refresh**: Built-in scheduler for weekly/monthly collection updates
 - **Background Service**: Run as system service/daemon for automatic management
 - **Smart Curation**: Remove duplicate or similar artworks automatically
-- **Storage Monitoring**: Automatic cleanup when disk space is low
-- **Update Notifications**: Optional system notifications for collection updates
+- **Storage Monitoring**: Automatic cleanup when disk space is low (target: 1-4GB max)
+- **Favorites System**: Permanent storage for user-selected images
 - **Rollback System**: Ability to restore previous collections if new ones are unsatisfactory
 
-### 10. Technical Enhancements
+### 11. Technical Enhancements
 - **Offline Mode**: Cache images for offline wallpaper rotation
 - **Performance Optimization**: Lazy loading and smart caching
 - **Bandwidth Management**: Configurable download limits and scheduling

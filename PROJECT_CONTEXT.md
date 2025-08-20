@@ -13,9 +13,25 @@
 - **Clear separation of concerns** - Technical analysis vs business decisions vs user preferences
 - **Wait for answers** before proceeding to implementation
 
-## Project Vision
-**Current**: Personal fine art wallpaper system for Kevin's MacBook
-**Future**: Potential product for non-technical users with one-click setup
+## Project Vision & Scaling Strategy
+**Phase 1 MVP**: Personal fine art wallpaper system for Kevin's MacBook (48 images, 24 hours)
+**Phase 2 Personal**: Expand Kevin's collection (weekly, monthly collections)
+**Phase 3 Product**: Scale to other users with cost-optimized architecture
+
+## Cost Strategy
+**MVP (Phase 1)**: $0 cost - Everything runs locally on Kevin's machine
+**Phase 2 Personal**: ~$0 cost - Local expansion (1GB storage for weekly collection)
+**Scaling (Phase 3+)**: Minimize costs through:
+- Shared database of curated images (one API call serves many users)
+- Efficient caching and CDN strategy
+- Serverless architecture to avoid idle server costs
+- Community curation to reduce manual filtering costs
+
+## Storage Requirements
+**MVP (48 images)**: ~150MB
+**Weekly collection (336 images)**: ~1GB  
+**Monthly collection (1,440 images)**: ~4GB
+**Strategy**: Smart cleanup, favorites system, storage optimization
 
 ## Core Problem We're Solving
 - Kevin wants rotating fine art wallpapers on his Mac
@@ -84,6 +100,19 @@ ArtWall/
 - Focus on wallpaper suitability over art historical value
 - Multi-monitor setup needs same image on all displays
 - Quality over quantity - better to have fewer perfect images than many mediocre ones
+
+## Competitive Analysis
+**Existing Solutions:**
+- Unsplash Desktop Apps (nature/photography, no fine art)
+- Bing/Windows Spotlight (daily wallpapers, not art-focused)
+- Irvue, 24 Hour Wallpaper, Keka (limited collections, manual management)
+
+**ArtWall's Unique Value:**
+- Museum-quality fine art focus with smart curation
+- Automated rotation with multi-monitor support
+- Expandable to multiple visual categories
+- Personal database that grows over time
+- Cost-effective scaling architecture
 
 ## Business Context
 - MIT License - can be monetized later
