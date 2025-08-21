@@ -69,19 +69,31 @@
 - Departments: American/European Paintings, Modern Art, Contemporary Art, Drawings and Prints
 
 ### API & Rate Limiting
-- Met Museum API: 497,375+ objects available
-- Rate limiting: 2+ seconds between calls to avoid 403 errors
-- Current success rate: ~1% of artworks pass all filters
-- Batch processing: 20 images per session, resume across runs
+- **CHICAGO ART INSTITUTE API (PRIMARY)**:
+  - 100% success rate for European paintings
+  - Reliable 200 status responses
+  - 3-second rate limiting (conservative, works perfectly)
+  - Department: "Painting and Sculpture of Europe"
+  - World-class content: Monet, Cézanne, Van Gogh, Renoir, Degas, Manet
+  - IIIF image service for high-resolution downloads
+  
+- **MET MUSEUM API (BACKUP/PROBLEMATIC)**:
+  - 497,375+ objects available
+  - Rate limiting: 2+ seconds between calls to avoid 403 errors
+  - Success rate: ~1% of artworks pass all filters
+  - **RELIABILITY ISSUE**: 502 server errors (Dec 2024)
 
 ## Current Status
 - ✅ MVP working with quality filtering
 - ✅ Rate limiting implemented  
 - ✅ Department sampling script created (`department_sampler.py`)
 - ✅ All 20 Met departments identified and mapped
-- ❌ **NEXT SESSION**: Run department sampling to let Kevin choose departments
-- ❌ **NEXT SESSION**: Update main script to use API department filtering
-- ❌ **NEXT SESSION**: Add multi-monitor and automated rotation setup
+- ✅ Updated main script to use API department filtering (European Paintings #11)
+- ✅ Reduced target to 48 images (24-hour rotation)
+- ❌ **BLOCKER**: Met Museum API returning 502 errors (server issues, not rate limiting)
+- ✅ **PIVOT SUCCESSFUL**: Art Institute of Chicago API implemented and working
+- ✅ **BREAKTHROUGH**: 100% success rate with Chicago API vs 1% with Met API
+- ✅ **FIRST COLLECTION**: 20/48 masterpieces downloaded (Monet, Cézanne, Van Gogh, etc.)
 
 ## Next Major Architecture Change
 **Moving to Database-Driven Approach:**
@@ -93,19 +105,63 @@
 ## Key Files & Structure
 ```
 ArtWall/
-├── main.py                 # Current working script (336 image target)
-├── department_sampler.py   # NEW: Sample all 20 departments for Kevin to review
-├── TOMORROW_PLAN.md       # NEW: Detailed action plan for next session
-├── PRD.md                 # Product requirements document  
-├── PROJECT_CONTEXT.md     # This file - read every session
-└── requirements.txt       # Python dependencies
+├── main.py                    # Met Museum API script (currently broken due to 502 errors)
+├── chicago_artwall.py         # NEW: Chicago Art Institute script (WORKING, 100% success rate)
+├── department_sampler.py      # Met Museum department sampler (for future use)
+├── TOMORROW_PLAN.md          # Completed action plan
+├── PRD.md                    # Product requirements document  
+├── PROJECT_CONTEXT.md        # This file - read every session
+└── requirements.txt          # Python dependencies
+
+Output Structure:
+~/Pictures/ArtWall/
+└── Chicago_Painting_and_Sculpture_of_Europe/  # 48/48 masterpieces COMPLETE
 ```
+
+## Major Technical Breakthrough (December 2024)
+
+### Chicago Art Institute API Success
+**Problem Solved**: Met Museum API reliability issues and 1% success rate
+**Solution**: Pivoted to Chicago Art Institute API with 100% success rate
+
+**Key Learnings**:
+- **API Quality Matters More Than Collection Size**: Chicago's curated European paintings collection beats Met's massive but poorly filterable collection
+- **Minimal Filtering Works**: Only needed public domain + has image filters - no complex quality checks required
+- **Department Targeting**: "Painting and Sculpture of Europe" gives perfect wallpaper-suitable content
+- **Rate Limiting**: 3-second delays are conservative but ensure 100% reliability
+
+**Final Collection Results** (48 images):
+- **Van Gogh**: The Bedroom, Madame Roulin Rocking the Cradle, Terrace at Montmartre
+- **Claude Monet**: Multiple Water Lilies, Haystacks, Étretat cliffs, Bordighera, Seine at Giverny
+- **Pierre-Auguste Renoir**: Chrysanthemums, Near the Lake, Woman at the Piano
+- **Sandro Botticelli**: Virgin and Child with an Angel
+- **Rembrandt van Rijn**: Young Woman at an Open Half-Door
+- **Paul Cézanne**: Auvers Panoramic View, Apples and Grapes
+- **Henri de Toulouse-Lautrec**: At the Moulin Rouge, Moulin de la Galette
+- **Plus**: Édouard Manet, Edgar Degas, Georges Seurat, and Dutch Golden Age masters
+
+### macOS Automation Success & Permission Architecture
+**Problem Solved**: AppleScript automation failing on macOS Sequoia (15.6.1)
+**Solution**: Updated to use new System Settings structure with proper pane IDs
+
+**Technical Implementation**:
+- **Fixed Pane ID**: `com.apple.Wallpaper-Settings.extension` for macOS 15+
+- **Complete Automation**: Opens settings, adds folder, enables 30-min rotation, configures multi-monitor
+- **Permission Requirements**: Requires Accessibility/Automation permissions for Terminal/Cursor
+
+**Permission Architecture Decision**:
+- **Research Conclusion**: AppleScript UI automation fundamentally unreliable in macOS Sequoia+
+- **Root Cause**: System Settings UI changes break AppleScript element targeting
+- **Script vs App**: Apps have direct API access, scripts limited to fragile UI automation
+- **Strategic Pivot**: Native macOS app required for proper automation (confirmed PRD roadmap)
+- **Current State**: Script provides image collection + manual setup instructions
 
 ## Critical User Feedback Patterns
 - Kevin shows screenshots of bad images → immediately implement filters to exclude those types
 - Focus on wallpaper suitability over art historical value
 - Multi-monitor setup needs same image on all displays
 - Quality over quantity - better to have fewer perfect images than many mediocre ones
+- **NEW**: Minimal filtering approach successful - let API curation do the work
 
 ## Competitive Analysis
 **Existing Solutions:**

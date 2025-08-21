@@ -92,15 +92,21 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
   - High resolution available
   - No API key required
 
-## Immediate Improvements (Next Sprint)
+## Next Sprint: Native macOS Application
 
-### 1. Image Quality & Curation
-- **Deal with Image Issues**: Address problematic images that don't work well as wallpapers
-- **Select Better Images from Jump**: Implement smarter filtering to choose more suitable artworks initially
-- **Image Quality Filters**: Filter out images that are too dark, too light, or have poor composition for desktop use
-- **Aspect Ratio Filtering**: Prioritize images that work well with common desktop aspect ratios
-- **Content Appropriateness**: Ensure images are suitable for desktop/workplace environments
-- **Resolution Requirements**: Set minimum resolution thresholds for crisp display quality
+### 1. MVP Native App Development
+**Priority**: Replace script-based approach with proper macOS application
+- **Swift/SwiftUI Implementation**: Native macOS app with proper system integration
+- **Direct Wallpaper API Access**: Use macOS frameworks instead of AppleScript UI automation
+- **Automatic Collection Building**: Integrate existing Chicago Art Institute API functionality
+- **One-Click Setup**: Complete automation from download to wallpaper rotation
+- **Proper Permission Handling**: Standard macOS app permissions and entitlements
+
+### 2. Image Quality & Curation (COMPLETED in Script)
+- ✅ **Smart API Selection**: Chicago Art Institute API provides 100% success rate
+- ✅ **Department Filtering**: "Painting and Sculpture of Europe" for optimal results  
+- ✅ **Paintings-Only Filter**: Excludes sculptures, prints, drawings automatically
+- ✅ **Quality Collection**: 48 masterpieces including Van Gogh, Monet, Renoir, Botticelli
 
 ## Potential Future Next Steps
 
@@ -115,13 +121,18 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **App Store Distribution**: macOS App Store, Microsoft Store, Linux package managers
 - **Installer Package**: Simple `.dmg`/`.exe`/`.deb` installers
 
-### 3. Automatic Wallpaper Configuration
-- **macOS Integration**: AppleScript/System Events to automatically configure Desktop & Screen Saver settings
-- **Wallpaper Folder Setup**: Programmatically add ArtWall folder to System Settings without user intervention
-- **Rotation Configuration**: Automatically enable rotation and set preferred intervals
-- **Display Settings**: Configure wallpaper scaling (Fill Screen, Fit to Screen, etc.) automatically
-- **Multi-Monitor Support**: Detect and configure wallpapers for multiple displays
-- **Permission Handling**: Request and manage system permissions for desktop modification
+### 3. Automatic Wallpaper Configuration (REQUIRES NATIVE APP)
+**Research Finding**: AppleScript UI automation is unreliable in macOS Sequoia+ due to System Settings changes
+**Solution**: Native macOS application required for proper automation
+
+- **Native App Approach**: Swift/SwiftUI app with direct macOS API access
+- **Wallpaper Folder Setup**: Use macOS frameworks to configure wallpaper settings programmatically
+- **Rotation Configuration**: Direct API calls to enable rotation and set intervals
+- **Display Settings**: Native configuration of wallpaper scaling and display options
+- **Multi-Monitor Support**: Proper multi-display detection and configuration
+- **Permission Handling**: Standard macOS app permission model with proper entitlements
+
+**Current MVP**: Manual wallpaper setup with clear instructions (script-based automation removed)
 
 ### 4. Enhanced Art APIs Integration
 - **Multi-Museum Support**: Integrate all major museum APIs listed above

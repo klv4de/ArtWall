@@ -38,24 +38,25 @@ class ArtWallManager:
             # Rate limiting and collection size settings
             'api_delay_seconds': 2.0,  # Increased from 0.5 to 2 seconds between API calls
             'max_retries': 3,  # Number of times to retry failed API calls
-            'weekly_target': 336,  # Images needed for 30-min rotation, 24/7 for a week
+            'daily_target': 48,  # Images needed for 30-min rotation, 24 hours
             'batch_size': 20,  # How many to try to get in each run
             'max_api_calls_per_session': 200  # Limit API calls to avoid rate limiting
         }
     
-    def get_random_artwork_ids(self, count=10):
-        """Fetch random artwork IDs from The Met's collection"""
-        # Get all object IDs (this is a large list)
-        print(f"Calling Met API: {self.met_api_base}/objects")
-        response = requests.get(f"{self.met_api_base}/objects")
+    def get_department_artwork_ids(self, department_id=11, count=100):
+        """Fetch artwork IDs from a specific department (default: European Paintings)"""
+        # Search for objects in European Paintings department with images
+        search_url = f"{self.met_api_base}/search?departmentId={department_id}&hasImages=true&isPublicDomain=true"
+        print(f"Calling Met API: {search_url}")
+        response = requests.get(search_url)
         print(f"API response status: {response.status_code}")
         
         if response.status_code == 200:
             data = response.json()
             all_ids = data.get("objectIDs", [])
-            print(f"Total objects in Met collection: {len(all_ids)}")
+            print(f"Total objects in European Paintings department: {len(all_ids)}")
             if all_ids:
-                # Return random sample
+                # Return random sample from department
                 sample_size = min(count, len(all_ids))
                 return random.sample(all_ids, sample_size)
         else:
@@ -75,9 +76,9 @@ class ArtWallManager:
         return len(image_files)
     
     def get_collection_progress(self):
-        """Get progress toward weekly target"""
+        """Get progress toward daily target"""
         current = self.get_current_collection_size()
-        target = self.settings['weekly_target']
+        target = self.settings['daily_target']
         percentage = (current / target) * 100 if target > 0 else 0
         return current, target, percentage
     
@@ -239,7 +240,7 @@ class ArtWallManager:
         
         # Get more IDs since we'll be filtering heavily, but limit total API calls
         max_to_check = min(self.settings['max_api_calls_per_session'], actual_count * 20)
-        artwork_ids = self.get_random_artwork_ids(max_to_check)
+        artwork_ids = self.get_department_artwork_ids(department_id=11, count=max_to_check)
         print(f"Retrieved {len(artwork_ids)} artwork IDs from the API")
         
         if not artwork_ids:
