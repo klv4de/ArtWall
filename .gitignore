@@ -25,6 +25,15 @@ venv/
 env/
 ENV/
 
+# Swift/Xcode Build Artifacts
+.build/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+.swiftpm/
+Package.resolved
+*.dSYM/
+
 # IDE
 .vscode/
 .idea/
