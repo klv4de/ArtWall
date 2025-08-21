@@ -1,0 +1,41 @@
+{
+  "": {
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/master.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Models/Artwork.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Services/ChicagoArtService.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ArtworkDetailView.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/CollectionView.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ContentView.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.swiftdeps"
+  },
+  "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/main.swift": {
+    "dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.d",
+    "object": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.swift.o",
+    "swiftmodule": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.swiftdeps"
+  }
+}

@@ -182,4 +182,22 @@ Output Structure:
 - Future features: GUI, one-click setup, multiple museum APIs, metadata display
 
 ---
+
+## 🚨 PRIORITY REFINEMENTS (Next Session - January 2025)
+
+**Critical fixes needed before proceeding with roadmap:**
+
+1. **Fix UI Jumpiness**: 
+   - Issue: Visual jump when transitioning from "Load Collection" to artwork grid view
+   - Current attempt: Added `.animation(.easeInOut(duration: 0.3))` but still jumpy
+   - Need: Smoother transition or different layout approach
+
+2. **Optimize Collection Loading**:
+   - Issue: Collections re-load every time when navigating back/forth in same session
+   - Current: Moved state to parent ContentView with `@Binding` 
+   - Need: Verify this works properly and collections stay loaded
+
+**Status**: Native SwiftUI app working with Chicago API integration, navigation, and artwork detail views. These are final polish items before proceeding with wallpaper functionality.
+
+---
 **Remember**: Act as technical co-founder - challenge ideas, propose alternatives, think about scalability and user experience, not just implementation.

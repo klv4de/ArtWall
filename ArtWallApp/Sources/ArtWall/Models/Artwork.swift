@@ -1,0 +1,81 @@
+import Foundation
+
+// MARK: - Chicago Art Institute API Models
+struct ArtworkSearchResponse: Codable {
+    let data: [Artwork]
+    let pagination: Pagination
+    let info: APIInfo
+}
+
+struct Artwork: Codable, Identifiable {
+    let id: Int
+    let title: String
+    let artistDisplay: String?
+    let dateDisplay: String?
+    let mediumDisplay: String?
+    let dimensions: String?
+    let imageId: String?
+    let altText: String?
+    let isPublicDomain: Bool
+    let departmentTitle: String?
+    let classificationTitle: String?
+    let artworkTypeTitle: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, dimensions
+        case artistDisplay = "artist_display"
+        case dateDisplay = "date_display"
+        case mediumDisplay = "medium_display"
+        case imageId = "image_id"
+        case altText = "alt_text"
+        case isPublicDomain = "is_public_domain"
+        case departmentTitle = "department_title"
+        case classificationTitle = "classification_title"
+        case artworkTypeTitle = "artwork_type_title"
+    }
+    
+    // Computed properties for filtering
+    var isPainting: Bool {
+        guard let medium = mediumDisplay?.lowercased() else { return false }
+        let paintingKeywords = ["oil on canvas", "oil on panel", "oil on board", "tempera on panel", "acrylic on canvas"]
+        return paintingKeywords.contains { medium.contains($0) }
+    }
+    
+    var isEuropeanDepartment: Bool {
+        return departmentTitle?.contains("Painting and Sculpture of Europe") == true
+    }
+    
+    var hasImage: Bool {
+        return imageId != nil && !imageId!.isEmpty
+    }
+    
+    var imageURL: URL? {
+        guard let imageId = imageId else { return nil }
+        // IIIF image service URL with 843px width
+        return URL(string: "https://www.artic.edu/iiif/2/\(imageId)/full/843,/0/default.jpg")
+    }
+}
+
+struct Pagination: Codable {
+    let total: Int
+    let limit: Int
+    let offset: Int
+    let totalPages: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case total, limit, offset
+        case totalPages = "total_pages"
+    }
+}
+
+struct APIInfo: Codable {
+    let licenseText: String
+    let licenseLinks: [String]
+    let version: String
+    
+    enum CodingKeys: String, CodingKey {
+        case licenseText = "license_text"
+        case licenseLinks = "license_links"
+        case version
+    }
+}

@@ -1,0 +1,321 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.ArtWall-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/sources",
+      "importPath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Models/Artwork.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Services/ChicagoArtService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ArtworkDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/CollectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "ArtWall",
+      "moduleOutputPath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/Modules/ArtWall.swiftmodule",
+      "objects" : [
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.swift.o",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.swift.o",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.swift.o",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.swift.o",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.swift.o",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "ArtWall_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "artwallapp"
+      ],
+      "outputFileMapPath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/Modules/ArtWall.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Models/Artwork.swift",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Services/ChicagoArtService.swift",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ArtworkDetailView.swift",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/CollectionView.swift",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ContentView.swift",
+        "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/main.swift"
+      ],
+      "tempsPath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "ArtWall" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "ArtWall",
+      "-package-name",
+      "artwallapp",
+      "-incremental",
+      "-c",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Models/Artwork.swift",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Services/ChicagoArtService.swift",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ArtworkDetailView.swift",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/CollectionView.swift",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ContentView.swift",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/main.swift",
+      "-I",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "ArtWall_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "artwallapp",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "ArtWall" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall-entitlement.plist"
+    },
+    "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Models/Artwork.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Services/ChicagoArtService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ArtworkDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/CollectionView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/Views/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/Sources/ArtWall/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/sources"
+    },
+    "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/Artwork.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ArtworkDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ChicagoArtService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/CollectionView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/ArtWall.product/Objects.LinkFileList"
+    },
+    "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/kevinvincenti/Library/CloudStorage/GoogleDrive-kevinleevincenti@gmail.com/My Drive/programming_projects/ArtWall/ArtWallApp/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}
