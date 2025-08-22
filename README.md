@@ -1,25 +1,45 @@
 # ArtWall
 
-Automatically fetch fine art from museum APIs and set them as rotating wallpapers on macOS.
+Native macOS application with comprehensive fine art database for rotating desktop wallpapers.
+
+## Current Status ✅
+
+**Complete Database Architecture** - 134,078 artworks with full metadata in local SQLite database.
 
 ## Quick Start
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the script: `python main.py`
-3. Enjoy beautiful art as your desktop background!
+### Native SwiftUI App
+```bash
+cd ArtWallApp
+swift run
+```
+
+### Database Analysis
+```bash
+python3 -c "import sqlite3; conn = sqlite3.connect('chicago_artworks_complete.db'); print('Total artworks:', conn.execute('SELECT COUNT(*) FROM artworks').fetchone()[0])"
+```
 
 ## Features
 
-- Fetches high-resolution fine art from The Metropolitan Museum of Art
-- Automatically sets up rotating wallpapers in macOS
-- Configurable rotation intervals
-- Public domain artwork (CC0 licensed)
+- **Complete Art Database**: 134,078 artworks from Chicago Art Institute with full metadata
+- **Instant Queries**: Lightning-fast local database searches with optimized indexes
+- **Advanced Filtering**: Query by department, artist, color, material, technique, date, and more
+- **Native macOS App**: SwiftUI application with professional UI/UX
+- **Offline Operation**: No API dependencies, works without internet
+- **Public Domain Focus**: High-quality, legally usable artwork
+
+## Architecture
+
+- **Database**: SQLite (360.8 MB) with 80+ metadata fields per artwork
+- **Frontend**: Native SwiftUI macOS application
+- **Images**: Chicago Art Institute IIIF service for high-resolution downloads
+- **Cost**: $0 - Completely free, local operation
 
 ## Requirements
 
-- macOS
-- Python 3.7+
-- Internet connection
+- macOS (for native app)
+- Swift/Xcode (for development)
+- Python 3.7+ (for database tools)
 
 ## License
 

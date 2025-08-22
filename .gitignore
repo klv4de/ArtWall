@@ -49,3 +49,6 @@ Package.resolved
 # *.jpg
 # *.png
 # *.jpeg
+artic-api-data/
+artic-api-data.tar.bz2
+chicago_artworks_complete.db*
