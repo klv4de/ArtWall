@@ -18,7 +18,10 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "ArtWall",
-            dependencies: []
+            dependencies: [],
+            resources: [
+                .copy("Resources")
+            ]
         )
     ]
 )

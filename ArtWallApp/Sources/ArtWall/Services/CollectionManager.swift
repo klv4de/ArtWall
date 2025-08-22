@@ -1,5 +1,16 @@
 import Foundation
 
+enum CollectionError: LocalizedError {
+    case resourceNotFound(String)
+    
+    var errorDescription: String? {
+        switch self {
+        case .resourceNotFound(let message):
+            return message
+        }
+    }
+}
+
 class CollectionManager: ObservableObject {
     @Published var availableCollections: [CollectionManifest] = []
     @Published var isLoading = false
@@ -34,21 +45,68 @@ class CollectionManager: ObservableObject {
     }
     
     private func loadCollectionManifests() async throws -> [CollectionManifest] {
-        // Load from GitHub collections (instant loading!)
-        // Using our pre-built collections with GitHub image URLs
+        // Load from bundled collections_index.json (production-ready!)
         
-        let manifests = [
-            createMedievalRenaissanceManifest(),
-            createRenaissanceBaroqueManifest(),
-            createEighteenthCenturyManifest(),
-            createGoldenAge1850sManifest(),
-            createGoldenAge1860sManifest(),
-            createGoldenAge1870sManifest(),
-            createGoldenAge1880sManifest(),
-            createGoldenAge1890sManifest()
-        ]
-        
-        return manifests
+        do {
+            guard let url = Bundle.main.url(forResource: "collections_index", withExtension: "json") else {
+                throw CollectionError.resourceNotFound("collections_index.json not found in app bundle")
+            }
+            
+            let data = try Data(contentsOf: url)
+            let collectionsIndex = try JSONDecoder().decode(CollectionsIndex.self, from: data)
+            
+            // Convert from CollectionsIndex format to CollectionManifest format
+            let manifests = collectionsIndex.collections.map { indexCollection in
+                CollectionManifest(
+                    collectionId: indexCollection.id,
+                    title: indexCollection.title,
+                    description: indexCollection.description,
+                    dateRange: indexCollection.dateRange,
+                    artworkCount: indexCollection.artworkCount,
+                    artworkIds: indexCollection.thumbnailArtworks.map { $0.id }, // Use thumbnail IDs for now
+                    artworks: [], // Will be populated when building collection
+                    filtersApplied: CollectionFilters(
+                        department: "Painting and Sculpture of Europe",
+                        isPublicDomain: true,
+                        hasImage: true,
+                        classification: "painting",
+                        isZoomable: true,
+                        dateRange: parseDateRange(indexCollection.dateRange)
+                    ),
+                    createdDate: collectionsIndex.createdDate
+                )
+            }
+            
+            print("✅ Loaded \(manifests.count) collections from collections_index.json")
+            return manifests
+            
+        } catch {
+            print("⚠️ Failed to load bundled collections_index.json: \(error)")
+            print("🔄 Falling back to hardcoded manifests...")
+            
+            // Fallback to hardcoded data if bundle loading fails
+            return [
+                createMedievalRenaissanceManifest(),
+                createRenaissanceBaroqueManifest(),
+                createEighteenthCenturyManifest(),
+                createGoldenAge1850sManifest(),
+                createGoldenAge1860sManifest(),
+                createGoldenAge1870sManifest(),
+                createGoldenAge1880sManifest(),
+                createGoldenAge1890sManifest()
+            ]
+        }
+    }
+    
+    private func parseDateRange(_ dateRange: String) -> [Int] {
+        // Parse "1260-1499" format into [1260, 1499]
+        let components = dateRange.split(separator: "-")
+        if components.count == 2,
+           let start = Int(components[0]),
+           let end = Int(components[1]) {
+            return [start, end]
+        }
+        return [0, 2025] // Default range
     }
     
     // MARK: - Collection Manifest Creation
@@ -227,11 +285,12 @@ class CollectionManager: ObservableObject {
     func buildCollection(from manifest: CollectionManifest) async -> ArtCollection? {
         print("🚀 Building collection: \(manifest.title) (instant loading!)")
         
-        // Load artwork metadata from our built collections (instant!)
-        let collectionPath = "../github_collections/collections/\(manifest.collectionId)/collection.json"
-        
+        // Load artwork metadata from bundled collections (production-ready!)
         do {
-            let url = URL(fileURLWithPath: collectionPath)
+            guard let url = Bundle.main.url(forResource: "collections/\(manifest.collectionId)/collection", withExtension: "json") else {
+                throw CollectionError.resourceNotFound("Collection \(manifest.collectionId) not found in app bundle")
+            }
+            
             let data = try Data(contentsOf: url)
             let githubCollection = try JSONDecoder().decode(GitHubCollection.self, from: data)
             
@@ -262,7 +321,7 @@ class CollectionManager: ObservableObject {
             return collection
             
         } catch {
-            print("⚠️ Could not load GitHub collection data, using manifest IDs: \(error)")
+            print("⚠️ Could not load bundled collection data, using manifest IDs: \(error)")
             
             // Fallback: create basic artworks from IDs
             var artworks: [Artwork] = []

@@ -1,0 +1,433 @@
+{
+  "collection_id": "medieval_early_renaissance",
+  "title": "🏛️ Medieval/Early Renaissance",
+  "description": "Medieval and Early Renaissance masterpieces (1260s-1490s)",
+  "date_range": "1260-1499",
+  "artwork_count": 37,
+  "artwork_ids": [
+    16237,
+    16192,
+    59843,
+    12683,
+    90071,
+    111444,
+    22871,
+    59897,
+    15468,
+    102087,
+    16156,
+    16159,
+    15716,
+    15717,
+    16212,
+    47599,
+    80589,
+    111608,
+    111609,
+    25781,
+    80570,
+    102098,
+    218072,
+    59940,
+    79777,
+    111622,
+    80526,
+    59916,
+    25743,
+    25740,
+    80542,
+    35226,
+    35229,
+    29095,
+    25749,
+    183006,
+    58702
+  ],
+  "artworks": [
+    {
+      "id": 16237,
+      "title": "Virgin and Child",
+      "artist": "Italian; Tuscany",
+      "date": "c. 1270",
+      "medium": "Tempera on panel",
+      "image_id": "3952a506-2776-5613-1693-e5c96c4708f2",
+      "image_url": "https://www.artic.edu/iiif/2/3952a506-2776-5613-1693-e5c96c4708f2/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16237.jpg"
+    },
+    {
+      "id": 16192,
+      "title": "Bishop Saint Enthroned",
+      "artist": "Allegretto Nuzi (Italian, 1346–1373)",
+      "date": "1360/70",
+      "medium": "Tempera on panel",
+      "image_id": "fc76cfb3-dcc1-2ee7-17a9-6d706a0efd82",
+      "image_url": "https://www.artic.edu/iiif/2/fc76cfb3-dcc1-2ee7-17a9-6d706a0efd82/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16192.jpg"
+    },
+    {
+      "id": 59843,
+      "title": "Madonna of Humility",
+      "artist": "Bolognese",
+      "date": "1375–1400",
+      "medium": "Tempera on panel",
+      "image_id": "33fb43be-8efc-4d35-a6fe-e92c890338bc",
+      "image_url": "https://www.artic.edu/iiif/2/33fb43be-8efc-4d35-a6fe-e92c890338bc/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59843.jpg"
+    },
+    {
+      "id": 12683,
+      "title": "Saint Catherine Delivered from the Wheel",
+      "artist": "Northern Spanish",
+      "date": "1375/1400",
+      "medium": "Oil and tempera on panel",
+      "image_id": "f6103cb8-ee9b-2334-96f5-9ac8e07f8b78",
+      "image_url": "https://www.artic.edu/iiif/2/f6103cb8-ee9b-2334-96f5-9ac8e07f8b78/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12683.jpg"
+    },
+    {
+      "id": 90071,
+      "title": "Triptych of the Crucifixion with Saints Anthony, Christopher, James and George",
+      "artist": "Netherlandish or German; possibly Rhenish",
+      "date": "c. 1400",
+      "medium": "Tempera and oil (estimated) on panel",
+      "image_id": "cc179e1f-83df-7ddb-7e3c-8816f0c446d9",
+      "image_url": "https://www.artic.edu/iiif/2/cc179e1f-83df-7ddb-7e3c-8816f0c446d9/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/90071.jpg"
+    },
+    {
+      "id": 111444,
+      "title": "Retable of Saints Athanasius, Blaise, and Agatha",
+      "artist": "Master of Riglos (Spanish, active c. 1435–1460)",
+      "date": "1440/45",
+      "medium": "Tempera on panel",
+      "image_id": "f67ea925-dddf-0bf5-50af-fa9557b849ef",
+      "image_url": "https://www.artic.edu/iiif/2/f67ea925-dddf-0bf5-50af-fa9557b849ef/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111444.jpg"
+    },
+    {
+      "id": 22871,
+      "title": "Christ on the Living Cross",
+      "artist": "Follower of the Master of Saint Veronica (German, active c. 1395–1420)",
+      "date": "c. 1420",
+      "medium": "Oil on panel",
+      "image_id": "4b9e255e-4a22-334d-1a57-fee2d84cd426",
+      "image_url": "https://www.artic.edu/iiif/2/4b9e255e-4a22-334d-1a57-fee2d84cd426/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/22871.jpg"
+    },
+    {
+      "id": 59897,
+      "title": "Christ Carrying the Cross",
+      "artist": "Master of the Worcester Carrying of the Cross (active c. 1400–c. 1450)",
+      "date": "c. 1425",
+      "medium": "Oil on panel",
+      "image_id": "84899261-2add-0f0d-b7fa-eba017663d07",
+      "image_url": "https://www.artic.edu/iiif/2/84899261-2add-0f0d-b7fa-eba017663d07/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59897.jpg"
+    },
+    {
+      "id": 15468,
+      "title": "Saint George and the Dragon",
+      "artist": "Bernat Martorell (Spanish, active from 1427–died 1452)",
+      "date": "1434/35",
+      "medium": "Tempera on panel",
+      "image_id": "8a0e4ac9-43ea-bc3e-884b-ee27f8a10501",
+      "image_url": "https://www.artic.edu/iiif/2/8a0e4ac9-43ea-bc3e-884b-ee27f8a10501/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15468.jpg"
+    },
+    {
+      "id": 102087,
+      "title": "Virgin and Child",
+      "artist": "Central Italian",
+      "date": "c. 1450",
+      "medium": "Tempera and oil on panel, gold ground",
+      "image_id": "16369b49-adca-a356-5aa1-7265fd45870e",
+      "image_url": "https://www.artic.edu/iiif/2/16369b49-adca-a356-5aa1-7265fd45870e/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/102087.jpg"
+    },
+    {
+      "id": 16156,
+      "title": "Saint John the Baptist Entering the Wilderness",
+      "artist": "Giovanni di Paolo (Italian, 1398–1482)",
+      "date": "c. 1455",
+      "medium": "Tempera on panel",
+      "image_id": "287ea0c4-1976-46b6-d3e0-5f24db2d95ae",
+      "image_url": "https://www.artic.edu/iiif/2/287ea0c4-1976-46b6-d3e0-5f24db2d95ae/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16156.jpg"
+    },
+    {
+      "id": 16159,
+      "title": "Ecce Agnus Dei",
+      "artist": "Giovanni di Paolo (Italian, 1398–1482)",
+      "date": "c. 1455",
+      "medium": "Tempera on panel",
+      "image_id": "9ae944b3-dea5-2db5-f090-c266a7d20ea7",
+      "image_url": "https://www.artic.edu/iiif/2/9ae944b3-dea5-2db5-f090-c266a7d20ea7/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16159.jpg"
+    },
+    {
+      "id": 15716,
+      "title": "Saint Christopher Meets Satan; Saint Christopher before the King of Lycia",
+      "artist": "Martín de Soria (Spanish, active 1449–87)",
+      "date": "1480/85",
+      "medium": "Tempera with oil glazes on panel",
+      "image_id": "2304d661-2cb9-b550-bc41-9ff923177fc5",
+      "image_url": "https://www.artic.edu/iiif/2/2304d661-2cb9-b550-bc41-9ff923177fc5/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15716.jpg"
+    },
+    {
+      "id": 15717,
+      "title": "Saint Christopher Taking Leave of the King Who Feared Satan; Saint Christopher and His Converts",
+      "artist": "Martín de Soria (Spanish, active 1449–87)",
+      "date": "1480/85",
+      "medium": "Tempera with oil glazes on panel",
+      "image_id": "2e511440-57e2-83e6-593c-9b71390d233b",
+      "image_url": "https://www.artic.edu/iiif/2/2e511440-57e2-83e6-593c-9b71390d233b/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15717.jpg"
+    },
+    {
+      "id": 16212,
+      "title": "Virgin and Child with Saints Jerome, Bernardino of Siena, and Angels",
+      "artist": "Sano di Pietro (Italian, 1405–1481)",
+      "date": "1450/60",
+      "medium": "Tempera on panel",
+      "image_id": "2563126c-ce54-2c5d-b41c-89eaebaf4ef7",
+      "image_url": "https://www.artic.edu/iiif/2/2563126c-ce54-2c5d-b41c-89eaebaf4ef7/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16212.jpg"
+    },
+    {
+      "id": 47599,
+      "title": "The Assassination and Funeral of Julius Caesar",
+      "artist": "Workshop of Apollonio di Giovanni (Italian, 1415/17-1465)\nMarco del Buono Giamberti (Italian, 1403-1489)",
+      "date": "1455/60",
+      "medium": "Tempera on panel, transferred to canvas mounted on pressed hardboard and cradled",
+      "image_id": "5f07e1e0-cc29-29b3-a746-994589acea56",
+      "image_url": "https://www.artic.edu/iiif/2/5f07e1e0-cc29-29b3-a746-994589acea56/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/47599.jpg"
+    },
+    {
+      "id": 80589,
+      "title": "Virgin and Child",
+      "artist": "Lippi-Pesellino Imitator (Italian, active c. 1450-1500)",
+      "date": "c. 1465",
+      "medium": "Oil and tempera on panel",
+      "image_id": "f46ec5c2-3897-1c1f-4d20-f8f81ac9b983",
+      "image_url": "https://www.artic.edu/iiif/2/f46ec5c2-3897-1c1f-4d20-f8f81ac9b983/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80589.jpg"
+    },
+    {
+      "id": 111608,
+      "title": "Emperor Heraclius Slays the King of Persia",
+      "artist": "Netherlandish",
+      "date": "c. 1470",
+      "medium": "Tempera and oil on panel",
+      "image_id": "6f01cb05-cd90-87c8-fd24-a1d31e2ccec6",
+      "image_url": "https://www.artic.edu/iiif/2/6f01cb05-cd90-87c8-fd24-a1d31e2ccec6/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111608.jpg"
+    },
+    {
+      "id": 111609,
+      "title": "Emperor Heraclius Denied Entry into Jerusalem",
+      "artist": "Netherlandish",
+      "date": "c. 1470",
+      "medium": "Tempera and oil on panel",
+      "image_id": "caf6a947-6359-1b5e-69e5-fedd26cf6360",
+      "image_url": "https://www.artic.edu/iiif/2/caf6a947-6359-1b5e-69e5-fedd26cf6360/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111609.jpg"
+    },
+    {
+      "id": 25781,
+      "title": "Virgin and Child with Two Angels",
+      "artist": "Attributed to Francesco Botticini (Italian, 1446–1497)",
+      "date": "c. 1470",
+      "medium": "Tempera on panel",
+      "image_id": "9c9e75ff-f131-2fdc-d29c-0584c80e0ca4",
+      "image_url": "https://www.artic.edu/iiif/2/9c9e75ff-f131-2fdc-d29c-0584c80e0ca4/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/25781.jpg"
+    },
+    {
+      "id": 80570,
+      "title": "Saints Apollonia, Barbara, and Agatha",
+      "artist": "Master Alejo (active Spain, c. 1485–1516)",
+      "date": "1490/1500",
+      "medium": "Tempera on panel",
+      "image_id": "03bdfb47-020e-7108-5a72-81a73b58dac9",
+      "image_url": "https://www.artic.edu/iiif/2/03bdfb47-020e-7108-5a72-81a73b58dac9/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80570.jpg"
+    },
+    {
+      "id": 102098,
+      "title": "Phaeton Driving the Chariot of Phoebus",
+      "artist": "Northern Italian; possibly Verona",
+      "date": "1475/1500",
+      "medium": "Tempera or distemper on canvas",
+      "image_id": "82b1ac6e-de4e-7e80-6bd8-e1f1bb0cb889",
+      "image_url": "https://www.artic.edu/iiif/2/82b1ac6e-de4e-7e80-6bd8-e1f1bb0cb889/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/102098.jpg"
+    },
+    {
+      "id": 218072,
+      "title": "Portrait of a Man in a Red Cap",
+      "artist": "South German; possibly Ulm",
+      "date": "c. 1480",
+      "medium": "Oil on panel",
+      "image_id": "629e6e88-5776-8ba5-e49f-fda92cdbac93",
+      "image_url": "https://www.artic.edu/iiif/2/629e6e88-5776-8ba5-e49f-fda92cdbac93/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/218072.jpg"
+    },
+    {
+      "id": 59940,
+      "title": "Diptych of Saints Achatius, Barbara, Apollonia, and Sebald",
+      "artist": "German; Franconia",
+      "date": "c. 1490",
+      "medium": "Distemper on linen, mounted on panel",
+      "image_id": "d11784fc-b853-f0ff-9870-d6405ae362f6",
+      "image_url": "https://www.artic.edu/iiif/2/d11784fc-b853-f0ff-9870-d6405ae362f6/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59940.jpg"
+    },
+    {
+      "id": 79777,
+      "title": "Saint Anthony of Padua",
+      "artist": "Hans Memling (Netherlandish, c. 1430–1494)",
+      "date": "c. 1485",
+      "medium": "Oil on panel",
+      "image_id": "11f6e7f8-9c46-1dd7-4ba8-4ef07bfc3bfa",
+      "image_url": "https://www.artic.edu/iiif/2/11f6e7f8-9c46-1dd7-4ba8-4ef07bfc3bfa/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/79777.jpg"
+    },
+    {
+      "id": 111622,
+      "title": "The Crucifixion",
+      "artist": "Carlo Crivelli (Italian, 1430/35–before 1495)",
+      "date": "c. 1487",
+      "medium": "Tempera on panel",
+      "image_id": "35afa43f-bdb5-06b8-81c5-416927ffe8ee",
+      "image_url": "https://www.artic.edu/iiif/2/35afa43f-bdb5-06b8-81c5-416927ffe8ee/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111622.jpg"
+    },
+    {
+      "id": 80526,
+      "title": "Virgin and Child with Two Angels",
+      "artist": "Sandro Botticelli (Italian, 1444/45–1510)",
+      "date": "c. 1490",
+      "medium": "Tempera on panel",
+      "image_id": "eb49ab17-f2d9-275a-ee71-e8f0016b34aa",
+      "image_url": "https://www.artic.edu/iiif/2/eb49ab17-f2d9-275a-ee71-e8f0016b34aa/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80526.jpg"
+    },
+    {
+      "id": 59916,
+      "title": "Virgin and Child",
+      "artist": "Attributed to Ercole de' Roberti (Italian, 1455/56–1496)",
+      "date": "1490/96",
+      "medium": "Tempera or oil on panel",
+      "image_id": "c92e6967-fe67-1d55-da3e-42a2a2d62f0d",
+      "image_url": "https://www.artic.edu/iiif/2/c92e6967-fe67-1d55-da3e-42a2a2d62f0d/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59916.jpg"
+    },
+    {
+      "id": 25743,
+      "title": "The Adoration of the Magi",
+      "artist": "Attributed to Raffaello Botticini (Italian, 1477–c.1520)",
+      "date": "c. 1495",
+      "medium": "Tempera on panel",
+      "image_id": "24c1565b-f22d-fb73-4a7f-f35bcb3dcc09",
+      "image_url": "https://www.artic.edu/iiif/2/24c1565b-f22d-fb73-4a7f-f35bcb3dcc09/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/25743.jpg"
+    },
+    {
+      "id": 25740,
+      "title": "Scenes from the Life of Saint John the Baptist",
+      "artist": "Bartolomeo di Giovanni (Italian, active c. 1465-1501)",
+      "date": "1490/95",
+      "medium": "Tempera on panel (poplar)",
+      "image_id": "a6c18204-e035-5fd0-408e-46b27d1ee6c5",
+      "image_url": "https://www.artic.edu/iiif/2/a6c18204-e035-5fd0-408e-46b27d1ee6c5/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/25740.jpg"
+    },
+    {
+      "id": 80542,
+      "title": "The Lamentation",
+      "artist": "Netherlandish; Bruges",
+      "date": "c. 1500",
+      "medium": "Oil on panel",
+      "image_id": "97ddac6e-56af-1078-81f0-11c0d6313432",
+      "image_url": "https://www.artic.edu/iiif/2/97ddac6e-56af-1078-81f0-11c0d6313432/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80542.jpg"
+    },
+    {
+      "id": 35226,
+      "title": "Saint Lucy",
+      "artist": "Vergós Workshop (Spanish, documented 1439–1503)",
+      "date": "c. 1500",
+      "medium": "Oil and gold on panel",
+      "image_id": "de6ea525-c0a3-b5ec-6061-d65d3ed0e5a8",
+      "image_url": "https://www.artic.edu/iiif/2/de6ea525-c0a3-b5ec-6061-d65d3ed0e5a8/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35226.jpg"
+    },
+    {
+      "id": 35229,
+      "title": "Saint Agatha",
+      "artist": "Vergós Workshop (Spanish, documented 1439–1503)",
+      "date": "c. 1500",
+      "medium": "Oil and gold on panel",
+      "image_id": "0aaa4cff-d1d8-8241-d230-0cecc9956f39",
+      "image_url": "https://www.artic.edu/iiif/2/0aaa4cff-d1d8-8241-d230-0cecc9956f39/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35229.jpg"
+    },
+    {
+      "id": 29095,
+      "title": "Entombment",
+      "artist": "German; possibly Cologne",
+      "date": "c. 1500",
+      "medium": "Tempera on panel",
+      "image_id": "fe17bc32-9512-fc0c-4c84-d812c8ea144c",
+      "image_url": "https://www.artic.edu/iiif/2/fe17bc32-9512-fc0c-4c84-d812c8ea144c/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/29095.jpg"
+    },
+    {
+      "id": 25749,
+      "title": "Fragment from Christ Carrying the Cross: Saint John the Evangelist",
+      "artist": "Jean Hey (Master of Moulins; Netherlandish, active in France, c. 1480-c.1504)",
+      "date": "c. 1500",
+      "medium": "Oil on panel",
+      "image_id": "266ebd5c-bc67-1e1e-9696-5a8e40e6de80",
+      "image_url": "https://www.artic.edu/iiif/2/266ebd5c-bc67-1e1e-9696-5a8e40e6de80/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/25749.jpg"
+    },
+    {
+      "id": 183006,
+      "title": "Fragment from Christ Carrying the Cross: Mourning Virgin",
+      "artist": "Jean Hey (Master of Moulins; Netherlandish, active in France, c. 1480-c.1504)",
+      "date": "c. 1500",
+      "medium": "Oil on panel",
+      "image_id": "5b05140d-7b91-ef9c-68fc-9ee13db64b21",
+      "image_url": "https://www.artic.edu/iiif/2/5b05140d-7b91-ef9c-68fc-9ee13db64b21/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/183006.jpg"
+    },
+    {
+      "id": 58702,
+      "title": "The Dream of Paris",
+      "artist": "Monogrammist PG (Germany, active c. 1525–50)",
+      "date": "1536",
+      "medium": "Oil on panel",
+      "image_id": "550d7d97-e4ae-e023-21ad-066559632a12",
+      "image_url": "https://www.artic.edu/iiif/2/550d7d97-e4ae-e023-21ad-066559632a12/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/58702.jpg"
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1260,
+      1499
+    ]
+  },
+  "created_date": "2025-01-21",
+  "failed_downloads": [],
+  "github_ready": true,
+  "image_base_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/"
+}

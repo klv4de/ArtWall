@@ -1,5 +1,56 @@
 import Foundation
 
+// MARK: - Collections Index Models (from collections_index.json)
+struct CollectionsIndex: Codable {
+    let collections: [CollectionIndexEntry]
+    let totalCollections: Int
+    let totalArtworks: Int
+    let createdDate: String
+    let version: String
+    
+    enum CodingKeys: String, CodingKey {
+        case collections
+        case totalCollections = "total_collections"
+        case totalArtworks = "total_artworks"
+        case createdDate = "created_date"
+        case version
+    }
+}
+
+struct CollectionIndexEntry: Codable {
+    let id: String
+    let title: String
+    let description: String
+    let dateRange: String
+    let artworkCount: Int
+    let thumbnailArtworks: [ThumbnailArtwork]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, description
+        case dateRange = "date_range"
+        case artworkCount = "artwork_count"
+        case thumbnailArtworks = "thumbnail_artworks"
+    }
+}
+
+struct ThumbnailArtwork: Codable {
+    let id: Int
+    let title: String
+    let artist: String?
+    let date: String?
+    let medium: String?
+    let imageId: String
+    let imageUrl: String
+    let githubImageUrl: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, artist, date, medium
+        case imageId = "image_id"
+        case imageUrl = "image_url"
+        case githubImageUrl = "github_image_url"
+    }
+}
+
 // MARK: - GitHub Collection Models (from built collections)
 struct GitHubCollection: Codable {
     let collectionId: String

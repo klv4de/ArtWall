@@ -13,14 +13,14 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 
 ## Tech Stack
 
-### Current (MVP)
-- **Language**: Python 3.7+
-- **HTTP Client**: `requests` library for API calls
-- **Image Processing**: `Pillow` (PIL) for image manipulation
-- **System Integration**: Native macOS system calls/AppleScript
-- **APIs**: REST APIs (Met Museum, future museum APIs)
-- **Storage**: Local filesystem (`~/Pictures/ArtWall/`)
-- **Platform**: macOS (with future cross-platform plans)
+### Current (MVP - COMPLETED)
+- **Language**: Swift + SwiftUI
+- **Platform**: Native macOS application
+- **Database**: SQLite with 134,078 artworks and complete metadata
+- **Collections**: 8 curated historical period collections (267 artworks)
+- **APIs**: Chicago Art Institute API for high-resolution images
+- **Architecture**: JSON-driven, bundle resources, production-ready
+- **Cost**: $0 - Completely local operation
 
 ### Future Professional Stack
 - **Packaging**: PyInstaller for standalone executables, proper setup.py/pyproject.toml
@@ -32,21 +32,53 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 
 ## MVP Features
 
-### 1. Art Fetching
-- Fetch random fine art from The Metropolitan Museum of Art API
-- Filter for public domain works (CC0 licensed)
-- Download high-resolution images suitable for desktop wallpapers
-- Intelligent curation to avoid inappropriate or low-quality images
+### ✅ Phase 1: Collection Browsing (COMPLETED)
+- **Native SwiftUI App**: Professional 4-page navigation (Welcome → Collections → Details → Artwork)
+- **8 Curated Collections**: Historical periods from Medieval to 1890s Golden Age
+- **267 High-Quality Artworks**: Museum masterpieces with full metadata
+- **Instant Loading**: JSON-driven architecture with bundle resources
+- **Optimized Performance**: 79% code reduction, production-ready file paths
 
-### 2. Wallpaper Management
-- Save images to dedicated macOS wallpaper folder (`~/Pictures/ArtWall`)
-- Provide clear instructions for setting up rotating wallpapers in System Settings
-- Support common desktop resolutions and aspect ratios
+### 🚀 Phase 2: Wallpaper Integration (NEXT MVP MILESTONE)
 
-### 3. Basic Configuration
-- Configurable number of artworks to download (default: 10)
-- Simple command-line interface
-- Respectful API usage with rate limiting
+#### **Core Wallpaper Functionality**
+- **"Apply this collection" Button**: One-click wallpaper setup on Collection Details page
+- **Automatic Download**: Save collection images to `~/Pictures/ArtWall/[Collection Name]/`
+- **System Integration**: Configure macOS wallpaper rotation automatically
+- **Multi-Monitor Support**: Apply same collection across all displays
+- **Rotation Settings**: 30-minute intervals for optimal art discovery experience
+
+#### **User Experience Flow**
+1. User browses collections in app
+2. User views Collection Details page with all artworks
+3. User clicks **"Apply this collection"** button
+4. App downloads all images to dedicated folder
+5. App configures macOS System Settings for wallpaper rotation
+6. User enjoys rotating fine art wallpapers automatically
+
+#### **Technical Implementation**
+- **Image Management**: Download and organize collection images locally
+- **macOS Integration**: Use native wallpaper APIs (not fragile AppleScript)
+- **Permission Handling**: Request necessary system permissions gracefully
+- **Error Handling**: Graceful fallbacks if system integration fails
+- **Progress Feedback**: Show download/setup progress to user
+
+### 🎨 Phase 2B: Collection Expansion (PRE-DISTRIBUTION)
+
+#### **Content Maximization Strategy**
+- **Goal**: Utilize most/all suitable Chicago Art Institute paintings before MVP distribution
+- **Current**: 8 collections, 267 artworks (historical periods focus)
+- **Target**: Comprehensive coverage using existing database of 803 European oil paintings
+
+#### **Expansion Categories**
+1. **Artist Collections**: Monet (47 works), Renoir (23), Degas (19), Cézanne (15), Van Gogh, Toulouse-Lautrec
+2. **Style Collections**: Impressionist Masters, Post-Impressionist, Baroque, Dutch Golden Age
+3. **Theme Collections**: Landscapes, Portraits, Still Life, Religious Art, Classical Mythology
+
+#### **Distribution Readiness**
+- **Phase 2A**: Wallpaper automation functionality
+- **Phase 2B**: Comprehensive collections (maximize content)
+- **Phase 3**: Package and distribute feature-complete MVP
 
 ### 4. Collection Management (Updated MVP Scope)
 - **MVP Target**: 24 high-quality images per collection for optimal browsing experience

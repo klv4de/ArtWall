@@ -36,9 +36,11 @@
   5. This prevents multiple instances and resource conflicts
 
 ## Project Vision & Scaling Strategy
-**Phase 1 MVP**: Personal fine art wallpaper system for Kevin's MacBook (48 images, 24 hours)
-**Phase 2 Personal**: Expand Kevin's collection (weekly, monthly collections)
-**Phase 3 Product**: Scale to other users with cost-optimized architecture
+**✅ Phase 1 COMPLETED**: Native SwiftUI app with collection browsing (8 collections, 267 artworks)
+**🚀 Phase 2A NEXT**: Wallpaper integration with "Apply this collection" functionality
+**🎨 Phase 2B**: Collection expansion - utilize most/all CAI paintings for maximum content
+**📦 Phase 3**: Distribution-ready MVP with comprehensive art collections
+**Phase 4 Future**: Scale to other users with cost-optimized architecture
 
 ## Cost Strategy
 **MVP (Phase 1)**: $0 cost - Everything runs locally on Kevin's machine
@@ -206,21 +208,67 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 
 ---
 
-## 🚨 PRIORITY REFINEMENTS (Next Session - January 2025)
+## 🚀 NEXT MVP MILESTONE: Wallpaper Integration (January 2025)
 
-**Critical fixes needed before proceeding with roadmap:**
+**COMPLETED OPTIMIZATIONS:**
+- ✅ **File Cleanup**: Removed 2.5GB+ of redundant files and organized project structure
+- ✅ **Code Optimization**: 79% code reduction, JSON-driven architecture, bundle resources
+- ✅ **Performance**: Faster loading with proper resource management
+- ✅ **Production Ready**: Robust error handling and professional code structure
 
-1. **Fix UI Jumpiness**: 
-   - Issue: Visual jump when transitioning from "Load Collection" to artwork grid view
-   - Current attempt: Added `.animation(.easeInOut(duration: 0.3))` but still jumpy
-   - Need: Smoother transition or different layout approach
+**NEXT PRIORITY: "Apply this collection" Functionality**
 
-2. **Optimize Collection Loading**:
-   - Issue: Collections re-load every time when navigating back/forth in same session
-   - Current: Moved state to parent ContentView with `@Binding` 
-   - Need: Verify this works properly and collections stay loaded
+### **Core Feature Requirements:**
+1. **"Apply this collection" Button**: 
+   - Location: Collection Details page (where user sees all artworks)
+   - Action: One-click wallpaper setup for entire collection
+   - UI: Prominent, clear call-to-action button
 
-**Status**: Native SwiftUI app working with Chicago API integration, navigation, and artwork detail views. Implementing new page architecture.
+2. **Wallpaper Integration**:
+   - Download collection images to `~/Pictures/ArtWall/[Collection Name]/`
+   - Configure macOS wallpaper rotation (30-minute intervals)
+   - Multi-monitor support (same collection on all displays)
+   - Progress feedback during download/setup
+
+3. **Technical Approach**:
+   - Use native macOS wallpaper APIs (not AppleScript)
+   - Request system permissions gracefully
+   - Robust error handling with user-friendly messages
+   - Maintain $0 cost architecture
+
+**Status**: Ready to implement wallpaper functionality on optimized, production-ready codebase.
+
+### **PHASE 2B: Collection Expansion Strategy**
+
+**Goal**: Maximize content before distribution by utilizing most/all suitable CAI paintings
+
+**Current State**: 8 collections, 267 artworks (focused on historical periods)
+**Target**: Comprehensive coverage of Chicago Art Institute's European painting collection
+
+**Expansion Areas:**
+1. **Artist-Focused Collections**:
+   - Monet Masterpieces (47 available works)
+   - Renoir Collection (23 available works)
+   - Degas Collection (19 available works)
+   - Cézanne Collection (15 available works)
+   - Van Gogh Highlights
+   - Toulouse-Lautrec Collection
+
+2. **Style-Based Collections**:
+   - Impressionist Masters
+   - Post-Impressionist Works
+   - Baroque Masterpieces
+   - Dutch Golden Age
+   - French Academic Art
+
+3. **Theme-Based Collections**:
+   - Landscapes & Seascapes
+   - Portraits & Figures
+   - Still Life Paintings
+   - Religious Art
+   - Mythology & Classical Themes
+
+**Implementation**: Use existing database (803 European oil paintings available) to generate comprehensive collection manifests with our proven JSON-driven architecture.
 
 ## 📱 **App Page Structure (January 2025)**
 
