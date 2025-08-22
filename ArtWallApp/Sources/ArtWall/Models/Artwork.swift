@@ -7,6 +7,11 @@ struct ArtworkSearchResponse: Codable {
     let info: APIInfo
 }
 
+struct ArtworkResponse: Codable {
+    let data: Artwork
+    let info: APIInfo
+}
+
 struct Artwork: Codable, Identifiable {
     let id: Int
     let title: String
@@ -62,7 +67,7 @@ struct Artwork: Codable, Identifiable {
     
     var imageURL: URL? {
         guard let imageId = imageId else { return nil }
-        // IIIF image service URL with 843px width
+        // For now, use Chicago IIIF service (will switch to GitHub once repo is created)
         return URL(string: "https://www.artic.edu/iiif/2/\(imageId)/full/843,/0/default.jpg")
     }
 }

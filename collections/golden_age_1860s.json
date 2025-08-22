@@ -1,0 +1,239 @@
+{
+  "collection_id": "golden_age_1860s",
+  "title": "Golden Age: 1860s",
+  "description": "1860s paintings from the Golden Age",
+  "date_range": "1860-1869",
+  "artwork_count": 24,
+  "artwork_ids": [
+    81505,
+    68428,
+    16636,
+    79586,
+    95993,
+    80463,
+    81535,
+    59930,
+    36678,
+    39510,
+    56556,
+    81512,
+    887,
+    95183,
+    16499,
+    81516,
+    111625,
+    14598,
+    81539,
+    16558,
+    878,
+    81515,
+    39496,
+    263513
+  ],
+  "artworks": [
+    {
+      "id": 81505,
+      "title": "Lion Hunt",
+      "artist": "Eugène Delacroix (French, 1798–1863)",
+      "date": "1860–61",
+      "medium": "Oil on canvas",
+      "year": 1860
+    },
+    {
+      "id": 68428,
+      "title": "The Artist's Daughter",
+      "artist": "Théodule Ribot (French, 1823–1891)",
+      "date": "c. 1865",
+      "medium": "Oil on canvas",
+      "year": 1860
+    },
+    {
+      "id": 16636,
+      "title": "Hesitation (Madame Monteaux?)",
+      "artist": "Alfred Stevens (Belgian, 1823–1906)",
+      "date": "c. 1867",
+      "medium": "Oil on panel",
+      "year": 1862
+    },
+    {
+      "id": 79586,
+      "title": "Portrait of Mme Lisle and Mme Loubens",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "c. 1867",
+      "medium": "Oil on canvas",
+      "year": 1862
+    },
+    {
+      "id": 95993,
+      "title": "Pond in the Woods",
+      "artist": "Narcisse Virgile Diaz de la Peña (French, 1807–1876)",
+      "date": "1862",
+      "medium": "Oil on canvas",
+      "year": 1862
+    },
+    {
+      "id": 80463,
+      "title": "Portrait of a Young Woman",
+      "artist": "Henri Regnault (French, 1843–1871)",
+      "date": "1863",
+      "medium": "Oil on canvas",
+      "year": 1863
+    },
+    {
+      "id": 81535,
+      "title": "Sea View, Calm Weather (Vue de mer, temps calme)",
+      "artist": "Édouard Manet (French, 1832–1883)",
+      "date": "1864",
+      "medium": "Oil on canvas",
+      "year": 1864
+    },
+    {
+      "id": 59930,
+      "title": "The Princesses",
+      "artist": "Adolphe Monticelli (French, 1824–1886)",
+      "date": "c. 1870",
+      "medium": "Oil on panel",
+      "year": 1865
+    },
+    {
+      "id": 36678,
+      "title": "Girl with Cherries",
+      "artist": "Eva Gonzalès (French, 1849–1883)",
+      "date": "c. 1870",
+      "medium": "Oil on canvas",
+      "year": 1865
+    },
+    {
+      "id": 39510,
+      "title": "Treasures of the Sea",
+      "artist": "Hans Makart (Austrian, 1840–1884)",
+      "date": "c. 1870/75",
+      "medium": "Oil on canvas",
+      "year": 1865
+    },
+    {
+      "id": 56556,
+      "title": "Alexander N. Fullerton",
+      "artist": "James Forbes (Scottish, 1800–after 1870)",
+      "date": "1865",
+      "medium": "Oil on canvas",
+      "year": 1865
+    },
+    {
+      "id": 81512,
+      "title": "Interrupted Reading",
+      "artist": "Jean-Baptiste-Camille Corot (French, 1796–1875)",
+      "date": "c. 1870",
+      "medium": "Oil on canvas, mounted on board",
+      "year": 1865
+    },
+    {
+      "id": 887,
+      "title": "Landscape with Figures",
+      "artist": "Narcisse Virgile Diaz de la Peña (French, 1807–1876)",
+      "date": "c. 1870",
+      "medium": "Oil on panel",
+      "year": 1865
+    },
+    {
+      "id": 95183,
+      "title": "Beggar with a Duffle Coat (Philosopher)",
+      "artist": "Édouard Manet (French, 1832-1883)",
+      "date": "1865–67",
+      "medium": "Oil on canvas",
+      "year": 1865
+    },
+    {
+      "id": 16499,
+      "title": "Jesus Mocked by the Soldiers",
+      "artist": "Édouard Manet (French, 1832–1883)",
+      "date": "1865",
+      "medium": "Oil on canvas",
+      "year": 1865
+    },
+    {
+      "id": 81516,
+      "title": "In the Auvergne",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "c. 1866–69",
+      "medium": "Oil on canvas",
+      "year": 1866
+    },
+    {
+      "id": 111625,
+      "title": "Cavalier",
+      "artist": "Mariano Fortuny y Marsal (Spanish, 1838–1874)",
+      "date": "c. 1871",
+      "medium": "Oil on panel",
+      "year": 1866
+    },
+    {
+      "id": 14598,
+      "title": "The Beach at Sainte-Adresse",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1867",
+      "medium": "Oil on canvas",
+      "year": 1867
+    },
+    {
+      "id": 81539,
+      "title": "On the Bank of the Seine, Bennecourt",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1868",
+      "medium": "Oil on canvas",
+      "year": 1868
+    },
+    {
+      "id": 16558,
+      "title": "A Lamplight Study: Herr Joachim",
+      "artist": "George Frederick Watts (English, 1817–1904)",
+      "date": "1868",
+      "medium": "Oil on canvas",
+      "year": 1868
+    },
+    {
+      "id": 878,
+      "title": "Wounded Eurydice",
+      "artist": "Jean-Baptiste-Camille Corot (French, 1796–1875)",
+      "date": "1868–70",
+      "medium": "Oil on canvas",
+      "year": 1868
+    },
+    {
+      "id": 81515,
+      "title": "The Little Shepherdess",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "1868–72",
+      "medium": "Oil on panel",
+      "year": 1868
+    },
+    {
+      "id": 39496,
+      "title": "At the Railway Station",
+      "artist": "Alfred Stevens (Belgian, 1823–1906)",
+      "date": "c. 1874",
+      "medium": "Oil on panel",
+      "year": 1869
+    },
+    {
+      "id": 263513,
+      "title": "Mother and Children",
+      "artist": "Pál Szinyei Merse (Hungarian, 1854-1920)",
+      "date": "1869",
+      "medium": "Oil on canvas",
+      "year": 1869
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1860,
+      1869
+    ]
+  },
+  "created_date": "2025-01-21"
+}

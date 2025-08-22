@@ -1,0 +1,290 @@
+{
+  "collection_id": "golden_age_1860s",
+  "title": "Golden Age: 1860s",
+  "description": "1860s paintings from the Golden Age",
+  "date_range": "1860-1869",
+  "artwork_count": 24,
+  "artwork_ids": [
+    81505,
+    68428,
+    16636,
+    79586,
+    95993,
+    80463,
+    81535,
+    59930,
+    36678,
+    39510,
+    56556,
+    81512,
+    887,
+    95183,
+    16499,
+    81516,
+    111625,
+    14598,
+    81539,
+    16558,
+    878,
+    81515,
+    39496,
+    263513
+  ],
+  "artworks": [
+    {
+      "id": 81505,
+      "title": "Lion Hunt",
+      "artist": "Eugène Delacroix (French, 1798–1863)",
+      "date": "1860–61",
+      "medium": "Oil on canvas",
+      "image_id": "3f0cd83f-84db-23e9-fb41-286de4bdae62",
+      "image_url": "https://www.artic.edu/iiif/2/3f0cd83f-84db-23e9-fb41-286de4bdae62/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81505.jpg"
+    },
+    {
+      "id": 68428,
+      "title": "The Artist's Daughter",
+      "artist": "Théodule Ribot (French, 1823–1891)",
+      "date": "c. 1865",
+      "medium": "Oil on canvas",
+      "image_id": "283433d1-bbc4-b526-eb7e-35f85cdb1cbb",
+      "image_url": "https://www.artic.edu/iiif/2/283433d1-bbc4-b526-eb7e-35f85cdb1cbb/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/68428.jpg"
+    },
+    {
+      "id": 16636,
+      "title": "Hesitation (Madame Monteaux?)",
+      "artist": "Alfred Stevens (Belgian, 1823–1906)",
+      "date": "c. 1867",
+      "medium": "Oil on panel",
+      "image_id": "46c9a3b9-b95e-5b99-005b-0fd3a2e93d88",
+      "image_url": "https://www.artic.edu/iiif/2/46c9a3b9-b95e-5b99-005b-0fd3a2e93d88/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16636.jpg"
+    },
+    {
+      "id": 79586,
+      "title": "Portrait of Mme Lisle and Mme Loubens",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "c. 1867",
+      "medium": "Oil on canvas",
+      "image_id": "8bcc9188-1d3d-14be-6ae7-ed211e089c0f",
+      "image_url": "https://www.artic.edu/iiif/2/8bcc9188-1d3d-14be-6ae7-ed211e089c0f/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/79586.jpg"
+    },
+    {
+      "id": 95993,
+      "title": "Pond in the Woods",
+      "artist": "Narcisse Virgile Diaz de la Peña (French, 1807–1876)",
+      "date": "1862",
+      "medium": "Oil on canvas",
+      "image_id": "44c6f2f1-90fc-f386-734b-fbb9427b6ff3",
+      "image_url": "https://www.artic.edu/iiif/2/44c6f2f1-90fc-f386-734b-fbb9427b6ff3/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/95993.jpg"
+    },
+    {
+      "id": 80463,
+      "title": "Portrait of a Young Woman",
+      "artist": "Henri Regnault (French, 1843–1871)",
+      "date": "1863",
+      "medium": "Oil on canvas",
+      "image_id": "cba37025-23eb-b55d-4e53-57a0a694eb37",
+      "image_url": "https://www.artic.edu/iiif/2/cba37025-23eb-b55d-4e53-57a0a694eb37/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80463.jpg"
+    },
+    {
+      "id": 81535,
+      "title": "Sea View, Calm Weather (Vue de mer, temps calme)",
+      "artist": "Édouard Manet (French, 1832–1883)",
+      "date": "1864",
+      "medium": "Oil on canvas",
+      "image_id": "8be90e71-83c3-3f98-a972-4acb9ce0e773",
+      "image_url": "https://www.artic.edu/iiif/2/8be90e71-83c3-3f98-a972-4acb9ce0e773/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81535.jpg"
+    },
+    {
+      "id": 59930,
+      "title": "The Princesses",
+      "artist": "Adolphe Monticelli (French, 1824–1886)",
+      "date": "c. 1870",
+      "medium": "Oil on panel",
+      "image_id": "98349f35-f768-6a6b-3c41-c7f43207ba58",
+      "image_url": "https://www.artic.edu/iiif/2/98349f35-f768-6a6b-3c41-c7f43207ba58/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59930.jpg"
+    },
+    {
+      "id": 36678,
+      "title": "Girl with Cherries",
+      "artist": "Eva Gonzalès (French, 1849–1883)",
+      "date": "c. 1870",
+      "medium": "Oil on canvas",
+      "image_id": "ec4367a5-52b8-79a5-7e7d-dbaff46d4f4e",
+      "image_url": "https://www.artic.edu/iiif/2/ec4367a5-52b8-79a5-7e7d-dbaff46d4f4e/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/36678.jpg"
+    },
+    {
+      "id": 39510,
+      "title": "Treasures of the Sea",
+      "artist": "Hans Makart (Austrian, 1840–1884)",
+      "date": "c. 1870/75",
+      "medium": "Oil on canvas",
+      "image_id": "d790fdf8-7b1f-c24a-ce2b-ca0f3d5ed2f3",
+      "image_url": "https://www.artic.edu/iiif/2/d790fdf8-7b1f-c24a-ce2b-ca0f3d5ed2f3/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/39510.jpg"
+    },
+    {
+      "id": 56556,
+      "title": "Alexander N. Fullerton",
+      "artist": "James Forbes (Scottish, 1800–after 1870)",
+      "date": "1865",
+      "medium": "Oil on canvas",
+      "image_id": "79d6ad93-50d3-8b6a-66d5-f24d0a3d1ecd",
+      "image_url": "https://www.artic.edu/iiif/2/79d6ad93-50d3-8b6a-66d5-f24d0a3d1ecd/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/56556.jpg"
+    },
+    {
+      "id": 81512,
+      "title": "Interrupted Reading",
+      "artist": "Jean-Baptiste-Camille Corot (French, 1796–1875)",
+      "date": "c. 1870",
+      "medium": "Oil on canvas, mounted on board",
+      "image_id": "1c2d32a7-790c-501a-e124-00f28cf5052d",
+      "image_url": "https://www.artic.edu/iiif/2/1c2d32a7-790c-501a-e124-00f28cf5052d/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81512.jpg"
+    },
+    {
+      "id": 887,
+      "title": "Landscape with Figures",
+      "artist": "Narcisse Virgile Diaz de la Peña (French, 1807–1876)",
+      "date": "c. 1870",
+      "medium": "Oil on panel",
+      "image_id": "ad3280c6-611a-c136-29b8-8f303a02f416",
+      "image_url": "https://www.artic.edu/iiif/2/ad3280c6-611a-c136-29b8-8f303a02f416/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/887.jpg"
+    },
+    {
+      "id": 95183,
+      "title": "Beggar with a Duffle Coat (Philosopher)",
+      "artist": "Édouard Manet (French, 1832-1883)",
+      "date": "1865–67",
+      "medium": "Oil on canvas",
+      "image_id": "1a087ef7-8455-e5d0-0b2b-9738cd33058c",
+      "image_url": "https://www.artic.edu/iiif/2/1a087ef7-8455-e5d0-0b2b-9738cd33058c/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/95183.jpg"
+    },
+    {
+      "id": 16499,
+      "title": "Jesus Mocked by the Soldiers",
+      "artist": "Édouard Manet (French, 1832–1883)",
+      "date": "1865",
+      "medium": "Oil on canvas",
+      "image_id": "4d03ba14-a01a-d003-404a-cf3f9fb40ede",
+      "image_url": "https://www.artic.edu/iiif/2/4d03ba14-a01a-d003-404a-cf3f9fb40ede/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16499.jpg"
+    },
+    {
+      "id": 81516,
+      "title": "In the Auvergne",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "c. 1866–69",
+      "medium": "Oil on canvas",
+      "image_id": "7a313db7-2369-1c7b-b4f7-a1d29218f778",
+      "image_url": "https://www.artic.edu/iiif/2/7a313db7-2369-1c7b-b4f7-a1d29218f778/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81516.jpg"
+    },
+    {
+      "id": 111625,
+      "title": "Cavalier",
+      "artist": "Mariano Fortuny y Marsal (Spanish, 1838–1874)",
+      "date": "c. 1871",
+      "medium": "Oil on panel",
+      "image_id": "ec823db9-a595-31d3-c499-ac921af10495",
+      "image_url": "https://www.artic.edu/iiif/2/ec823db9-a595-31d3-c499-ac921af10495/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111625.jpg"
+    },
+    {
+      "id": 14598,
+      "title": "The Beach at Sainte-Adresse",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1867",
+      "medium": "Oil on canvas",
+      "image_id": "95be2572-b53d-8e7b-abc9-10eb48d4fa5d",
+      "image_url": "https://www.artic.edu/iiif/2/95be2572-b53d-8e7b-abc9-10eb48d4fa5d/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/14598.jpg"
+    },
+    {
+      "id": 81539,
+      "title": "On the Bank of the Seine, Bennecourt",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1868",
+      "medium": "Oil on canvas",
+      "image_id": "66f95ea3-a11a-1cf4-6599-d0a49bb25744",
+      "image_url": "https://www.artic.edu/iiif/2/66f95ea3-a11a-1cf4-6599-d0a49bb25744/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81539.jpg"
+    },
+    {
+      "id": 16558,
+      "title": "A Lamplight Study: Herr Joachim",
+      "artist": "George Frederick Watts (English, 1817–1904)",
+      "date": "1868",
+      "medium": "Oil on canvas",
+      "image_id": "6c265c85-4579-a9a6-b51b-0732d7110d0b",
+      "image_url": "https://www.artic.edu/iiif/2/6c265c85-4579-a9a6-b51b-0732d7110d0b/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16558.jpg"
+    },
+    {
+      "id": 878,
+      "title": "Wounded Eurydice",
+      "artist": "Jean-Baptiste-Camille Corot (French, 1796–1875)",
+      "date": "1868–70",
+      "medium": "Oil on canvas",
+      "image_id": "f024968c-3cb1-f1cc-b1af-2a1d40b7e193",
+      "image_url": "https://www.artic.edu/iiif/2/f024968c-3cb1-f1cc-b1af-2a1d40b7e193/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/878.jpg"
+    },
+    {
+      "id": 81515,
+      "title": "The Little Shepherdess",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "1868–72",
+      "medium": "Oil on panel",
+      "image_id": "f2bc893e-3b1a-62c9-0862-035f19cf405a",
+      "image_url": "https://www.artic.edu/iiif/2/f2bc893e-3b1a-62c9-0862-035f19cf405a/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81515.jpg"
+    },
+    {
+      "id": 39496,
+      "title": "At the Railway Station",
+      "artist": "Alfred Stevens (Belgian, 1823–1906)",
+      "date": "c. 1874",
+      "medium": "Oil on panel",
+      "image_id": "2ba51712-835e-c17c-5f48-240bc76561a0",
+      "image_url": "https://www.artic.edu/iiif/2/2ba51712-835e-c17c-5f48-240bc76561a0/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/39496.jpg"
+    },
+    {
+      "id": 263513,
+      "title": "Mother and Children",
+      "artist": "Pál Szinyei Merse (Hungarian, 1854-1920)",
+      "date": "1869",
+      "medium": "Oil on canvas",
+      "image_id": "5f575140-664b-74a0-ebdb-69823dfd7bab",
+      "image_url": "https://www.artic.edu/iiif/2/5f575140-664b-74a0-ebdb-69823dfd7bab/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/263513.jpg"
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1860,
+      1869
+    ]
+  },
+  "created_date": "2025-01-21",
+  "failed_downloads": [],
+  "github_ready": true,
+  "image_base_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/"
+}

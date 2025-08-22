@@ -1,0 +1,203 @@
+{
+  "collection_id": "golden_age_1890s",
+  "title": "Golden Age: 1890s",
+  "description": "1890s paintings from the Golden Age",
+  "date_range": "1890-1899",
+  "artwork_count": 20,
+  "artwork_ids": [
+    874,
+    16648,
+    212300,
+    16512,
+    20556,
+    81576,
+    81551,
+    210893,
+    53213,
+    80450,
+    16502,
+    16496,
+    29395,
+    16542,
+    16564,
+    222003,
+    94241,
+    235046,
+    16473,
+    109926
+  ],
+  "artworks": [
+    {
+      "id": 874,
+      "title": "Landscape",
+      "artist": "Jean Charles Cazin (French, 1841–1901)",
+      "date": "c. 1895",
+      "medium": "Oil on canvas",
+      "year": 1890
+    },
+    {
+      "id": 16648,
+      "title": "Woman in Front of a Still Life by Cezanne",
+      "artist": "Paul Gauguin (French, 1848–1903)",
+      "date": "1890",
+      "medium": "Oil on linen canvas",
+      "year": 1890
+    },
+    {
+      "id": 212300,
+      "title": "The Beach of Les Grands Sables at Le Pouldu",
+      "artist": "Paul Sérusier (French, 1864–1927)",
+      "date": "1890",
+      "medium": "Oil on canvas",
+      "year": 1890
+    },
+    {
+      "id": 16512,
+      "title": "Ravine Near Biskra",
+      "artist": "Victor Pierre Huguet (French, 1835-1902)",
+      "date": "c. 1895",
+      "medium": "Oil on canvas",
+      "year": 1890
+    },
+    {
+      "id": 20556,
+      "title": "Young Girl with Hat",
+      "artist": "Berthe Morisot (French, 1841–1895)",
+      "date": "1892",
+      "medium": "Oil on canvas",
+      "year": 1892
+    },
+    {
+      "id": 81576,
+      "title": "Mrs. Potter Palmer",
+      "artist": "Anders Leonard Zorn (Swedish, 1860–1920)",
+      "date": "1893",
+      "medium": "Oil on canvas",
+      "year": 1893
+    },
+    {
+      "id": 81551,
+      "title": "The Place du Havre, Paris",
+      "artist": "Camille Pissarro (French, 1830–1903)",
+      "date": "1893",
+      "medium": "Oil on canvas",
+      "year": 1893
+    },
+    {
+      "id": 210893,
+      "title": "Slender Woman with Vase",
+      "artist": "József Rippl-Rónai (Hungarian, 1861–1927)",
+      "date": "1894",
+      "medium": "Oil on canvas",
+      "year": 1894
+    },
+    {
+      "id": 53213,
+      "title": "Nude Girl in Doorway",
+      "artist": "Anders Leonard Zorn (Swedish, 1860–1920)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "year": 1895
+    },
+    {
+      "id": 80450,
+      "title": "Portrait of a Woman",
+      "artist": "Charles Cottet (French, 1863-1925)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "year": 1895
+    },
+    {
+      "id": 16502,
+      "title": "Mill of Pont Maupuit",
+      "artist": "Jean Baptiste Armand Guillaumin (French, 1841-1927)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "year": 1895
+    },
+    {
+      "id": 16496,
+      "title": "No te aha oe riri (Why Are You Angry?)",
+      "artist": "Paul Gauguin (French, 1848–1903)",
+      "date": "1896",
+      "medium": "Oil on jute canvas",
+      "year": 1896
+    },
+    {
+      "id": 29395,
+      "title": "In the Heather",
+      "artist": "Pierre Puvis de Chavannes (French, 1824–1898)",
+      "date": "1896",
+      "medium": "Oil on canvas",
+      "year": 1896
+    },
+    {
+      "id": 16542,
+      "title": "The Customs House at Varengeville",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "year": 1897
+    },
+    {
+      "id": 16564,
+      "title": "Branch of the Seine near Giverny (Mist)",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "year": 1897
+    },
+    {
+      "id": 222003,
+      "title": "Les Oies",
+      "artist": "Theodor Esbern Philipsen (Danish, 1840–1920)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "year": 1897
+    },
+    {
+      "id": 94241,
+      "title": "The Red Room, Etretat",
+      "artist": "Félix Edouard Vallotton (French, born Switzerland, 1865–1925)",
+      "date": "1899",
+      "medium": "Oil on artist's board",
+      "year": 1899
+    },
+    {
+      "id": 235046,
+      "title": "The Harvest of Buckwheat",
+      "artist": "Paul Sérusier  (French, 1864–1927)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "year": 1899
+    },
+    {
+      "id": 16473,
+      "title": "Cigar Making in Seville",
+      "artist": "Ricardo Canals y Llambí (Spanish, 1876–1931)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "year": 1899
+    },
+    {
+      "id": 109926,
+      "title": "Landscape: Window Overlooking the Woods",
+      "artist": "Édouard Vuillard (French, 1868-1940)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "year": 1899
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1890,
+      1899
+    ]
+  },
+  "created_date": "2025-01-21"
+}

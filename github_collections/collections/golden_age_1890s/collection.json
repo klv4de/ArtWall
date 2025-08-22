@@ -1,0 +1,246 @@
+{
+  "collection_id": "golden_age_1890s",
+  "title": "Golden Age: 1890s",
+  "description": "1890s paintings from the Golden Age",
+  "date_range": "1890-1899",
+  "artwork_count": 20,
+  "artwork_ids": [
+    874,
+    16648,
+    212300,
+    16512,
+    20556,
+    81576,
+    81551,
+    210893,
+    53213,
+    80450,
+    16502,
+    16496,
+    29395,
+    16542,
+    16564,
+    222003,
+    94241,
+    235046,
+    16473,
+    109926
+  ],
+  "artworks": [
+    {
+      "id": 874,
+      "title": "Landscape",
+      "artist": "Jean Charles Cazin (French, 1841–1901)",
+      "date": "c. 1895",
+      "medium": "Oil on canvas",
+      "image_id": "3a34f988-f779-2e96-1786-8945b6b9c87d",
+      "image_url": "https://www.artic.edu/iiif/2/3a34f988-f779-2e96-1786-8945b6b9c87d/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/874.jpg"
+    },
+    {
+      "id": 16648,
+      "title": "Woman in Front of a Still Life by Cezanne",
+      "artist": "Paul Gauguin (French, 1848–1903)",
+      "date": "1890",
+      "medium": "Oil on linen canvas",
+      "image_id": "38f866cb-9000-de5a-e655-d3fb4d8dc056",
+      "image_url": "https://www.artic.edu/iiif/2/38f866cb-9000-de5a-e655-d3fb4d8dc056/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16648.jpg"
+    },
+    {
+      "id": 212300,
+      "title": "The Beach of Les Grands Sables at Le Pouldu",
+      "artist": "Paul Sérusier (French, 1864–1927)",
+      "date": "1890",
+      "medium": "Oil on canvas",
+      "image_id": "ef637785-df55-adaf-b907-e3e8f59f08d6",
+      "image_url": "https://www.artic.edu/iiif/2/ef637785-df55-adaf-b907-e3e8f59f08d6/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/212300.jpg"
+    },
+    {
+      "id": 16512,
+      "title": "Ravine Near Biskra",
+      "artist": "Victor Pierre Huguet (French, 1835-1902)",
+      "date": "c. 1895",
+      "medium": "Oil on canvas",
+      "image_id": "41458ec7-da2d-773d-159c-9ae9afb53516",
+      "image_url": "https://www.artic.edu/iiif/2/41458ec7-da2d-773d-159c-9ae9afb53516/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16512.jpg"
+    },
+    {
+      "id": 20556,
+      "title": "Young Girl with Hat",
+      "artist": "Berthe Morisot (French, 1841–1895)",
+      "date": "1892",
+      "medium": "Oil on canvas",
+      "image_id": "12731595-67a3-dc3c-efa8-29d75b9cd315",
+      "image_url": "https://www.artic.edu/iiif/2/12731595-67a3-dc3c-efa8-29d75b9cd315/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/20556.jpg"
+    },
+    {
+      "id": 81576,
+      "title": "Mrs. Potter Palmer",
+      "artist": "Anders Leonard Zorn (Swedish, 1860–1920)",
+      "date": "1893",
+      "medium": "Oil on canvas",
+      "image_id": "6f3dc71a-683d-7ad6-e24a-a97c4877f30d",
+      "image_url": "https://www.artic.edu/iiif/2/6f3dc71a-683d-7ad6-e24a-a97c4877f30d/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81576.jpg"
+    },
+    {
+      "id": 81551,
+      "title": "The Place du Havre, Paris",
+      "artist": "Camille Pissarro (French, 1830–1903)",
+      "date": "1893",
+      "medium": "Oil on canvas",
+      "image_id": "0ff20364-c795-c2ca-c1e8-e5a848f09554",
+      "image_url": "https://www.artic.edu/iiif/2/0ff20364-c795-c2ca-c1e8-e5a848f09554/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81551.jpg"
+    },
+    {
+      "id": 210893,
+      "title": "Slender Woman with Vase",
+      "artist": "József Rippl-Rónai (Hungarian, 1861–1927)",
+      "date": "1894",
+      "medium": "Oil on canvas",
+      "image_id": "2479fd9c-a90e-2f5a-b418-6ed505ab2bb9",
+      "image_url": "https://www.artic.edu/iiif/2/2479fd9c-a90e-2f5a-b418-6ed505ab2bb9/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/210893.jpg"
+    },
+    {
+      "id": 53213,
+      "title": "Nude Girl in Doorway",
+      "artist": "Anders Leonard Zorn (Swedish, 1860–1920)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "image_id": "0f9304d9-e93d-7169-e1ab-48d3cc664dde",
+      "image_url": "https://www.artic.edu/iiif/2/0f9304d9-e93d-7169-e1ab-48d3cc664dde/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/53213.jpg"
+    },
+    {
+      "id": 80450,
+      "title": "Portrait of a Woman",
+      "artist": "Charles Cottet (French, 1863-1925)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "image_id": "e30b27db-b263-abb6-0005-ff238f8fd530",
+      "image_url": "https://www.artic.edu/iiif/2/e30b27db-b263-abb6-0005-ff238f8fd530/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80450.jpg"
+    },
+    {
+      "id": 16502,
+      "title": "Mill of Pont Maupuit",
+      "artist": "Jean Baptiste Armand Guillaumin (French, 1841-1927)",
+      "date": "c. 1900",
+      "medium": "Oil on canvas",
+      "image_id": "f4abdcdc-1d4f-4b8c-5f16-dacc42d509f5",
+      "image_url": "https://www.artic.edu/iiif/2/f4abdcdc-1d4f-4b8c-5f16-dacc42d509f5/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16502.jpg"
+    },
+    {
+      "id": 16496,
+      "title": "No te aha oe riri (Why Are You Angry?)",
+      "artist": "Paul Gauguin (French, 1848–1903)",
+      "date": "1896",
+      "medium": "Oil on jute canvas",
+      "image_id": "2adb35ce-8e94-cda5-210e-b04d488bbdc8",
+      "image_url": "https://www.artic.edu/iiif/2/2adb35ce-8e94-cda5-210e-b04d488bbdc8/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16496.jpg"
+    },
+    {
+      "id": 29395,
+      "title": "In the Heather",
+      "artist": "Pierre Puvis de Chavannes (French, 1824–1898)",
+      "date": "1896",
+      "medium": "Oil on canvas",
+      "image_id": "33883e44-383d-3da8-6464-e4053e0e5613",
+      "image_url": "https://www.artic.edu/iiif/2/33883e44-383d-3da8-6464-e4053e0e5613/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/29395.jpg"
+    },
+    {
+      "id": 16542,
+      "title": "The Customs House at Varengeville",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "image_id": "2b30e687-4526-f487-cedc-448b3188fd19",
+      "image_url": "https://www.artic.edu/iiif/2/2b30e687-4526-f487-cedc-448b3188fd19/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16542.jpg"
+    },
+    {
+      "id": 16564,
+      "title": "Branch of the Seine near Giverny (Mist)",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "image_id": "838d8c33-a3b4-68ea-587b-87ceec2011af",
+      "image_url": "https://www.artic.edu/iiif/2/838d8c33-a3b4-68ea-587b-87ceec2011af/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16564.jpg"
+    },
+    {
+      "id": 222003,
+      "title": "Les Oies",
+      "artist": "Theodor Esbern Philipsen (Danish, 1840–1920)",
+      "date": "1897",
+      "medium": "Oil on canvas",
+      "image_id": "3a3c9e9e-5d5d-caf5-017a-99fcc52367d0",
+      "image_url": "https://www.artic.edu/iiif/2/3a3c9e9e-5d5d-caf5-017a-99fcc52367d0/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/222003.jpg"
+    },
+    {
+      "id": 94241,
+      "title": "The Red Room, Etretat",
+      "artist": "Félix Edouard Vallotton (French, born Switzerland, 1865–1925)",
+      "date": "1899",
+      "medium": "Oil on artist's board",
+      "image_id": "e4df4d4a-4cfb-5be8-3728-0d0bf1b44751",
+      "image_url": "https://www.artic.edu/iiif/2/e4df4d4a-4cfb-5be8-3728-0d0bf1b44751/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/94241.jpg"
+    },
+    {
+      "id": 235046,
+      "title": "The Harvest of Buckwheat",
+      "artist": "Paul Sérusier  (French, 1864–1927)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "image_id": "47634d3f-1ac9-4631-b9ea-5c40fda489be",
+      "image_url": "https://www.artic.edu/iiif/2/47634d3f-1ac9-4631-b9ea-5c40fda489be/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/235046.jpg"
+    },
+    {
+      "id": 16473,
+      "title": "Cigar Making in Seville",
+      "artist": "Ricardo Canals y Llambí (Spanish, 1876–1931)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "image_id": "5965fe15-d8fa-3f39-031d-bb4a231560e0",
+      "image_url": "https://www.artic.edu/iiif/2/5965fe15-d8fa-3f39-031d-bb4a231560e0/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16473.jpg"
+    },
+    {
+      "id": 109926,
+      "title": "Landscape: Window Overlooking the Woods",
+      "artist": "Édouard Vuillard (French, 1868-1940)",
+      "date": "1899",
+      "medium": "Oil on canvas",
+      "image_id": "a1dc6109-6e0c-7801-ebe8-8c95fec2c4e4",
+      "image_url": "https://www.artic.edu/iiif/2/a1dc6109-6e0c-7801-ebe8-8c95fec2c4e4/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/109926.jpg"
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1890,
+      1899
+    ]
+  },
+  "created_date": "2025-01-21",
+  "failed_downloads": [],
+  "github_ready": true,
+  "image_base_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/"
+}

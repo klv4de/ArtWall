@@ -56,10 +56,27 @@ struct ContentView: View {
     }
     
     private func loadFeaturedArtwork() async {
-        let artwork = await artService.fetchFeaturedArtwork()
+        // Create instant featured artwork (no API call needed!)
+        let instantArtwork = Artwork(
+            id: 81555,
+            title: "Lunch at the Restaurant Fournaise (The Rowers' Lunch)",
+            artistDisplay: "Pierre-Auguste Renoir (French, 1841–1919)",
+            dateDisplay: "1875",
+            mediumDisplay: "Oil on canvas",
+            dimensions: nil,
+            imageId: "1a1b74fe-ff2a-8991-0581-5d420f0b840e", // Real image ID from our data
+            altText: nil,
+            isPublicDomain: true,
+            departmentTitle: "Painting and Sculpture of Europe",
+            classificationTitle: "painting",
+            artworkTypeTitle: nil
+        )
+        
         await MainActor.run {
-            featuredArtwork = artwork
+            featuredArtwork = instantArtwork
         }
+        
+        print("✅ Instantly loaded featured artwork: \(instantArtwork.title)")
     }
 }
 

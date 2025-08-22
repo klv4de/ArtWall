@@ -119,6 +119,70 @@ class ChicagoArtService: ObservableObject {
         return filtered
     }
     
+    // MARK: - Targeted ID Fetching (New Hybrid Approach)
+    
+    func fetchArtworksByIds(_ ids: [Int]) async throws -> [Artwork] {
+        await MainActor.run {
+            isLoading = true
+            errorMessage = nil
+        }
+        
+        var artworks: [Artwork] = []
+        let totalIds = ids.count
+        
+        print("🎯 Fetching \(totalIds) specific artworks by ID...")
+        
+        for (index, artworkId) in ids.enumerated() {
+            do {
+                if let artwork = try await fetchArtworkById(artworkId) {
+                    artworks.append(artwork)
+                    print("✅ [\(index + 1)/\(totalIds)] Fetched: \(artwork.title)")
+                } else {
+                    print("⚠️ [\(index + 1)/\(totalIds)] Artwork ID \(artworkId) not found")
+                }
+                
+                // Rate limiting between requests
+                if index < ids.count - 1 {
+                    try await Task.sleep(nanoseconds: UInt64(apiDelay * 1_000_000_000))
+                }
+                
+            } catch {
+                print("❌ [\(index + 1)/\(totalIds)] Failed to fetch ID \(artworkId): \(error)")
+                // Continue with next artwork instead of failing entire collection
+            }
+        }
+        
+        await MainActor.run {
+            isLoading = false
+        }
+        
+        print("🎨 Successfully fetched \(artworks.count)/\(totalIds) artworks")
+        return artworks
+    }
+    
+    private func fetchArtworkById(_ id: Int) async throws -> Artwork? {
+        let url = URL(string: "\(apiBase)/artworks/\(id)")!
+        
+        print("🔍 Fetching artwork ID: \(id)")
+        
+        let (data, response) = try await session.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw APIError.invalidResponse
+        }
+        
+        guard httpResponse.statusCode == 200 else {
+            if httpResponse.statusCode == 404 {
+                print("⚠️ Artwork ID \(id) not found (404)")
+                return nil
+            }
+            throw APIError.httpError(httpResponse.statusCode)
+        }
+        
+        let artworkResponse = try JSONDecoder().decode(ArtworkResponse.self, from: data)
+        return artworkResponse.data
+    }
+    
     func downloadImage(from artwork: Artwork) async -> Data? {
         guard let imageURL = artwork.imageURL else {
             print("❌ No image URL for: \(artwork.title)")

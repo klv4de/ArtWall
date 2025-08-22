@@ -1,0 +1,268 @@
+{
+  "collection_id": "golden_age_1850s",
+  "title": "Golden Age: 1850s",
+  "description": "1850s paintings from the Golden Age",
+  "date_range": "1850-1859",
+  "artwork_count": 22,
+  "artwork_ids": [
+    881,
+    882,
+    80571,
+    94842,
+    897,
+    81521,
+    35155,
+    59882,
+    90064,
+    13487,
+    4428,
+    6002,
+    14569,
+    81510,
+    891,
+    35145,
+    894,
+    94239,
+    263516,
+    890,
+    81522,
+    896
+  ],
+  "artworks": [
+    {
+      "id": 881,
+      "title": "Courtyard",
+      "artist": "Alexandre Gabriel Decamps (French, 1803–1860)",
+      "date": "c. 1855",
+      "medium": "Oil on canvas",
+      "image_id": "96fe74e1-7085-09bc-407f-464d1524730b",
+      "image_url": "https://www.artic.edu/iiif/2/96fe74e1-7085-09bc-407f-464d1524730b/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/881.jpg"
+    },
+    {
+      "id": 882,
+      "title": "Study of Pigs",
+      "artist": "Alexandre Gabriel Decamps (French, 1803–1860)",
+      "date": "c. 1855",
+      "medium": "Oil on paper, mounted on canvas",
+      "image_id": "a77f410d-fb47-e103-485b-19a7de1d432e",
+      "image_url": "https://www.artic.edu/iiif/2/a77f410d-fb47-e103-485b-19a7de1d432e/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/882.jpg"
+    },
+    {
+      "id": 80571,
+      "title": "Street Musicians",
+      "artist": "Style of Honoré Victorin Daumier (French, 1808–1879)",
+      "date": "c. 1855",
+      "medium": "Oil on panel",
+      "image_id": "fdd9f9dc-6893-c608-7589-02f4f0ab5fbd",
+      "image_url": "https://www.artic.edu/iiif/2/fdd9f9dc-6893-c608-7589-02f4f0ab5fbd/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80571.jpg"
+    },
+    {
+      "id": 94842,
+      "title": "Houses in Optevoz, France",
+      "artist": "Charles François Daubigny (French, 1817–1878)",
+      "date": "1852",
+      "medium": "Oil on canvas",
+      "image_id": "314637b6-22f5-5c2d-5b33-cd6ef4218748",
+      "image_url": "https://www.artic.edu/iiif/2/314637b6-22f5-5c2d-5b33-cd6ef4218748/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/94842.jpg"
+    },
+    {
+      "id": 897,
+      "title": "Pasture in Normandy",
+      "artist": "Constant Troyon (French, 1810–1865)",
+      "date": "1852",
+      "medium": "Oil on panel",
+      "image_id": "5ae91cbf-66c5-cf9b-f355-629e458cb063",
+      "image_url": "https://www.artic.edu/iiif/2/5ae91cbf-66c5-cf9b-f355-629e458cb063/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/897.jpg"
+    },
+    {
+      "id": 81521,
+      "title": "The Woodchopper",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "c. 1858–66",
+      "medium": "Oil on canvas",
+      "image_id": "e7928f74-f52e-e7d5-77ab-8b3d93b8b727",
+      "image_url": "https://www.artic.edu/iiif/2/e7928f74-f52e-e7d5-77ab-8b3d93b8b727/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81521.jpg"
+    },
+    {
+      "id": 35155,
+      "title": "Education of Cupid",
+      "artist": "Narcisse Virgile Diaz de la Peña (French, 1807–1876)",
+      "date": "c. 1859",
+      "medium": "Oil on panel",
+      "image_id": "3dae143d-6840-2e6e-dff5-cd2eea745da2",
+      "image_url": "https://www.artic.edu/iiif/2/3dae143d-6840-2e6e-dff5-cd2eea745da2/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35155.jpg"
+    },
+    {
+      "id": 59882,
+      "title": "The Carousal (Scene from Faust?)",
+      "artist": "Artist unknown (French, 19th century)",
+      "date": "c. 1860/70",
+      "medium": "Oil on panel",
+      "image_id": "47e85960-5411-6a5e-002d-83066fa724b7",
+      "image_url": "https://www.artic.edu/iiif/2/47e85960-5411-6a5e-002d-83066fa724b7/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59882.jpg"
+    },
+    {
+      "id": 90064,
+      "title": "The Carousal (Scene from Faust?)",
+      "artist": "Artist unknown (French, 19th century)",
+      "date": "c. 1860/70",
+      "medium": "Oil on panel",
+      "image_id": "ab54b417-6dc1-e12b-67f7-0b6a6421d336",
+      "image_url": "https://www.artic.edu/iiif/2/ab54b417-6dc1-e12b-67f7-0b6a6421d336/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/90064.jpg"
+    },
+    {
+      "id": 13487,
+      "title": "Young Spartan Girls Challenging Boys",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "c. 1860",
+      "medium": "Oil on canvas",
+      "image_id": "ca2932b4-6c0c-5482-2ae5-8b74926d7b73",
+      "image_url": "https://www.artic.edu/iiif/2/ca2932b4-6c0c-5482-2ae5-8b74926d7b73/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/13487.jpg"
+    },
+    {
+      "id": 4428,
+      "title": "Mère Grégoire",
+      "artist": "Gustave Courbet (French, 1819–1877)",
+      "date": "1855, reworked 1857–59",
+      "medium": "Oil on canvas",
+      "image_id": "2e6d08c8-dac0-4f1c-3e56-de3539ceb905",
+      "image_url": "https://www.artic.edu/iiif/2/2e6d08c8-dac0-4f1c-3e56-de3539ceb905/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/4428.jpg"
+    },
+    {
+      "id": 6002,
+      "title": "The Print Collector",
+      "artist": "Honoré Victorin Daumier (French, 1808–1879)",
+      "date": "c. 1860",
+      "medium": "Oil on cradled panel",
+      "image_id": "f1dce916-58a3-db57-d5cd-be0994dc98c7",
+      "image_url": "https://www.artic.edu/iiif/2/f1dce916-58a3-db57-d5cd-be0994dc98c7/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/6002.jpg"
+    },
+    {
+      "id": 14569,
+      "title": "Two Lawyers",
+      "artist": "Honoré Victorin Daumier (French, 1808–1879)",
+      "date": "c. 1860",
+      "medium": "Oil on panel",
+      "image_id": "069a0bb0-8a91-b4be-4ce7-6bf49552ef69",
+      "image_url": "https://www.artic.edu/iiif/2/069a0bb0-8a91-b4be-4ce7-6bf49552ef69/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/14569.jpg"
+    },
+    {
+      "id": 81510,
+      "title": "Souvenir of Italy",
+      "artist": "Jean-Baptiste-Camille Corot (French, 1796–1875)",
+      "date": "1855–60",
+      "medium": "Oil on canvas",
+      "image_id": "db1f6435-23d1-b7ac-9c44-ad70cefdb9c3",
+      "image_url": "https://www.artic.edu/iiif/2/db1f6435-23d1-b7ac-9c44-ad70cefdb9c3/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81510.jpg"
+    },
+    {
+      "id": 891,
+      "title": "The Cottage by the Roadside, Stormy Sky",
+      "artist": "Jules Dupré (French, 1811–1889)",
+      "date": "c. 1860",
+      "medium": "Oil on canvas",
+      "image_id": "f4d85da1-5c80-3c7b-38cc-bf324d6ce670",
+      "image_url": "https://www.artic.edu/iiif/2/f4d85da1-5c80-3c7b-38cc-bf324d6ce670/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/891.jpg"
+    },
+    {
+      "id": 35145,
+      "title": "The Lion Hunt",
+      "artist": "Pierre Andrieu (French, 1821-1892)",
+      "date": "1855",
+      "medium": "Oil on canvas",
+      "image_id": "8a842898-2164-97ca-d746-8eab031fb3ed",
+      "image_url": "https://www.artic.edu/iiif/2/8a842898-2164-97ca-d746-8eab031fb3ed/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35145.jpg"
+    },
+    {
+      "id": 894,
+      "title": "Springtime",
+      "artist": "Théodore Rousseau (French, 1812–1867)",
+      "date": "c. 1860",
+      "medium": "Oil on panel",
+      "image_id": "f5731565-80bd-6d4c-8790-d0c252d92bd4",
+      "image_url": "https://www.artic.edu/iiif/2/f5731565-80bd-6d4c-8790-d0c252d92bd4/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/894.jpg"
+    },
+    {
+      "id": 94239,
+      "title": "Landscape",
+      "artist": "Théodore Rousseau (French, 1812–1867)",
+      "date": "c. 1860",
+      "medium": "Oil on panel",
+      "image_id": "43228273-29dd-c5d7-b75c-536109504fc0",
+      "image_url": "https://www.artic.edu/iiif/2/43228273-29dd-c5d7-b75c-536109504fc0/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/94239.jpg"
+    },
+    {
+      "id": 263516,
+      "title": "Untitled (Lady with a Parakeet)",
+      "artist": "August (Ágost) Canzi (Austrian, 1808-1866)",
+      "date": "1856",
+      "medium": "Oil on canvas",
+      "image_id": "5482d244-ac7e-9e7f-3352-912c572a8eb5",
+      "image_url": "https://www.artic.edu/iiif/2/5482d244-ac7e-9e7f-3352-912c572a8eb5/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/263516.jpg"
+    },
+    {
+      "id": 890,
+      "title": "On the Road",
+      "artist": "Jules Dupré (French, 1811–1889)",
+      "date": "1856",
+      "medium": "Oil on canvas",
+      "image_id": "e0d8a305-15b0-bdcd-1e83-06d8594a2f7e",
+      "image_url": "https://www.artic.edu/iiif/2/e0d8a305-15b0-bdcd-1e83-06d8594a2f7e/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/890.jpg"
+    },
+    {
+      "id": 81522,
+      "title": "The Sheepshearers",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "c. 1857–61",
+      "medium": "Oil on canvas",
+      "image_id": "bd921daa-25ba-3a48-5b30-ad03d8a8bacb",
+      "image_url": "https://www.artic.edu/iiif/2/bd921daa-25ba-3a48-5b30-ad03d8a8bacb/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81522.jpg"
+    },
+    {
+      "id": 896,
+      "title": "The Road to Market",
+      "artist": "Constant Troyon (French, 1810–1865)",
+      "date": "1858/59",
+      "medium": "Oil on canvas",
+      "image_id": "6aaa3537-abbf-f49e-877f-4d8e8e4d50c2",
+      "image_url": "https://www.artic.edu/iiif/2/6aaa3537-abbf-f49e-877f-4d8e8e4d50c2/full/843,/0/default.jpg",
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/896.jpg"
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1850,
+      1859
+    ]
+  },
+  "created_date": "2025-01-21",
+  "failed_downloads": [],
+  "github_ready": true,
+  "image_base_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/"
+}

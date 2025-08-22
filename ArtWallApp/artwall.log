@@ -1,0 +1,19 @@
+[0/1] Planning build
+Building for debugging...
+[0/6] Write sources
+[0/6] Write ArtWall-entitlement.plist
+[2/6] Write swift-version--1AB21518FC5DEDBE.txt
+[4/16] Compiling ArtWall ContentView.swift
+[5/16] Compiling ArtWall main.swift
+[6/16] Compiling ArtWall ArtworkDetailView.swift
+[7/16] Compiling ArtWall CollectionDetailsView.swift
+[8/16] Compiling ArtWall Collection.swift
+[9/16] Compiling ArtWall CollectionManager.swift
+[10/16] Compiling ArtWall Artwork.swift
+[11/16] Compiling ArtWall CollectionsListView.swift
+[12/16] Emitting module ArtWall
+[13/16] Compiling ArtWall ChicagoArtService.swift
+[13/16] Write Objects.LinkFileList
+[14/16] Linking ArtWall
+[15/16] Applying ArtWall
+Build of product 'ArtWall' complete! (12.88s)

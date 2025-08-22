@@ -2,8 +2,15 @@ import SwiftUI
 
 struct CollectionsListView: View {
     @StateObject private var artService = ChicagoArtService()
+    @StateObject private var collectionManager: CollectionManager
     @State private var collections: [ArtCollection] = []
     @Environment(\.dismiss) private var dismiss
+    
+    init() {
+        let artService = ChicagoArtService()
+        self._artService = StateObject(wrappedValue: artService)
+        self._collectionManager = StateObject(wrappedValue: CollectionManager(artService: artService))
+    }
     
     var body: some View {
         NavigationStack {
@@ -22,13 +29,13 @@ struct CollectionsListView: View {
                 
                 // Main content
                 if collections.isEmpty {
-                    if artService.isLoading {
+                    if collectionManager.isLoading || artService.isLoading {
                         VStack(spacing: 16) {
                             ProgressView()
                                 .scaleEffect(1.5)
                             Text("Loading collections...")
                                 .font(.headline)
-                            Text("Fetching artwork previews...")
+                            Text("Building historical period collections...")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
                         }
@@ -46,6 +53,13 @@ struct CollectionsListView: View {
                             Text("Collections are being prepared...")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
+                            
+                            Button("Load Collections") {
+                                Task {
+                                    await loadCollections()
+                                }
+                            }
+                            .buttonStyle(.borderedProminent)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
@@ -66,7 +80,7 @@ struct CollectionsListView: View {
                     }
                 }
                 
-                if let error = artService.errorMessage {
+                if let error = collectionManager.errorMessage ?? artService.errorMessage {
                     Text("Error: \(error)")
                         .foregroundColor(.red)
                         .padding()
@@ -79,22 +93,37 @@ struct CollectionsListView: View {
     }
     
     private func loadCollections() async {
-        // Load European paintings collection with 24 images
-        let artworks = await artService.fetchEuropeanPaintings(limit: 24)
+        // Load available collection manifests
+        await collectionManager.loadAvailableCollections()
+        
+        // Build all 8 collections (now with instant loading!)
+        let allCollections = [
+            "medieval_early_renaissance",
+            "renaissance_baroque", 
+            "eighteenth_century",
+            "golden_age_1850s",
+            "golden_age_1860s",
+            "golden_age_1870s",
+            "golden_age_1880s",
+            "golden_age_1890s"
+        ]
+        
+        var builtCollections: [ArtCollection] = []
+        
+        for collectionId in allCollections {
+            if let manifest = collectionManager.getCollectionManifest(id: collectionId) {
+                print("🎨 Building collection: \(manifest.title)")
+                
+                if let collection = await collectionManager.buildCollection(from: manifest) {
+                    builtCollections.append(collection)
+                    print("✅ Built collection: \(collection.title) with \(collection.totalCount) artworks")
+                }
+            }
+        }
         
         await MainActor.run {
-            if !artworks.isEmpty {
-                print("🎨 Creating collection with \(artworks.count) artworks")
-                print("🖼️ First 4 artwork URLs for thumbnails:")
-                for (index, artwork) in artworks.prefix(4).enumerated() {
-                    print("  \(index + 1). \(artwork.title): \(artwork.imageURL?.absoluteString ?? "No URL")")
-                }
-                
-                let europeanCollection = ArtCollection.europeanPaintings(with: artworks)
-                collections = [europeanCollection]
-            } else {
-                print("❌ No artworks loaded for collection")
-            }
+            collections = builtCollections
+            print("🎉 Loaded \(collections.count) collections total")
         }
     }
 }
@@ -160,7 +189,7 @@ struct CollectionCard: View {
                     
                     Spacer()
                     
-                    Text(collection.source)
+                    Text(collection.dateRange)
                         .font(.caption)
                         .foregroundColor(.blue)
                 }

@@ -1,0 +1,770 @@
+{
+  "collection_id": "renaissance_baroque",
+  "title": "🎨 Renaissance/Baroque",
+  "description": "Renaissance and Baroque masterpieces (1500s-1690s)",
+  "date_range": "1500-1699",
+  "artwork_count": 83,
+  "artwork_ids": [
+    188974,
+    16151,
+    102088,
+    184371,
+    15496,
+    39851,
+    59960,
+    22862,
+    22866,
+    234781,
+    16305,
+    110527,
+    79789,
+    86441,
+    236975,
+    111453,
+    190405,
+    269805,
+    57829,
+    59874,
+    24684,
+    80540,
+    10281,
+    75974,
+    56133,
+    29403,
+    203330,
+    93737,
+    80553,
+    67362,
+    213758,
+    28857,
+    13495,
+    16340,
+    100343,
+    100344,
+    48776,
+    256795,
+    64029,
+    32091,
+    15260,
+    100342,
+    21934,
+    209969,
+    28874,
+    80535,
+    15698,
+    866,
+    257287,
+    41211,
+    80560,
+    100356,
+    181702,
+    16349,
+    27309,
+    238272,
+    11022,
+    16413,
+    24677,
+    257286,
+    57643,
+    35195,
+    84096,
+    30365,
+    5304,
+    198905,
+    258490,
+    4770,
+    44826,
+    44829,
+    512,
+    11142,
+    86994,
+    12875,
+    58050,
+    12876,
+    12879,
+    12883,
+    105698,
+    4092,
+    28876,
+    101077,
+    52177
+  ],
+  "artworks": [
+    {
+      "id": 188974,
+      "title": "Virgin and Child with the Young Saint John the Baptist, Saint Cecilia, and Angels",
+      "artist": "Piero di Cosimo (Italian, 1461/62–1521)",
+      "date": "c. 1505",
+      "medium": "Oil on panel",
+      "year": 1500
+    },
+    {
+      "id": 16151,
+      "title": "Portrait of a Gentleman",
+      "artist": "Ridolfo Ghirlandaio (Italian, 1483–1561)",
+      "date": "c. 1505",
+      "medium": "Oil, with tempera (?), on panel, transferred to canvas",
+      "year": 1500
+    },
+    {
+      "id": 102088,
+      "title": "Assumption of the Virgin",
+      "artist": "Marcellus Coffermans (Netherlandish, 1524–1581)",
+      "date": "16th century",
+      "medium": "Oil on panel",
+      "year": 1501
+    },
+    {
+      "id": 184371,
+      "title": "The Nativity",
+      "artist": "Fra Bartolommeo (Baccio della Porta; Italian, 1472-1517)",
+      "date": "1504/07",
+      "medium": "Oil on panel",
+      "year": 1504
+    },
+    {
+      "id": 15496,
+      "title": "The Nativity",
+      "artist": "Master of Pulkau (Bavarian or Austrian, active c. 1505–1520)",
+      "date": "1507–10",
+      "medium": "Oil on panel",
+      "year": 1507
+    },
+    {
+      "id": 39851,
+      "title": "Philip the Good, Duke of Burgundy; Isabelle of Bourbon (?)",
+      "artist": "Flemish",
+      "date": "1510–30",
+      "medium": "Oil on panel",
+      "year": 1510
+    },
+    {
+      "id": 59960,
+      "title": "Portrait of a Man",
+      "artist": "Attributed to Martin Schaffner (German, 1477/78–1546/49)",
+      "date": "1520/30",
+      "medium": "Oil on parchment, mounted on panel",
+      "year": 1515
+    },
+    {
+      "id": 22862,
+      "title": "Saint Matthias (?) and a Donor (recto); Saint Andrew (verso)",
+      "artist": "Jacob Cornelisz. van Oostsanen (Netherlandish, c. 1470/75–by 1533)\nor Workshop of Jacob Cornelisz. van Oostsanen (Netherlandish, c. 1470/75–by 1533)",
+      "date": "c. 1520",
+      "medium": "Oil on panel",
+      "year": 1515
+    },
+    {
+      "id": 22866,
+      "title": "Saint Peter and a Donor (recto); Saint Thomas (verso)",
+      "artist": "Jacob Cornelisz. van Oostsanen (Netherlandish, c. 1470/75–by 1533)\nor Workshop of Jacob Cornelisz. van Oostsanen (Netherlandish, c. 1470/75–by 1533)",
+      "date": "c. 1520",
+      "medium": "Oil on panel",
+      "year": 1515
+    },
+    {
+      "id": 234781,
+      "title": "Christ Carrying the Cross",
+      "artist": "Sebastiano del Piombo (Italian, c. 1485–1547)",
+      "date": "1515–17",
+      "medium": "Oil on panel",
+      "year": 1515
+    },
+    {
+      "id": 16305,
+      "title": "Virgin and Child",
+      "artist": "Workshop of Adriaen Isenbrant (Netherlandish, c. 1485–1551)",
+      "date": "c. 1520",
+      "medium": "Oil on panel",
+      "year": 1515
+    },
+    {
+      "id": 110527,
+      "title": "Landscape with Tournament and Hunters",
+      "artist": "Jan van Scorel (Netherlandish, 1495-1562)",
+      "date": "1519–20",
+      "medium": "Oil on panel",
+      "year": 1519
+    },
+    {
+      "id": 79789,
+      "title": "Portrait of a Man",
+      "artist": "North Netherlandish",
+      "date": "c. 1525",
+      "medium": "Oil on panel",
+      "year": 1520
+    },
+    {
+      "id": 86441,
+      "title": "Portrait of a Man",
+      "artist": "Flemish",
+      "date": "c. 1530",
+      "medium": "Oil on panel",
+      "year": 1525
+    },
+    {
+      "id": 236975,
+      "title": "Saint Jerome in Penitence",
+      "artist": "Master of the Lille Adoration (Netherlandish, active about 1520–40)",
+      "date": "1525–30",
+      "medium": "Oil on panel",
+      "year": 1525
+    },
+    {
+      "id": 111453,
+      "title": "Landscape with the Penitent Saint Jerome",
+      "artist": "Belgian; Antwerp",
+      "date": "1530–40",
+      "medium": "Oil on panel",
+      "year": 1530
+    },
+    {
+      "id": 190405,
+      "title": "Saint Luke Drawing the Virgin and Christ Child",
+      "artist": "Girolamo da Carpi (Girolamo Sellari; Italian, c. 1501–1556)",
+      "date": "c. 1535",
+      "medium": "Oil on panel",
+      "year": 1530
+    },
+    {
+      "id": 269805,
+      "title": "Madonna and Child with Saints Elizabeth and John the Baptist",
+      "artist": "Jacopino del Conte (Italian, 1510–1598)",
+      "date": "1535–40",
+      "medium": "Oil on panel",
+      "year": 1535
+    },
+    {
+      "id": 57829,
+      "title": "Two Peasants Looking at a Mirror",
+      "artist": "Follower of Jan Massys (Netherlandish, 1509–1575)",
+      "date": "c. 1550",
+      "medium": "Oil on panel",
+      "year": 1545
+    },
+    {
+      "id": 59874,
+      "title": "Portrait of a Woman",
+      "artist": "Flemish; possibly Antwerp",
+      "date": "1562",
+      "medium": "Oil on panel",
+      "year": 1550
+    },
+    {
+      "id": 24684,
+      "title": "Francesco de' Medici",
+      "artist": "Attributed to Alessandro Allori (Italian, 1535–1607)",
+      "date": "c. 1560",
+      "medium": "Oil on panel",
+      "year": 1555
+    },
+    {
+      "id": 80540,
+      "title": "Portrait of Don Juan of Austria",
+      "artist": "Alonso Sánchez Coello (Spanish, 1531/32–1588)",
+      "date": "1559/60",
+      "medium": "Oil on panel, transferred to canvas",
+      "year": 1560
+    },
+    {
+      "id": 10281,
+      "title": "Portrait of a Man",
+      "artist": "Attributed to Antonis Mor (Netherlandish, 1516/21–1575/77)",
+      "date": "c. 1565",
+      "medium": "Oil on panel",
+      "year": 1560
+    },
+    {
+      "id": 75974,
+      "title": "Portrait of a Court Lady",
+      "artist": "Follower of Antonis Mor (Netherlandish, 1516/21-1575/77)",
+      "date": "c. 1565",
+      "medium": "Oil on canvas",
+      "year": 1560
+    },
+    {
+      "id": 56133,
+      "title": "Christ on the Cross",
+      "artist": "Flemish",
+      "date": "c. 1580–c. 1600",
+      "medium": "Oil on panel",
+      "year": 1575
+    },
+    {
+      "id": 29403,
+      "title": "Head of an Apostle",
+      "artist": "Follower of Jacob Jordaens (Flemish, 1593-1678)",
+      "date": "Date unknown",
+      "medium": "Oil on panel",
+      "year": 1593
+    },
+    {
+      "id": 203330,
+      "title": "The Vision of Saint Francis",
+      "artist": "Ludovico Carracci (Italian, 1555–1619)",
+      "date": "c. 1602",
+      "medium": "Oil on copper",
+      "year": 1593
+    },
+    {
+      "id": 93737,
+      "title": "Landscape with Figures",
+      "artist": "Attributed to Joos de Momper, II (Flemish, 1564–1635)",
+      "date": "c. 1600/25",
+      "medium": "Oil on panel",
+      "year": 1595
+    },
+    {
+      "id": 80553,
+      "title": "Nicolas Rubens, the artist's son",
+      "artist": "Attributed to Peter Paul Rubens (Flemish, 1577–1640)",
+      "date": "Late 1630s",
+      "medium": "Oil on panel",
+      "year": 1597
+    },
+    {
+      "id": 67362,
+      "title": "Saint Martin and the Beggar",
+      "artist": "El Greco (Doménikos Theotokópoulos; Greek, active in Spain, 1541–1614)",
+      "date": "c. 1597–c. 1600",
+      "medium": "Oil on canvas",
+      "year": 1597
+    },
+    {
+      "id": 213758,
+      "title": "Saint John the Baptist in the Wilderness",
+      "artist": "Adam Elsheimer (German, 1578–1610)",
+      "date": "c. 1605",
+      "medium": "Oil on copper",
+      "year": 1600
+    },
+    {
+      "id": 28857,
+      "title": "Man with a Ruff",
+      "artist": "Follower of Anthony van Dyck (Flemish, 1599–1641)",
+      "date": "17th century",
+      "medium": "Oil on canvas",
+      "year": 1600
+    },
+    {
+      "id": 13495,
+      "title": "The Christ Child and Saint John the Baptist with Saint Francis",
+      "artist": "Follower of Peter Paul Rubens (Flemish, 1577–1640)",
+      "date": "Date unknown",
+      "medium": "Oil on canvas",
+      "year": 1600
+    },
+    {
+      "id": 16340,
+      "title": "Mountain Road with Travelers",
+      "artist": "Joos de Momper, II (Flemish, 1564-1635)",
+      "date": "c. 1610/25",
+      "medium": "Oil on cradled panel",
+      "year": 1600
+    },
+    {
+      "id": 100343,
+      "title": "Sacrifice of Isaac",
+      "artist": "School of Johann Liss, the younger (German, c. 1597-1631)",
+      "date": "1600–50",
+      "medium": "Oil on copper",
+      "year": 1600
+    },
+    {
+      "id": 100344,
+      "title": "Lot and his Daughters",
+      "artist": "School of Johann Liss, the younger (German, c. 1597–1631)",
+      "date": "1600–50",
+      "medium": "Oil on copper",
+      "year": 1600
+    },
+    {
+      "id": 48776,
+      "title": "Man in Armour",
+      "artist": "Antonio Puga (Spanish, 1602–1648)",
+      "date": "17th century",
+      "medium": "Oil on canvas",
+      "year": 1602
+    },
+    {
+      "id": 256795,
+      "title": "Venus, Cupid and Ceres",
+      "artist": "Cornelis Cornelisz van Haarlem (Dutch, 1562–1638)",
+      "date": "1604",
+      "medium": "Oil on canvas",
+      "year": 1604
+    },
+    {
+      "id": 64029,
+      "title": "Bouquet of Flowers in an Earthenware Vase",
+      "artist": "Attributed to Jan Brueghel the Elder (Flemish, 1568–1625)",
+      "date": "c. 1610",
+      "medium": "Oil on panel",
+      "year": 1605
+    },
+    {
+      "id": 32091,
+      "title": "Virgin and Child with Angels",
+      "artist": "Giulio Cesare Procaccini (Italian, 1574–1625)",
+      "date": "c. 1610",
+      "medium": "Oil on panel",
+      "year": 1605
+    },
+    {
+      "id": 15260,
+      "title": "The Judgement of Zaleucus",
+      "artist": "Otto van Veen (Flemish, c. 1556/57–1629)",
+      "date": "1605/10",
+      "medium": "Oil on panel",
+      "year": 1605
+    },
+    {
+      "id": 100342,
+      "title": "Saint Francis",
+      "artist": "Peter Paul Rubens (Flemish, 1577-1640)",
+      "date": "c. 1615",
+      "medium": "Oil on panel",
+      "year": 1610
+    },
+    {
+      "id": 21934,
+      "title": "Kitchen Scene",
+      "artist": "Diego Velázquez (Spanish, 1599–1660)",
+      "date": "1618/20",
+      "medium": "Oil on canvas",
+      "year": 1618
+    },
+    {
+      "id": 209969,
+      "title": "Landscape with Hunters",
+      "artist": "Paul Bril (Flemish, 1553/54–1626)",
+      "date": "1619",
+      "medium": "Oil on canvas",
+      "year": 1619
+    },
+    {
+      "id": 28874,
+      "title": "St. Albert of Louvain",
+      "artist": "Peter Paul Rubens (Flemish, 1577-1640)",
+      "date": "1620",
+      "medium": "Oil on panel",
+      "year": 1620
+    },
+    {
+      "id": 80535,
+      "title": "Portrait of a Man",
+      "artist": "Follower of Anthony van Dyck (Flemish, 1599–1641)",
+      "date": "1625–30",
+      "medium": "Oil on canvas",
+      "year": 1625
+    },
+    {
+      "id": 15698,
+      "title": "Portrait of Isabella of Bourbon",
+      "artist": "Follower of Peter Paul Rubens (Flemish, 1577–1640)",
+      "date": "c. 1630",
+      "medium": "Oil on panel",
+      "year": 1625
+    },
+    {
+      "id": 866,
+      "title": "Helena Tromper Du Bois",
+      "artist": "Attributed to Anthony van Dyck (Flemish, 1599–1641)",
+      "date": "c. 1631",
+      "medium": "Oil on canvas",
+      "year": 1626
+    },
+    {
+      "id": 257287,
+      "title": "Alpheus and Arethusa",
+      "artist": "Moyses van Uyttenbroeck (Dutch, c. 1590-1648)",
+      "date": "1626",
+      "medium": "Oil on panel",
+      "year": 1626
+    },
+    {
+      "id": 41211,
+      "title": "Portrait of Philip IV",
+      "artist": "Workshop of Diego Velázquez (Spanish, 1599-1660)",
+      "date": "c. 1632",
+      "medium": "Oil on canvas",
+      "year": 1627
+    },
+    {
+      "id": 80560,
+      "title": "Isabella of Bourbon, Wife of Philip IV of Spain",
+      "artist": "Workshop of Diego Velázquez (Spanish, 1599–1660)",
+      "date": "c. 1632",
+      "medium": "Oil on canvas",
+      "year": 1627
+    },
+    {
+      "id": 100356,
+      "title": "The Apotheosis of the Hero",
+      "artist": "Follower of Peter Paul Rubens (Flemish, 1577–1640)",
+      "date": "1630/40",
+      "medium": "Oil on panel",
+      "year": 1630
+    },
+    {
+      "id": 181702,
+      "title": "A View of Vianen with a Herdsman and Cattle by a River",
+      "artist": "Aelbert Cuyp (Dutch, 1621–1691)",
+      "date": "c. 1643–c. 1645",
+      "medium": "Oil on panel",
+      "year": 1638
+    },
+    {
+      "id": 16349,
+      "title": "Travellers Arriving at an Inn",
+      "artist": "Pieter de Neyn (Dutch, 1597–1639)",
+      "date": "1639–40",
+      "medium": "Oil on panel",
+      "year": 1639
+    },
+    {
+      "id": 27309,
+      "title": "Two Monks in a Landscape",
+      "artist": "Italian or Spanish",
+      "date": "c. 1645",
+      "medium": "Oil on canvas",
+      "year": 1640
+    },
+    {
+      "id": 238272,
+      "title": "River Landscape with a View of Naarden",
+      "artist": "Salomon van Ruysdael (Dutch, about 1602–1670)",
+      "date": "1642",
+      "medium": "Oil on panel",
+      "year": 1642
+    },
+    {
+      "id": 11022,
+      "title": "The Sacrifice of Polyxena",
+      "artist": "Giulio Carpioni (Italian, 1613–1678)",
+      "date": "c. 1650",
+      "medium": "Oil on canvas",
+      "year": 1645
+    },
+    {
+      "id": 16413,
+      "title": "Portrait of an Officer",
+      "artist": "Italian",
+      "date": "c. 1650",
+      "medium": "Oil on canvas",
+      "year": 1645
+    },
+    {
+      "id": 24677,
+      "title": "The Adoration of the Magi",
+      "artist": "Pietro della Vecchia (Italian, 1605-1678)",
+      "date": "c. 1650",
+      "medium": "Oil on canvas",
+      "year": 1645
+    },
+    {
+      "id": 257286,
+      "title": "Breakfast Still Life",
+      "artist": "Willem Claesz. Heda (Dutch, 1594-1680)",
+      "date": "1647",
+      "medium": "Oil on panel",
+      "year": 1647
+    },
+    {
+      "id": 57643,
+      "title": "Man with a Tankard at a Window",
+      "artist": "Adriaen van Ostade (Dutch, 1610–1685)",
+      "date": "1650–60",
+      "medium": "Oil on panel",
+      "year": 1650
+    },
+    {
+      "id": 35195,
+      "title": "The Lamentation",
+      "artist": "Andrea Vaccaro (Italian, 1598/1604-1670)",
+      "date": "1652",
+      "medium": "Oil on canvas",
+      "year": 1652
+    },
+    {
+      "id": 84096,
+      "title": "Dead Birds and Shot Bags",
+      "artist": "Attributed to Pieter Boel (Flemish, 1622-1674)",
+      "date": "c. 1660",
+      "medium": "Oil on canvas",
+      "year": 1655
+    },
+    {
+      "id": 30365,
+      "title": "Portrait of a Grand Master of the Knights of Malta, Martin de Redin",
+      "artist": "Mattia Preti (Italian, 1613–1699)",
+      "date": "c. 1660",
+      "medium": "Oil on canvas",
+      "year": 1655
+    },
+    {
+      "id": 5304,
+      "title": "Homer Dictating",
+      "artist": "Pier Francesco Mola (Italian, 1612–1666)",
+      "date": "1660/65",
+      "medium": "Oil on canvas",
+      "year": 1660
+    },
+    {
+      "id": 198905,
+      "title": "Still Life with Ostrich Egg Cup and the Whitfield Heirlooms",
+      "artist": "Pieter Gerritsz. van Roestraeten (Dutch, 1630–1700)",
+      "date": "c. 1670",
+      "medium": "Oil on canvas",
+      "year": 1660
+    },
+    {
+      "id": 258490,
+      "title": "A Vanitas Still Life with a Flag, Candlestick, Musical Instruments, Books, Writing Paraphernalia, Globes and Hourglass",
+      "artist": "Edwaert Collier (Dutch, 1642–1708)",
+      "date": "1662",
+      "medium": "Oil on canvas",
+      "year": 1662
+    },
+    {
+      "id": 4770,
+      "title": "Wooded Landscape with Cottage and Horseman",
+      "artist": "Meindert Hobbema (Dutch, 1638–1709)",
+      "date": "1663",
+      "medium": "Oil on canvas",
+      "year": 1663
+    },
+    {
+      "id": 44826,
+      "title": "Polycrates and the Fisherman",
+      "artist": "Salvator Rosa (Italian, 1615–1673)",
+      "date": "1664",
+      "medium": "Oil on canvas",
+      "year": 1664
+    },
+    {
+      "id": 44829,
+      "title": "Polycrates' Crucifixion",
+      "artist": "Salvator Rosa (Italian, 1615–1673)",
+      "date": "1664",
+      "medium": "Oil on canvas",
+      "year": 1664
+    },
+    {
+      "id": 512,
+      "title": "The Music Lesson",
+      "artist": "Gerard ter Borch (Dutch, 1617-1681)",
+      "date": "c. 1670",
+      "medium": "Oil on canvas",
+      "year": 1665
+    },
+    {
+      "id": 11142,
+      "title": "Vase of Flowers",
+      "artist": "Jean Baptiste Belin I (Blin de Fontenay; French, 1653-1715)",
+      "date": "Date unknown",
+      "medium": "Oil on panel",
+      "year": 1673
+    },
+    {
+      "id": 86994,
+      "title": "Birds in Landscape",
+      "artist": "Marmaduke Cradock (English, c. 1660-1717)",
+      "date": "Date unknown",
+      "medium": "Oil on canvas",
+      "year": 1680
+    },
+    {
+      "id": 12875,
+      "title": "Mercury rescues the disguised Io after beheading Argus",
+      "artist": "Johann Michael Rottmayr (Austrian, 1654–1730)",
+      "date": "c. 1690/95",
+      "medium": "Oil on canvas",
+      "year": 1685
+    },
+    {
+      "id": 58050,
+      "title": "Jacopo Butera",
+      "artist": "Francesco Solimena (Italian, 1657–1747)",
+      "date": "c. 1695",
+      "medium": "Oil on canvas",
+      "year": 1690
+    },
+    {
+      "id": 12876,
+      "title": "Diana and Endymion",
+      "artist": "Johann Michael Rottmayr (Austrian, 1654–1730)",
+      "date": "1690/95",
+      "medium": "Oil on canvas",
+      "year": 1690
+    },
+    {
+      "id": 12879,
+      "title": "Venus and Cupid at the Forge of Vulcan",
+      "artist": "Johann Michael Rottmayr (Austrian, 1654–1730)",
+      "date": "1690/95",
+      "medium": "Oil on canvas",
+      "year": 1690
+    },
+    {
+      "id": 12883,
+      "title": "Jove casts his Thunderbolts at the Rebellious Giants",
+      "artist": "Johann Michael Rottmayr (Austrian, 1654–1730)",
+      "date": "1690/95",
+      "medium": "Oil on canvas",
+      "year": 1690
+    },
+    {
+      "id": 105698,
+      "title": "La Bonne Aventure (The Fortune Teller)",
+      "artist": "After Jean Baptiste Joseph Pater (French, 1695–1736)",
+      "date": "Date unknown",
+      "medium": "Oil on panel",
+      "year": 1695
+    },
+    {
+      "id": 4092,
+      "title": "Arcadian Landscape with Figures",
+      "artist": "Alessandro Magnasco (Italian, 1667–1749)",
+      "date": "c. 1700",
+      "medium": "Oil on canvas",
+      "year": 1695
+    },
+    {
+      "id": 28876,
+      "title": "Portrait of a Girl",
+      "artist": "Attributed to Francesco Solimena (Italian, 1657–1747)",
+      "date": "c. 1700",
+      "medium": "Oil on canvas",
+      "year": 1695
+    },
+    {
+      "id": 101077,
+      "title": "Adam and Eve in Paradise",
+      "artist": "Francesco Solimena (Italian, 1657–1747)",
+      "date": "c. 1700",
+      "medium": "Oil on canvas",
+      "year": 1695
+    },
+    {
+      "id": 52177,
+      "title": "Holy Family with the Infant St. John",
+      "artist": "Francesco Trevisani (Italian, 1656–1746)",
+      "date": "c. 1700",
+      "medium": "Oil on canvas",
+      "year": 1695
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1500,
+      1699
+    ]
+  },
+  "created_date": "2025-01-21"
+}

@@ -1,0 +1,356 @@
+{
+  "collection_id": "golden_age_1870s",
+  "title": "Golden Age: 1870s ⭐",
+  "description": "1870s paintings - Peak decade of Impressionism",
+  "date_range": "1870-1879",
+  "artwork_count": 37,
+  "artwork_ids": [
+    111057,
+    11723,
+    899,
+    86298,
+    86297,
+    100352,
+    30368,
+    880,
+    16551,
+    4776,
+    14556,
+    14594,
+    81507,
+    18951,
+    39554,
+    21165,
+    895,
+    14574,
+    186425,
+    39528,
+    39493,
+    81555,
+    25810,
+    14650,
+    16571,
+    885,
+    59944,
+    39479,
+    95613,
+    14572,
+    80604,
+    84076,
+    191564,
+    14647,
+    81557,
+    81558,
+    95654
+  ],
+  "artworks": [
+    {
+      "id": 111057,
+      "title": "The Fairies",
+      "artist": "Adolphe Monticelli (French, 1824–1886)",
+      "date": "1870/80",
+      "medium": "Oil on panel",
+      "year": 1870
+    },
+    {
+      "id": 11723,
+      "title": "Woman at Her Toilette",
+      "artist": "Berthe Morisot (French, 1841–1895)",
+      "date": "1875–80",
+      "medium": "Oil on canvas",
+      "year": 1870
+    },
+    {
+      "id": 899,
+      "title": "The Tête-à-tête",
+      "artist": "Emile van Marcke de Lummen (French, 1827–1890)",
+      "date": "c. 1875–90",
+      "medium": "Oil on canvas",
+      "year": 1870
+    },
+    {
+      "id": 86298,
+      "title": "Study of a Cow",
+      "artist": "Emile van Marcke de Lummen (French, 1827–1890)",
+      "date": "c. 1875–90",
+      "medium": "Oil on canvas",
+      "year": 1870
+    },
+    {
+      "id": 86297,
+      "title": "Two Boats in a Storm",
+      "artist": "Jules Dupré (French, 1811–1889)",
+      "date": "1870/75",
+      "medium": "Oil on canvas",
+      "year": 1870
+    },
+    {
+      "id": 100352,
+      "title": "African Chief",
+      "artist": "Mariano Fortuny y Marsal (Spanish, 1838-1874)",
+      "date": "1870",
+      "medium": "Oil on canvas",
+      "year": 1870
+    },
+    {
+      "id": 30368,
+      "title": "Colonnade and Gardens of the Medici Palace",
+      "artist": "Style of Hubert Robert (French, 1733–1808)",
+      "date": "After 1870",
+      "medium": "Oil on panel",
+      "year": 1870
+    },
+    {
+      "id": 880,
+      "title": "The Marsh",
+      "artist": "Charles François Daubigny (French, 1817–1878)",
+      "date": "1871",
+      "medium": "Oil on panel",
+      "year": 1871
+    },
+    {
+      "id": 16551,
+      "title": "Beata Beatrix",
+      "artist": "Dante Gabriel Rossetti (English, 1828–1882)",
+      "date": "1871–72",
+      "medium": "Oil on canvas",
+      "year": 1871
+    },
+    {
+      "id": 4776,
+      "title": "The Keeper of the Herd",
+      "artist": "Jean-François Millet (French, 1814–1875)",
+      "date": "1871–74",
+      "medium": "Oil on canvas",
+      "year": 1871
+    },
+    {
+      "id": 14556,
+      "title": "Auvers, Panoramic View",
+      "artist": "Paul Cezanne (French, 1839–1906)",
+      "date": "1873-75",
+      "medium": "Oil on canvas",
+      "year": 1873
+    },
+    {
+      "id": 14594,
+      "title": "Portrait of a Woman with a Black Fichu",
+      "artist": "Édouard Manet (French, 1832–1883)",
+      "date": "c. 1878",
+      "medium": "Oil on canvas",
+      "year": 1873
+    },
+    {
+      "id": 81507,
+      "title": "House of Mère Bazot",
+      "artist": "Charles François Daubigny (French, 1817–1878)",
+      "date": "1874",
+      "medium": "Oil on canvas",
+      "year": 1874
+    },
+    {
+      "id": 18951,
+      "title": "Yellow Dancers (In the Wings)",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "1874–76",
+      "medium": "Oil on canvas",
+      "year": 1874
+    },
+    {
+      "id": 39554,
+      "title": "An Alpine Scene",
+      "artist": "Gustave Courbet (French, 1819–1877)",
+      "date": "1874",
+      "medium": "Oil on canvas",
+      "year": 1874
+    },
+    {
+      "id": 21165,
+      "title": "The Conversation",
+      "artist": "Marcellin Gilbert Desboutin (French, 1823–1902)",
+      "date": "1875/79",
+      "medium": "Oil on canvas",
+      "year": 1874
+    },
+    {
+      "id": 895,
+      "title": "Man with Lance Riding through the Snow",
+      "artist": "Adolphe Schreyer (German, 1828–1899)",
+      "date": "c. 1880",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 14574,
+      "title": "Henri Degas and His Niece Lucie Degas (The Artist's Uncle and Cousin)",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "1875–76",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 186425,
+      "title": "Afternoon Tea",
+      "artist": "Jean François Raffaëlli (French, 1850–1924)",
+      "date": "c. 1880",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 39528,
+      "title": "The Out-Post",
+      "artist": "Jean-Louis-Ernest Meissonier (French, 1815–1891)",
+      "date": "c. 1880",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 39493,
+      "title": "The Wrestler's Challenge",
+      "artist": "Mihály Munkácsy (Hungarian, 1844-1900)",
+      "date": "1875",
+      "medium": "Oil on panel",
+      "year": 1875
+    },
+    {
+      "id": 81555,
+      "title": "Lunch at the Restaurant Fournaise (The Rowers' Lunch)",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1875",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 25810,
+      "title": "The Courtyard",
+      "artist": "Stanislas Lépine (French, 1835–1892)",
+      "date": "c. 1880",
+      "medium": "Oil on canvas",
+      "year": 1875
+    },
+    {
+      "id": 14650,
+      "title": "Alfred Sisley",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1876",
+      "medium": "Oil on canvas",
+      "year": 1876
+    },
+    {
+      "id": 16571,
+      "title": "Arrival of the Normandy Train, Gare Saint-Lazare",
+      "artist": "Claude Monet (French, 1840–1926)",
+      "date": "1877",
+      "medium": "Oil on canvas",
+      "year": 1877
+    },
+    {
+      "id": 885,
+      "title": "A Mounted Officer",
+      "artist": "Jean Baptiste Edouard Detaille (French, 1848–1912)",
+      "date": "1877",
+      "medium": "Oil on canvas",
+      "year": 1877
+    },
+    {
+      "id": 59944,
+      "title": "The Laundress",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1877–79",
+      "medium": "Oil on canvas",
+      "year": 1877
+    },
+    {
+      "id": 39479,
+      "title": "Springtime and Love",
+      "artist": "Francesco Paolo Michetti (Italian, 1851–1929)",
+      "date": "1878",
+      "medium": "Oil on canvas",
+      "year": 1878
+    },
+    {
+      "id": 95613,
+      "title": "At the Justice of the Peace",
+      "artist": "Pieter Verhaert (Belgian, 1852–1908)",
+      "date": "1878",
+      "medium": "Oil on canvas",
+      "year": 1878
+    },
+    {
+      "id": 14572,
+      "title": "The Millinery Shop",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "1879-86",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 80604,
+      "title": "Portrait after a Costume Ball (Portrait of Madame Dietz-Monnin)",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "1879",
+      "medium": "Distemper, metallic paint, and pastel, on canvas",
+      "year": 1879
+    },
+    {
+      "id": 84076,
+      "title": "Café Singer",
+      "artist": "Edgar Degas (French, 1834–1917)",
+      "date": "1879",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 191564,
+      "title": "Standing Bather, Seen from the Back",
+      "artist": "Paul Cezanne (French, 1839–1906)",
+      "date": "1879-82",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 14647,
+      "title": "Young Woman Sewing",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1879",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 81557,
+      "title": "Seascape",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1879",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 81558,
+      "title": "Acrobats at the Cirque Fernando (Francisca and Angelina Wartenberg)",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1879",
+      "medium": "Oil on canvas",
+      "year": 1879
+    },
+    {
+      "id": 95654,
+      "title": "Near the Lake",
+      "artist": "Pierre-Auguste Renoir (French, 1841–1919)",
+      "date": "1879–80",
+      "medium": "Oil on canvas",
+      "year": 1879
+    }
+  ],
+  "filters_applied": {
+    "department": "Painting and Sculpture of Europe",
+    "is_public_domain": true,
+    "has_image": true,
+    "classification": "painting",
+    "is_zoomable": true,
+    "date_range": [
+      1870,
+      1879
+    ]
+  },
+  "created_date": "2025-01-21"
+}

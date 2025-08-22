@@ -2,8 +2,6 @@ import SwiftUI
 
 struct CollectionDetailsView: View {
     let collection: ArtCollection
-    @StateObject private var artService = ChicagoArtService()
-    @State private var allArtworks: [Artwork] = []
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -27,12 +25,9 @@ struct CollectionDetailsView: View {
                 
                 Spacer()
                 
-                Button("Refresh") {
-                    Task {
-                        await loadAllArtworks()
-                    }
-                }
-                .disabled(artService.isLoading)
+                Text("\(collection.dateRange)")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
@@ -49,7 +44,7 @@ struct CollectionDetailsView: View {
                     
                     Spacer()
                     
-                    Text("\(allArtworks.isEmpty ? collection.totalCount : allArtworks.count) artworks")
+                    Text("\(collection.totalCount) artworks")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
@@ -69,50 +64,20 @@ struct CollectionDetailsView: View {
             Divider()
             
             // Artworks grid
-            if artService.isLoading && allArtworks.isEmpty {
-                VStack(spacing: 16) {
-                    ProgressView()
-                        .scaleEffect(1.5)
-                    Text("Loading complete collection...")
-                        .font(.headline)
-                    Text("This may take a moment...")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else {
-                ScrollView {
-                    LazyVGrid(columns: [
-                        GridItem(.adaptive(minimum: 200), spacing: 16)
-                    ], spacing: 16) {
-                        ForEach(allArtworks) { artwork in
-                            NavigationLink(destination: ArtworkDetailView(artwork: artwork)) {
-                                ArtworkCard(artwork: artwork)
-                            }
-                            .buttonStyle(PlainButtonStyle())
+            ScrollView {
+                LazyVGrid(columns: [
+                    GridItem(.adaptive(minimum: 200), spacing: 16)
+                ], spacing: 16) {
+                    ForEach(collection.allArtworks) { artwork in
+                        NavigationLink(destination: ArtworkDetailView(artwork: artwork)) {
+                            ArtworkCard(artwork: artwork)
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 16)
                 }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 16)
             }
-            
-            if let error = artService.errorMessage {
-                Text("Error: \(error)")
-                    .foregroundColor(.red)
-                    .padding()
-            }
-        }
-        .task {
-            await loadAllArtworks()
-        }
-    }
-    
-    private func loadAllArtworks() async {
-        // Load the full collection (24 artworks standard)
-        let artworks = await artService.fetchEuropeanPaintings(limit: 24)
-        await MainActor.run {
-            allArtworks = artworks
         }
     }
 }

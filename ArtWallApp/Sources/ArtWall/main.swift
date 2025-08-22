@@ -5,7 +5,7 @@ struct ArtWallApp: App {
         WindowGroup {
             ContentView()
         }
-        .windowStyle(.hiddenTitleBar)
+        .windowStyle(.titleBar)
         .windowResizability(.contentMinSize)
     }
 }

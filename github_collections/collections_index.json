@@ -1,0 +1,400 @@
+{
+  "collections": [
+    {
+      "id": "medieval_early_renaissance",
+      "title": "🏛️ Medieval/Early Renaissance",
+      "description": "Medieval and Early Renaissance masterpieces (1260s-1490s)",
+      "date_range": "1260-1499",
+      "artwork_count": 37,
+      "thumbnail_artworks": [
+        {
+          "id": 16237,
+          "title": "Virgin and Child",
+          "artist": "Italian; Tuscany",
+          "date": "c. 1270",
+          "medium": "Tempera on panel",
+          "image_id": "3952a506-2776-5613-1693-e5c96c4708f2",
+          "image_url": "https://www.artic.edu/iiif/2/3952a506-2776-5613-1693-e5c96c4708f2/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16237.jpg"
+        },
+        {
+          "id": 16192,
+          "title": "Bishop Saint Enthroned",
+          "artist": "Allegretto Nuzi (Italian, 1346–1373)",
+          "date": "1360/70",
+          "medium": "Tempera on panel",
+          "image_id": "fc76cfb3-dcc1-2ee7-17a9-6d706a0efd82",
+          "image_url": "https://www.artic.edu/iiif/2/fc76cfb3-dcc1-2ee7-17a9-6d706a0efd82/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16192.jpg"
+        },
+        {
+          "id": 59843,
+          "title": "Madonna of Humility",
+          "artist": "Bolognese",
+          "date": "1375–1400",
+          "medium": "Tempera on panel",
+          "image_id": "33fb43be-8efc-4d35-a6fe-e92c890338bc",
+          "image_url": "https://www.artic.edu/iiif/2/33fb43be-8efc-4d35-a6fe-e92c890338bc/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59843.jpg"
+        },
+        {
+          "id": 12683,
+          "title": "Saint Catherine Delivered from the Wheel",
+          "artist": "Northern Spanish",
+          "date": "1375/1400",
+          "medium": "Oil and tempera on panel",
+          "image_id": "f6103cb8-ee9b-2334-96f5-9ac8e07f8b78",
+          "image_url": "https://www.artic.edu/iiif/2/f6103cb8-ee9b-2334-96f5-9ac8e07f8b78/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12683.jpg"
+        }
+      ]
+    },
+    {
+      "id": "renaissance_baroque",
+      "title": "🎨 Renaissance/Baroque",
+      "description": "Renaissance and Baroque masterpieces (1500s-1690s)",
+      "date_range": "1500-1699",
+      "artwork_count": 79,
+      "thumbnail_artworks": [
+        {
+          "id": 188974,
+          "title": "Virgin and Child with the Young Saint John the Baptist, Saint Cecilia, and Angels",
+          "artist": "Piero di Cosimo (Italian, 1461/62–1521)",
+          "date": "c. 1505",
+          "medium": "Oil on panel",
+          "image_id": "16d830b7-d681-6c88-379b-9585c655b6b7",
+          "image_url": "https://www.artic.edu/iiif/2/16d830b7-d681-6c88-379b-9585c655b6b7/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/188974.jpg"
+        },
+        {
+          "id": 16151,
+          "title": "Portrait of a Gentleman",
+          "artist": "Ridolfo Ghirlandaio (Italian, 1483–1561)",
+          "date": "c. 1505",
+          "medium": "Oil, with tempera (?), on panel, transferred to canvas",
+          "image_id": "db37b494-6b09-18ce-a618-0b16352f33a2",
+          "image_url": "https://www.artic.edu/iiif/2/db37b494-6b09-18ce-a618-0b16352f33a2/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16151.jpg"
+        },
+        {
+          "id": 102088,
+          "title": "Assumption of the Virgin",
+          "artist": "Marcellus Coffermans (Netherlandish, 1524–1581)",
+          "date": "16th century",
+          "medium": "Oil on panel",
+          "image_id": "2f7bd26c-ffdf-0b4a-f1e2-8acd09554023",
+          "image_url": "https://www.artic.edu/iiif/2/2f7bd26c-ffdf-0b4a-f1e2-8acd09554023/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/102088.jpg"
+        },
+        {
+          "id": 184371,
+          "title": "The Nativity",
+          "artist": "Fra Bartolommeo (Baccio della Porta; Italian, 1472-1517)",
+          "date": "1504/07",
+          "medium": "Oil on panel",
+          "image_id": "40fdb1d6-93fe-2916-78fb-f56a1ac261f1",
+          "image_url": "https://www.artic.edu/iiif/2/40fdb1d6-93fe-2916-78fb-f56a1ac261f1/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/184371.jpg"
+        }
+      ]
+    },
+    {
+      "id": "eighteenth_century",
+      "title": "🎭 18th Century",
+      "description": "18th Century European paintings (1700s-1790s)",
+      "date_range": "1700-1799",
+      "artwork_count": 19,
+      "thumbnail_artworks": [
+        {
+          "id": 109220,
+          "title": "Annunciation to the Shepherds",
+          "artist": "After Jacobo Bassano (Italian, c. 1510-1592)",
+          "date": "c. 1710",
+          "medium": "Oil on canvas",
+          "image_id": "ec272cba-5f5c-dcc1-00e3-00dfdb042a52",
+          "image_url": "https://www.artic.edu/iiif/2/ec272cba-5f5c-dcc1-00e3-00dfdb042a52/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/109220.jpg"
+        },
+        {
+          "id": 93784,
+          "title": "La Fête du Mai",
+          "artist": "After Jean Baptiste Joseph Pater (French, 1695-1736)",
+          "date": "Date unknown",
+          "medium": "Oil on panel",
+          "image_id": "424365f4-5c5a-e993-f5a9-34b4f732c1d8",
+          "image_url": "https://www.artic.edu/iiif/2/424365f4-5c5a-e993-f5a9-34b4f732c1d8/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/93784.jpg"
+        },
+        {
+          "id": 59858,
+          "title": "Woman Looking For Fleas",
+          "artist": "Attributed to Giuseppe Maria Crespi (Italian, 1665–1747)",
+          "date": "c. 1715",
+          "medium": "Oil on canvas",
+          "image_id": "2ee1ea7b-4ad8-e8fd-6821-394bab14c395",
+          "image_url": "https://www.artic.edu/iiif/2/2ee1ea7b-4ad8-e8fd-6821-394bab14c395/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59858.jpg"
+        },
+        {
+          "id": 41208,
+          "title": "The Presentation in the Temple",
+          "artist": "Stefano Pozzi (Italian, 1699–1768)",
+          "date": "Date unknown",
+          "medium": "Oil on canvas",
+          "image_id": "749250e6-883e-d22b-4cf4-621e22b5178d",
+          "image_url": "https://www.artic.edu/iiif/2/749250e6-883e-d22b-4cf4-621e22b5178d/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/41208.jpg"
+        }
+      ]
+    },
+    {
+      "id": "golden_age_1850s",
+      "title": "Golden Age: 1850s",
+      "description": "1850s paintings from the Golden Age",
+      "date_range": "1850-1859",
+      "artwork_count": 22,
+      "thumbnail_artworks": [
+        {
+          "id": 881,
+          "title": "Courtyard",
+          "artist": "Alexandre Gabriel Decamps (French, 1803–1860)",
+          "date": "c. 1855",
+          "medium": "Oil on canvas",
+          "image_id": "96fe74e1-7085-09bc-407f-464d1524730b",
+          "image_url": "https://www.artic.edu/iiif/2/96fe74e1-7085-09bc-407f-464d1524730b/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/881.jpg"
+        },
+        {
+          "id": 882,
+          "title": "Study of Pigs",
+          "artist": "Alexandre Gabriel Decamps (French, 1803–1860)",
+          "date": "c. 1855",
+          "medium": "Oil on paper, mounted on canvas",
+          "image_id": "a77f410d-fb47-e103-485b-19a7de1d432e",
+          "image_url": "https://www.artic.edu/iiif/2/a77f410d-fb47-e103-485b-19a7de1d432e/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/882.jpg"
+        },
+        {
+          "id": 80571,
+          "title": "Street Musicians",
+          "artist": "Style of Honoré Victorin Daumier (French, 1808–1879)",
+          "date": "c. 1855",
+          "medium": "Oil on panel",
+          "image_id": "fdd9f9dc-6893-c608-7589-02f4f0ab5fbd",
+          "image_url": "https://www.artic.edu/iiif/2/fdd9f9dc-6893-c608-7589-02f4f0ab5fbd/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80571.jpg"
+        },
+        {
+          "id": 94842,
+          "title": "Houses in Optevoz, France",
+          "artist": "Charles François Daubigny (French, 1817–1878)",
+          "date": "1852",
+          "medium": "Oil on canvas",
+          "image_id": "314637b6-22f5-5c2d-5b33-cd6ef4218748",
+          "image_url": "https://www.artic.edu/iiif/2/314637b6-22f5-5c2d-5b33-cd6ef4218748/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/94842.jpg"
+        }
+      ]
+    },
+    {
+      "id": "golden_age_1860s",
+      "title": "Golden Age: 1860s",
+      "description": "1860s paintings from the Golden Age",
+      "date_range": "1860-1869",
+      "artwork_count": 24,
+      "thumbnail_artworks": [
+        {
+          "id": 81505,
+          "title": "Lion Hunt",
+          "artist": "Eugène Delacroix (French, 1798–1863)",
+          "date": "1860–61",
+          "medium": "Oil on canvas",
+          "image_id": "3f0cd83f-84db-23e9-fb41-286de4bdae62",
+          "image_url": "https://www.artic.edu/iiif/2/3f0cd83f-84db-23e9-fb41-286de4bdae62/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81505.jpg"
+        },
+        {
+          "id": 68428,
+          "title": "The Artist's Daughter",
+          "artist": "Théodule Ribot (French, 1823–1891)",
+          "date": "c. 1865",
+          "medium": "Oil on canvas",
+          "image_id": "283433d1-bbc4-b526-eb7e-35f85cdb1cbb",
+          "image_url": "https://www.artic.edu/iiif/2/283433d1-bbc4-b526-eb7e-35f85cdb1cbb/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/68428.jpg"
+        },
+        {
+          "id": 16636,
+          "title": "Hesitation (Madame Monteaux?)",
+          "artist": "Alfred Stevens (Belgian, 1823–1906)",
+          "date": "c. 1867",
+          "medium": "Oil on panel",
+          "image_id": "46c9a3b9-b95e-5b99-005b-0fd3a2e93d88",
+          "image_url": "https://www.artic.edu/iiif/2/46c9a3b9-b95e-5b99-005b-0fd3a2e93d88/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16636.jpg"
+        },
+        {
+          "id": 79586,
+          "title": "Portrait of Mme Lisle and Mme Loubens",
+          "artist": "Edgar Degas (French, 1834–1917)",
+          "date": "c. 1867",
+          "medium": "Oil on canvas",
+          "image_id": "8bcc9188-1d3d-14be-6ae7-ed211e089c0f",
+          "image_url": "https://www.artic.edu/iiif/2/8bcc9188-1d3d-14be-6ae7-ed211e089c0f/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/79586.jpg"
+        }
+      ]
+    },
+    {
+      "id": "golden_age_1870s",
+      "title": "Golden Age: 1870s ⭐",
+      "description": "1870s paintings - Peak decade of Impressionism",
+      "date_range": "1870-1879",
+      "artwork_count": 37,
+      "thumbnail_artworks": [
+        {
+          "id": 111057,
+          "title": "The Fairies",
+          "artist": "Adolphe Monticelli (French, 1824–1886)",
+          "date": "1870/80",
+          "medium": "Oil on panel",
+          "image_id": "4d682c85-3e87-2998-5e66-6628d4ddf9f1",
+          "image_url": "https://www.artic.edu/iiif/2/4d682c85-3e87-2998-5e66-6628d4ddf9f1/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111057.jpg"
+        },
+        {
+          "id": 11723,
+          "title": "Woman at Her Toilette",
+          "artist": "Berthe Morisot (French, 1841–1895)",
+          "date": "1875–80",
+          "medium": "Oil on canvas",
+          "image_id": "78c80988-6524-cec7-c661-a4c0a706d06f",
+          "image_url": "https://www.artic.edu/iiif/2/78c80988-6524-cec7-c661-a4c0a706d06f/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/11723.jpg"
+        },
+        {
+          "id": 899,
+          "title": "The Tête-à-tête",
+          "artist": "Emile van Marcke de Lummen (French, 1827–1890)",
+          "date": "c. 1875–90",
+          "medium": "Oil on canvas",
+          "image_id": "a8258ace-3df9-7232-73c0-157a0f916e1f",
+          "image_url": "https://www.artic.edu/iiif/2/a8258ace-3df9-7232-73c0-157a0f916e1f/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/899.jpg"
+        },
+        {
+          "id": 86298,
+          "title": "Study of a Cow",
+          "artist": "Emile van Marcke de Lummen (French, 1827–1890)",
+          "date": "c. 1875–90",
+          "medium": "Oil on canvas",
+          "image_id": "c2bf35ea-3878-ffd1-18c3-311f13db873a",
+          "image_url": "https://www.artic.edu/iiif/2/c2bf35ea-3878-ffd1-18c3-311f13db873a/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/86298.jpg"
+        }
+      ]
+    },
+    {
+      "id": "golden_age_1880s",
+      "title": "Golden Age: 1880s",
+      "description": "1880s paintings from the Golden Age",
+      "date_range": "1880-1889",
+      "artwork_count": 29,
+      "thumbnail_artworks": [
+        {
+          "id": 111736,
+          "title": "Circassian Cavalry Awaiting their Commanding Officer at the Door of a Byzantine Monument; Memory of the Orient",
+          "artist": "Alberto Pasini (Italian, 1826-1899)",
+          "date": "1880",
+          "medium": "Oil on canvas",
+          "image_id": "f2cf5f64-7c25-7d20-42a2-bd371ee9f68b",
+          "image_url": "https://www.artic.edu/iiif/2/f2cf5f64-7c25-7d20-42a2-bd371ee9f68b/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111736.jpg"
+        },
+        {
+          "id": 16549,
+          "title": "Apples and Grapes",
+          "artist": "Claude Monet (French, 1840–1926)",
+          "date": "1880",
+          "medium": "Oil on canvas",
+          "image_id": "c12058f4-188f-c6ed-f0fe-52b32acfb296",
+          "image_url": "https://www.artic.edu/iiif/2/c12058f4-188f-c6ed-f0fe-52b32acfb296/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16549.jpg"
+        },
+        {
+          "id": 81548,
+          "title": "Young Peasant Having Her Coffee",
+          "artist": "Camille Pissarro (French, 1830–1903)",
+          "date": "1881",
+          "medium": "Oil on canvas",
+          "image_id": "335a59a4-3f5b-b9db-b8e8-861467d211ef",
+          "image_url": "https://www.artic.edu/iiif/2/335a59a4-3f5b-b9db-b8e8-861467d211ef/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/81548.jpg"
+        },
+        {
+          "id": 263514,
+          "title": "Loading Hay",
+          "artist": "Mihály Munkácsy (Hungarian, 1844-1900)",
+          "date": "c. 1886-87",
+          "medium": "Oil on canvas",
+          "image_id": "2dcd9e08-6f4f-9c8a-30b0-54ed93d7c049",
+          "image_url": "https://www.artic.edu/iiif/2/2dcd9e08-6f4f-9c8a-30b0-54ed93d7c049/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/263514.jpg"
+        }
+      ]
+    },
+    {
+      "id": "golden_age_1890s",
+      "title": "Golden Age: 1890s",
+      "description": "1890s paintings from the Golden Age",
+      "date_range": "1890-1899",
+      "artwork_count": 20,
+      "thumbnail_artworks": [
+        {
+          "id": 874,
+          "title": "Landscape",
+          "artist": "Jean Charles Cazin (French, 1841–1901)",
+          "date": "c. 1895",
+          "medium": "Oil on canvas",
+          "image_id": "3a34f988-f779-2e96-1786-8945b6b9c87d",
+          "image_url": "https://www.artic.edu/iiif/2/3a34f988-f779-2e96-1786-8945b6b9c87d/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/874.jpg"
+        },
+        {
+          "id": 16648,
+          "title": "Woman in Front of a Still Life by Cezanne",
+          "artist": "Paul Gauguin (French, 1848–1903)",
+          "date": "1890",
+          "medium": "Oil on linen canvas",
+          "image_id": "38f866cb-9000-de5a-e655-d3fb4d8dc056",
+          "image_url": "https://www.artic.edu/iiif/2/38f866cb-9000-de5a-e655-d3fb4d8dc056/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16648.jpg"
+        },
+        {
+          "id": 212300,
+          "title": "The Beach of Les Grands Sables at Le Pouldu",
+          "artist": "Paul Sérusier (French, 1864–1927)",
+          "date": "1890",
+          "medium": "Oil on canvas",
+          "image_id": "ef637785-df55-adaf-b907-e3e8f59f08d6",
+          "image_url": "https://www.artic.edu/iiif/2/ef637785-df55-adaf-b907-e3e8f59f08d6/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/212300.jpg"
+        },
+        {
+          "id": 16512,
+          "title": "Ravine Near Biskra",
+          "artist": "Victor Pierre Huguet (French, 1835-1902)",
+          "date": "c. 1895",
+          "medium": "Oil on canvas",
+          "image_id": "41458ec7-da2d-773d-159c-9ae9afb53516",
+          "image_url": "https://www.artic.edu/iiif/2/41458ec7-da2d-773d-159c-9ae9afb53516/full/843,/0/default.jpg",
+          "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16512.jpg"
+        }
+      ]
+    }
+  ],
+  "total_collections": 8,
+  "total_artworks": 267,
+  "created_date": "2025-01-21",
+  "version": "1.0"
+}
