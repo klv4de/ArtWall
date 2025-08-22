@@ -49,10 +49,11 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - Respectful API usage with rate limiting
 
 ### 4. Collection Management (Updated MVP Scope)
-- **MVP Target**: 48 high-quality images for 30-minute rotations (24 hours of content)
-- **Department-Based Selection**: Use Met API department filtering for higher success rates
+- **MVP Target**: 24 high-quality images per collection for optimal browsing experience
+- **Department-Based Selection**: Use Chicago Art Institute API for 100% success rates
 - **Quality Over Quantity**: Focus on perfect wallpaper suitability vs. large collection
-- **Future Expansion**: Can scale to weekly collection (336 images) after MVP validation
+- **Collection Standard**: 24 masterpieces per collection with 4-image thumbnail previews
+- **Future Expansion**: Can scale to multiple themed collections after MVP validation
 
 ## Major Art APIs Available
 

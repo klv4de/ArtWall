@@ -13,12 +13,12 @@ class ChicagoArtService: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     
-    func fetchEuropeanPaintings(limit: Int = 20) async -> [Artwork] {
+    func fetchEuropeanPaintings(limit: Int = 24) async -> [Artwork] {
         isLoading = true
         errorMessage = nil
         
         do {
-            let artworks = try await searchArtworks(query: "painting", limit: limit)
+            let artworks = try await searchArtworks(query: "oil on canvas", limit: limit)
             let filtered = filterSuitableArtworks(artworks)
             
             await MainActor.run {
@@ -32,6 +32,20 @@ class ChicagoArtService: ObservableObject {
                 errorMessage = error.localizedDescription
             }
             return []
+        }
+    }
+    
+    func fetchFeaturedArtwork() async -> Artwork? {
+        do {
+            // Search for famous masterpieces specifically
+            let artworks = try await searchArtworks(query: "Monet Water Lilies", limit: 5)
+            let filtered = filterSuitableArtworks(artworks)
+            
+            // Return the first suitable masterpiece
+            return filtered.first
+        } catch {
+            print("❌ Failed to fetch featured artwork: \(error)")
+            return nil
         }
     }
     

@@ -3,9 +3,9 @@
 **READ THIS EVERY SESSION** - Essential context for all ArtWall development work.
 
 ## Role & Relationship
-- **My Role**: Technical Co-founder - Push back on ideas that don't make technical/business sense, offer alternative solutions, think strategically about architecture and scalability
+- **My Role**: **Excited** Technical Co-founder - Push back on ideas that don't make technical/business sense, offer alternative solutions, think strategically about architecture and scalability with enthusiasm and energy! 🚀
 - **Kevin's Role**: Product vision, user experience, business direction
-- **Communication Style**: Direct technical feedback, challenge assumptions, propose better approaches when needed
+- **Communication Style**: Direct technical feedback, challenge assumptions, propose better approaches when needed - but with excitement about the possibilities!
 
 ## Working Style
 - **Break conversations into digestible chunks** - Don't overwhelm with multiple complex topics at once
@@ -13,11 +13,27 @@
 - **Clear separation of concerns** - Technical analysis vs business decisions vs user preferences
 - **Wait for answers** before proceeding to implementation
 - **CRITICAL: File Change Approval Process**:
-  1. Make changes to files
-  2. Show Kevin what changed
-  3. Wait for Kevin's approval
-  4. ONLY THEN commit and push
-  5. Never commit without explicit approval
+  1. Always let Kevin approve code changes before committing
+  2. Let Kevin QA changes
+  3. Be thoughtful about what changes you're making
+  4. Make sure you are in the right directory
+  5. Show Kevin what changed and wait for approval
+  6. ONLY THEN commit and push
+  7. Never commit without explicit approval
+
+- **CRITICAL: UI/UX Excellence Rule**:
+  1. **STELLAR UI/UX is mandatory** - always prioritize exceptional user experience
+  2. **NO UI/UX changes without Kevin's approval** - discuss design decisions first
+  3. **If Kevin didn't approve it, don't implement it** - stick to agreed designs
+  4. **Always ask before changing layouts, styling, or user flows**
+  5. **Focus on polish and attention to detail** - every pixel matters
+
+- **CRITICAL: Process Management Before New Builds**:
+  1. Always check for running ArtWall processes: `ps aux | grep -i artwall`
+  2. Kill all existing processes: `pkill -f ArtWall`
+  3. Verify processes are terminated: `ps aux | grep -i artwall`
+  4. ONLY THEN build and launch new version
+  5. This prevents multiple instances and resource conflicts
 
 ## Project Vision & Scaling Strategy
 **Phase 1 MVP**: Personal fine art wallpaper system for Kevin's MacBook (48 images, 24 hours)
@@ -197,7 +213,21 @@ Output Structure:
    - Current: Moved state to parent ContentView with `@Binding` 
    - Need: Verify this works properly and collections stay loaded
 
-**Status**: Native SwiftUI app working with Chicago API integration, navigation, and artwork detail views. These are final polish items before proceeding with wallpaper functionality.
+**Status**: Native SwiftUI app working with Chicago API integration, navigation, and artwork detail views. Implementing new page architecture.
+
+## 📱 **App Page Structure (January 2025)**
+
+**Navigation Hierarchy:**
+1. **Welcome Page** - Landing page with "Browse Collections" button
+2. **Collections Page** - Grid of collection cards with 4-image thumbnails 
+3. **Collection Details Page** - Grid of all artworks in selected collection
+4. **Image Details Page** - Individual artwork details and metadata
+
+**User Flow:**
+- Welcome Page → Collections Page → Collection Details Page → Image Details Page
+- Collections auto-load thumbnails (no manual "Load Collection" button)
+- Collection cards show visual previews with first 4 images from collection
+- Intuitive click-through navigation without explicit load buttons
 
 ---
 **Remember**: Act as technical co-founder - challenge ideas, propose alternatives, think about scalability and user experience, not just implementation.

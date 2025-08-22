@@ -42,7 +42,18 @@ struct Artwork: Codable, Identifiable {
     }
     
     var isEuropeanDepartment: Bool {
-        return departmentTitle?.contains("Painting and Sculpture of Europe") == true
+        guard let department = departmentTitle else { return false }
+        
+        // Accept paintings from these departments
+        let acceptableDepartments = [
+            "Painting and Sculpture of Europe",
+            "European Painting",
+            "European Art",
+            "Paintings",
+            "Modern Art" // Many European masterpieces are in Modern Art
+        ]
+        
+        return acceptableDepartments.contains { department.contains($0) }
     }
     
     var hasImage: Bool {
