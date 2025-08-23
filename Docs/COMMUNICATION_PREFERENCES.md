@@ -90,6 +90,12 @@
 - **Consider scalability and maintenance** in recommendations
 - **Think about user experience impact** of technical decisions
 
+### **CRITICAL: Compilation First Rule**
+- **ALWAYS fix compilation errors before proceeding** - Never ignore or work around compilation issues
+- **Zero tolerance for broken builds** - Code must compile cleanly before any testing or feature work
+- **Verify file changes are saved** - Double-check that edits are actually applied to the filesystem
+- **Clean build = prerequisite** - No development work continues with compilation errors present
+
 ### **Code Changes**
 - **Always show what changed** before committing
 - **Explain the technical reasoning** behind changes

@@ -18,6 +18,14 @@
 4. **Future-Proof** - Easy to hire Swift developers later
 5. **Windows Path Exists** - Swift runs on Windows, or port core logic to C#/.NET
 
+### **Image Download Strategy**
+**Decision**: Use GitHub-hosted images instead of Chicago Art Institute API
+- **Reliability** - GitHub CDN is more stable than museum API
+- **Performance** - Images already optimized and cached
+- **$0 Cost** - No API rate limits or bandwidth costs
+- **Offline Capability** - Images remain available even if museum API changes
+- **Quality Control** - We've already curated high-quality versions
+
 ## 🎨 **Design System & UI Standards**
 
 ### **Core Design Principles**

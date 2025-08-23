@@ -3,6 +3,11 @@ import SwiftUI
 struct CollectionDetailsView: View {
     let collection: ArtCollection
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var downloadService = ImageDownloadService()
+    @State private var showingDownloadProgress = false
+    @State private var collectionApplied = false
+    @State private var showingError = false
+    @State private var errorMessage = ""
     
     var body: some View {
         VStack(spacing: 0) {
@@ -25,13 +30,18 @@ struct CollectionDetailsView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    // TODO: Implement wallpaper functionality
-                    print("🎨 Apply collection: \(collection.title)")
-                }) {
-                    Text("Apply this collection")
+                if collectionApplied {
+                    Text("Collection applied")
                         .font(.headline)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.green)
+                } else {
+                    Button(action: {
+                        startCollectionDownload()
+                    }) {
+                        Text("Apply this collection")
+                            .font(.headline)
+                            .foregroundColor(.blue)
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -85,6 +95,56 @@ struct CollectionDetailsView: View {
             }
         }
         .toolbar(.hidden)
+        .overlay(
+            // Download Progress Overlay
+            Group {
+                if showingDownloadProgress {
+                    ZStack {
+                        Color.black.opacity(0.3)
+                            .ignoresSafeArea()
+                        
+                        DownloadProgressView(downloadService: downloadService) {
+                            // Cancel download
+                            showingDownloadProgress = false
+                            downloadService.isDownloading = false
+                        }
+                    }
+                }
+            }
+        )
+        .alert("Error", isPresented: $showingError) {
+            Button("Try Again") {
+                startCollectionDownload()
+            }
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text(errorMessage)
+        }
+    }
+    
+    private func startCollectionDownload() {
+        showingDownloadProgress = true
+        
+        Task {
+            do {
+                try await downloadService.downloadCollection(collection)
+                
+                // Download complete - proceed with wallpaper setup
+                await MainActor.run {
+                    showingDownloadProgress = false
+                    // TODO: Set up wallpaper rotation - for now, simulate success
+                    collectionApplied = true
+                    print("🎨 Ready to apply wallpaper collection: \(collection.title)")
+                }
+            } catch {
+                await MainActor.run {
+                    showingDownloadProgress = false
+                    errorMessage = "There was an error setting up your wallpaper collection. Try reapplying this collection."
+                    showingError = true
+                    print("❌ Download failed: \(error.localizedDescription)")
+                }
+            }
+        }
     }
 }
 
