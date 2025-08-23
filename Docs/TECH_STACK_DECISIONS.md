@@ -18,6 +18,39 @@
 4. **Future-Proof** - Easy to hire Swift developers later
 5. **Windows Path Exists** - Swift runs on Windows, or port core logic to C#/.NET
 
+## 🎨 **Design System & UI Standards**
+
+### **Core Design Principles**
+1. **Component Consistency** - All UI elements must follow a unified design system
+2. **Reusable Components** - Create shared components to ensure consistency
+3. **Visual Hierarchy** - Clear typography, spacing, and color standards
+4. **Responsive Design** - Scaleable UI with intelligent breakpoints
+5. **Accessibility First** - Ensure all interactions are accessible and intuitive
+
+### **Button Standards**
+- **Primary Actions**: `.font(.headline)` + `.foregroundColor(.blue)`
+- **Secondary Actions**: Match primary styling for consistency
+- **Consistent Sizing**: Use standard control sizes across the app
+- **Symmetrical Layout**: Balance visual weight in headers and navigation
+
+### **Typography Scale**
+- **Page Titles**: `.font(.title2)` + `.fontWeight(.semibold)`
+- **Section Headers**: `.font(.headline)`
+- **Body Text**: `.font(.subheadline)`
+- **Captions**: `.font(.caption)` + `.foregroundColor(.secondary)`
+
+### **Color Palette**
+- **Primary Action**: `.blue` (system blue)
+- **Secondary Text**: `.secondary` (system secondary)
+- **Background**: `Color(NSColor.windowBackgroundColor)`
+- **Cards**: `Color(NSColor.controlBackgroundColor)`
+
+### **Spacing Standards**
+- **Page Margins**: `.padding(.horizontal, 20)`
+- **Section Spacing**: `.padding(.vertical, 16)`
+- **Card Padding**: `.padding(16)`
+- **Grid Spacing**: `spacing: 20` for major grids
+
 ## 🏗️ **Architecture Decisions**
 
 ### **Hybrid Hosting Strategy**

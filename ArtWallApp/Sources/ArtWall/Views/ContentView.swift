@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showingCollections = false
     @State private var featuredArtwork: Artwork?
     @StateObject private var artService = ChicagoArtService()
     
     var body: some View {
+        NavigationStack {
         VStack(spacing: 20) {
             // Featured artwork or placeholder
             if let artwork = featuredArtwork {
@@ -38,17 +38,15 @@ struct ContentView: View {
                 .font(.headline)
                 .foregroundColor(.secondary)
             
-            Button("Browse Collections") {
-                showingCollections = true
+            NavigationLink(destination: CollectionsListView()) {
+                Text("Browse Collections")
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
         }
         .padding(40)
-        .frame(minWidth: 500, minHeight: 500)
-        .sheet(isPresented: $showingCollections) {
-            CollectionsListView()
-                .frame(minWidth: 900, minHeight: 700)
+        .frame(minWidth: 1000, minHeight: 700)
+        .toolbar(.hidden)
         }
         .task {
             await loadFeaturedArtwork()

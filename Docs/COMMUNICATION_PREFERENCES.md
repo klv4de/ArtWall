@@ -33,6 +33,7 @@
 3. **If Kevin didn't approve it, don't implement it** - stick to agreed designs
 4. **Always ask before changing layouts, styling, or user flows**
 5. **Focus on polish and attention to detail** - every pixel matters
+6. **CONSISTENT COMPONENTS** - always use reusable components and ensure consistent styling across the application as part of a single cohesive design system
 
 ### **CRITICAL: Process Management Before New Builds**
 1. Always check for running ArtWall processes: `ps aux | grep -i artwall`

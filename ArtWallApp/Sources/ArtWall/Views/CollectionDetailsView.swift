@@ -25,9 +25,14 @@ struct CollectionDetailsView: View {
                 
                 Spacer()
                 
-                Text("\(collection.dateRange)")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                Button(action: {
+                    // TODO: Implement wallpaper functionality
+                    print("🎨 Apply collection: \(collection.title)")
+                }) {
+                    Text("Apply this collection")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                }
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
@@ -79,6 +84,7 @@ struct CollectionDetailsView: View {
                 .padding(.vertical, 16)
             }
         }
+        .toolbar(.hidden)
     }
 }
 

@@ -13,8 +13,7 @@ struct CollectionsListView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
+        VStack(spacing: 0) {
                 // Header - Clean title only, no back button
                 VStack(spacing: 0) {
                     Text("Collections")
@@ -86,7 +85,7 @@ struct CollectionsListView: View {
                         .padding()
                 }
             }
-        }
+        .toolbar(.hidden)
         .task {
             await loadCollections()
         }
