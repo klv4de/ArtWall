@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ArtWall",
     platforms: [
-        .macOS(.v13)
+        .macOS(.v14) // macOS Sonoma 14.0+ required for reliable wallpaper automation
     ],
     products: [
         .executable(

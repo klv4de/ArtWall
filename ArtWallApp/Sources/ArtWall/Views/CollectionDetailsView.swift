@@ -8,6 +8,7 @@ struct CollectionDetailsView: View {
     @State private var collectionApplied = false
     @State private var showingError = false
     @State private var errorMessage = ""
+    private let logger = ArtWallLogger.shared
     
     var body: some View {
         VStack(spacing: 0) {
@@ -31,11 +32,17 @@ struct CollectionDetailsView: View {
                 Spacer()
                 
                 if collectionApplied {
-                    Text("Collection applied")
-                        .font(.headline)
-                        .foregroundColor(.green)
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text("Collection Applied")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                        Text("Wallpaper changes every 30 min")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                 } else {
                     Button(action: {
+                        logger.info("User clicked 'Apply this collection' for: \(collection.title)", category: .ui)
                         startCollectionDownload()
                     }) {
                         Text("Apply this collection")
@@ -129,19 +136,18 @@ struct CollectionDetailsView: View {
             do {
                 try await downloadService.downloadCollection(collection)
                 
-                // Download complete - proceed with wallpaper setup
+                // Download and wallpaper setup complete
                 await MainActor.run {
                     showingDownloadProgress = false
-                    // TODO: Set up wallpaper rotation - for now, simulate success
                     collectionApplied = true
-                    print("🎨 Ready to apply wallpaper collection: \(collection.title)")
+                    print("🎉 Collection applied successfully: \(collection.title)")
                 }
             } catch {
                 await MainActor.run {
                     showingDownloadProgress = false
-                    errorMessage = "There was an error setting up your wallpaper collection. Try reapplying this collection."
+                    errorMessage = "There was an error downloading or setting up your wallpaper collection. Please check your internet connection and try again."
                     showingError = true
-                    print("❌ Download failed: \(error.localizedDescription)")
+                    print("❌ Collection setup failed: \(error.localizedDescription)")
                 }
             }
         }

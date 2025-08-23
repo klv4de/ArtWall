@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var featuredArtwork: Artwork?
     @StateObject private var artService = ChicagoArtService()
+    private let logger = ArtWallLogger.shared
     
     var body: some View {
         NavigationStack {
@@ -49,6 +50,7 @@ struct ContentView: View {
         .toolbar(.hidden)
         }
         .task {
+            logger.info("ContentView appeared - loading featured artwork", category: .app)
             await loadFeaturedArtwork()
         }
     }
@@ -74,7 +76,7 @@ struct ContentView: View {
             featuredArtwork = instantArtwork
         }
         
-        print("✅ Instantly loaded featured artwork: \(instantArtwork.title)")
+        logger.success("Loaded featured artwork: \(instantArtwork.title)", category: .app)
     }
 }
 

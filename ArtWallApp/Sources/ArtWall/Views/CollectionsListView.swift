@@ -5,6 +5,7 @@ struct CollectionsListView: View {
     @StateObject private var collectionManager: CollectionManager
     @State private var collections: [ArtCollection] = []
     @Environment(\.dismiss) private var dismiss
+    private let logger = ArtWallLogger.shared
     
     init() {
         let artService = ChicagoArtService()
@@ -87,11 +88,14 @@ struct CollectionsListView: View {
             }
         .toolbar(.hidden)
         .task {
+            logger.info("CollectionsListView appeared - loading collections", category: .ui)
             await loadCollections()
         }
     }
     
     private func loadCollections() async {
+        let tracker = logger.startProcess("Load Collections UI", category: .ui)
+        
         // Load available collection manifests
         await collectionManager.loadAvailableCollections()
         
@@ -122,8 +126,10 @@ struct CollectionsListView: View {
         
         await MainActor.run {
             collections = builtCollections
-            print("🎉 Loaded \(collections.count) collections total")
         }
+        
+        tracker.complete()
+        logger.success("Loaded \(collections.count) collections total in UI", category: .ui)
     }
 }
 

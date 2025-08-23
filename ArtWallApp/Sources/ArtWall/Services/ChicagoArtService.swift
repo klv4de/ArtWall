@@ -4,6 +4,7 @@ class ChicagoArtService: ObservableObject {
     private let apiBase = "https://api.artic.edu/api/v1"
     private let session = URLSession.shared
     private let apiDelay: TimeInterval = 3.0  // 3-second delay between API calls
+    private let logger = ArtWallLogger.shared
     
     // API Settings (matching our Python script)
     private let maxAPICallsPerSession = 100
@@ -13,7 +14,13 @@ class ChicagoArtService: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     
+    init() {
+        logger.info("ChicagoArtService initialized", category: .network)
+    }
+    
     func fetchEuropeanPaintings(limit: Int = 24) async -> [Artwork] {
+        let tracker = logger.startProcess("Fetch European Paintings", category: .network)
+        
         isLoading = true
         errorMessage = nil
         
@@ -25,12 +32,17 @@ class ChicagoArtService: ObservableObject {
                 isLoading = false
             }
             
+            tracker.complete()
+            logger.success("Fetched \(filtered.count) European paintings from API", category: .network)
             return filtered
         } catch {
             await MainActor.run {
                 isLoading = false
                 errorMessage = error.localizedDescription
             }
+            
+            tracker.fail(error: error)
+            logger.error("Failed to fetch European paintings", error: error, category: .network)
             return []
         }
     }

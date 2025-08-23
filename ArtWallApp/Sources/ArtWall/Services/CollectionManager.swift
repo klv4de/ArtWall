@@ -17,14 +17,18 @@ class CollectionManager: ObservableObject {
     @Published var errorMessage: String?
     
     private let artService: ChicagoArtService
+    private let logger = ArtWallLogger.shared
     
     init(artService: ChicagoArtService) {
         self.artService = artService
+        logger.info("CollectionManager initialized", category: .collections)
     }
     
     // MARK: - Collection Loading
     
     func loadAvailableCollections() async {
+        let tracker = logger.startProcess("Load Available Collections", category: .collections)
+        
         await MainActor.run {
             isLoading = true
             errorMessage = nil
@@ -36,11 +40,17 @@ class CollectionManager: ObservableObject {
                 availableCollections = collections
                 isLoading = false
             }
+            
+            tracker.complete()
+            logger.success("Loaded \(collections.count) collections successfully", category: .collections)
         } catch {
             await MainActor.run {
                 errorMessage = "Failed to load collections: \(error.localizedDescription)"
                 isLoading = false
             }
+            
+            tracker.fail(error: error)
+            logger.error("Failed to load available collections", error: error, category: .collections)
         }
     }
     
@@ -77,12 +87,12 @@ class CollectionManager: ObservableObject {
                 )
             }
             
-            print("✅ Loaded \(manifests.count) collections from collections_index.json")
+            logger.success("Loaded \(manifests.count) collections from collections_index.json", category: .collections)
             return manifests
             
         } catch {
-            print("⚠️ Failed to load bundled collections_index.json: \(error)")
-            print("🔄 Falling back to hardcoded manifests...")
+            logger.warning("Failed to load bundled collections_index.json", category: .collections)
+            logger.info("Falling back to hardcoded manifests", category: .collections)
             
             // Fallback to hardcoded data if bundle loading fails
             return [
@@ -283,7 +293,8 @@ class CollectionManager: ObservableObject {
     // MARK: - Collection Building
     
     func buildCollection(from manifest: CollectionManifest) async -> ArtCollection? {
-        print("🚀 Building collection: \(manifest.title) (instant loading!)")
+        let tracker = logger.startProcess("Build Collection: \(manifest.title)", category: .collections)
+        logger.info("Building collection: \(manifest.title) (instant loading!)", category: .collections)
         
         // Load artwork metadata from bundled collections (production-ready!)
         do {
@@ -315,13 +326,14 @@ class CollectionManager: ObservableObject {
                 artworks.append(artwork)
             }
             
-            print("✅ Instantly loaded collection with \(artworks.count) artworks from GitHub data")
+            tracker.complete()
+            logger.success("Instantly loaded collection with \(artworks.count) artworks from GitHub data", category: .collections)
             
             let collection = ArtCollection.from(manifest: manifest, artworks: artworks)
             return collection
             
         } catch {
-            print("⚠️ Could not load bundled collection data, using manifest IDs: \(error)")
+            logger.warning("Could not load bundled collection data, using manifest IDs", category: .collections)
             
             // Fallback: create basic artworks from IDs
             var artworks: [Artwork] = []
@@ -344,7 +356,8 @@ class CollectionManager: ObservableObject {
                 artworks.append(artwork)
             }
             
-            print("✅ Created fallback collection with \(artworks.count) artworks")
+            tracker.complete()
+            logger.success("Created fallback collection with \(artworks.count) artworks", category: .collections)
             
             let collection = ArtCollection.from(manifest: manifest, artworks: artworks)
             return collection

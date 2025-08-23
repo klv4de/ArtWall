@@ -10,6 +10,8 @@ class ImageDownloadService: ObservableObject {
     @Published var totalDownloads = 0
     
     private let baseDownloadPath: URL
+    private let wallpaperService = WallpaperService()
+    private let logger = ArtWallLogger.shared
     
     init() {
         // Create download directory in ~/Pictures/ArtWall/
@@ -17,35 +19,85 @@ class ImageDownloadService: ObservableObject {
         self.baseDownloadPath = picturesPath.appendingPathComponent("ArtWall")
         
         // Ensure the base directory exists
-        try? FileManager.default.createDirectory(at: baseDownloadPath, withIntermediateDirectories: true)
+        do {
+            try FileManager.default.createDirectory(at: baseDownloadPath, withIntermediateDirectories: true)
+            logger.success("Created/verified download directory: \(baseDownloadPath.path)", category: .download)
+        } catch {
+            logger.error("Failed to create download directory", error: error, category: .download)
+        }
     }
     
-    /// Downloads all images for a collection to local storage
+    /// Downloads all images for a collection and sets up wallpaper rotation
     func downloadCollection(_ collection: ArtCollection) async throws {
+        let tracker = logger.startProcess("Download Collection: \(collection.title)", category: .download)
+        
         isDownloading = true
         downloadProgress = 0.0
         currentDownloadIndex = 0
         totalDownloads = collection.allArtworks.count
         
-        // Create collection-specific directory
         let collectionPath = baseDownloadPath.appendingPathComponent(sanitizeFileName(collection.title))
-        try FileManager.default.createDirectory(at: collectionPath, withIntermediateDirectories: true)
         
-        downloadStatus = "Preparing to download \(totalDownloads) artworks..."
-        
-        for (index, artwork) in collection.allArtworks.enumerated() {
-            currentDownloadIndex = index + 1
-            downloadStatus = "Downloading \(artwork.title) (\(currentDownloadIndex)/\(totalDownloads))"
+        do {
+            logger.info("Starting download for collection: \(collection.title) (\(totalDownloads) artworks)", category: .download)
             
-            try await downloadArtworkImage(artwork, to: collectionPath)
+            // Check if we need to replace existing collection
+            if wallpaperService.shouldUpdateCollection(collection, at: collectionPath) {
+                downloadStatus = "Preparing collection folder..."
+                tracker.progress("Cleaning up existing collection")
+                try wallpaperService.cleanupOldCollection(at: collectionPath)
+            }
             
-            downloadProgress = Double(currentDownloadIndex) / Double(totalDownloads)
+            // Create collection-specific directory
+            try FileManager.default.createDirectory(at: collectionPath, withIntermediateDirectories: true)
+            logger.success("Created collection directory: \(collectionPath.path)", category: .download)
+            
+            downloadStatus = "Downloading \(totalDownloads) artworks..."
+            tracker.progress("Starting image downloads")
+            
+            // Download all images with error recovery
+            var failedDownloads = 0
+            for (index, artwork) in collection.allArtworks.enumerated() {
+                currentDownloadIndex = index + 1
+                downloadStatus = "Downloading \(artwork.title) (\(currentDownloadIndex)/\(totalDownloads))"
+                
+                do {
+                    try await downloadArtworkImage(artwork, to: collectionPath)
+                    logger.debug("Downloaded artwork \(currentDownloadIndex)/\(totalDownloads): \(artwork.title)", category: .download)
+                } catch {
+                    failedDownloads += 1
+                    logger.warning("Failed to download artwork: \(artwork.title)", category: .download)
+                    
+                    // Continue with other downloads unless too many failures
+                    if failedDownloads > totalDownloads / 4 { // More than 25% failed
+                        logger.error("Too many download failures (\(failedDownloads)/\(totalDownloads)), aborting", category: .download)
+                        throw ImageDownloadError.downloadFailed("Too many download failures")
+                    }
+                }
+                
+                downloadProgress = Double(currentDownloadIndex) / Double(totalDownloads)
+            }
+            
+            logger.info("Download phase complete. Success: \(totalDownloads - failedDownloads)/\(totalDownloads)", category: .download)
+            
+            // Set up wallpaper and screensaver automation
+            downloadStatus = "Setting up wallpaper rotation..."
+            tracker.progress("Configuring wallpaper automation")
+            
+            try await wallpaperService.setupWallpaperRotation(for: collection, at: collectionPath)
+            
+            downloadStatus = "Collection applied! Wallpaper will change every 30 minutes."
+            isDownloading = false
+            
+            tracker.complete()
+            logger.success("Successfully downloaded and configured collection: \(collection.title)", category: .download)
+            
+        } catch {
+            isDownloading = false
+            tracker.fail(error: error)
+            logger.error("Failed to download/configure collection: \(collection.title)", error: error, category: .download)
+            throw error
         }
-        
-        downloadStatus = "Download complete! \(totalDownloads) artworks saved."
-        isDownloading = false
-        
-        print("🎉 Successfully downloaded collection '\(collection.title)' to: \(collectionPath.path)")
     }
     
     /// Downloads a single artwork image

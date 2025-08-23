@@ -7,8 +7,10 @@
 
 ### **Core Technologies**
 - **Language**: Swift + SwiftUI
-- **Platform**: Native macOS application
+- **Platform**: Native macOS application (macOS Sonoma 14.0+ required)
 - **Development**: Xcode (free)
+- **Tested on**: macOS Sequoia 15.6.1
+- **Multi-Monitor**: Partial support (main screen working, external monitor API issue identified)
 - **Total Cost**: $0
 
 ### **Why Swift/SwiftUI**
@@ -58,6 +60,36 @@
 - **Section Spacing**: `.padding(.vertical, 16)`
 - **Card Padding**: `.padding(16)`
 - **Grid Spacing**: `spacing: 20` for major grids
+
+## 🔍 **Logging & Testing Infrastructure**
+
+### **Comprehensive Observability System**
+**Decision**: Implement enterprise-grade logging and testing infrastructure
+- **ArtWallLogger**: Structured logging with 8 categories and 6 severity levels
+- **File Logging**: `~/Library/Logs/ArtWall/artwall-YYYY-MM-DD.log` with 7-day retention
+- **Process Tracking**: Automatic timing and success/failure tracking for all major operations
+- **Console Integration**: Native macOS Console.app support with searchable logs
+
+### **Automated Testing Framework**
+**Decision**: Build comprehensive system validation and component testing
+- **AppTester**: Automated health checks on app startup
+- **System Tests**: File system, network, macOS compatibility, screen detection, UserDefaults
+- **Component Tests**: Collections, wallpaper API, download operations
+- **Non-Destructive**: All tests safe to run in production environment
+
+### **Error Recovery & Resilience**
+**Decision**: Implement robust error handling with graceful degradation
+- **Timeout Protection**: 5-10 second wallpaper API timeouts prevent freezing (multi-monitor issue identified)
+- **Partial Failure Tolerance**: Continue downloads even if 25% fail
+- **Fallback Mechanisms**: Hardcoded manifests if bundle loading fails
+- **User-Friendly Errors**: Clear error messages with actionable guidance
+
+### **Why This Infrastructure?**
+1. **Debugging Efficiency** - Complete visibility into all operations
+2. **Reliability** - Proactive issue detection and graceful failure handling
+3. **User Support** - Detailed logs for troubleshooting user issues
+4. **Development Speed** - Rapid identification of issues during development
+5. **Production Confidence** - Comprehensive testing validates system health
 
 ## 🏗️ **Architecture Decisions**
 
@@ -138,4 +170,24 @@ GitHub Repository (Free)
 
 ---
 
-**✅ All major technical decisions finalized - ready to begin Swift development!**
+## 🚧 **Current Status & Next Steps** (January 21, 2025)
+
+### **✅ COMPLETED**
+- Enterprise logging and testing infrastructure (100% complete)
+- Download functionality (working perfectly - 24/24 images)
+- Wallpaper system integration (95% complete)
+- Development standards and documentation
+
+### **⚠️ KNOWN ISSUE**
+**Multi-Monitor Wallpaper API Hanging**
+- **Symptom**: App freezes when setting wallpaper on external monitor (DELL U3818DW)
+- **Root Cause**: `NSWorkspace.setDesktopImageURL()` blocking on external displays
+- **Workaround**: Target main screen only initially
+- **Next Session**: Fix multi-monitor support or implement graceful fallback
+
+### **🎯 IMMEDIATE NEXT STEP**
+1. Modify `WallpaperService.configureWallpaperSettings()` to use `NSScreen.main` only
+2. Test complete end-to-end flow on main screen
+3. Add multi-monitor support as secondary feature
+
+**✅ All major technical decisions finalized - infrastructure complete - 95% wallpaper integration done!**
