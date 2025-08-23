@@ -48,7 +48,7 @@ class CollectionManager: ObservableObject {
         // Load from bundled collections_index.json (production-ready!)
         
         do {
-            guard let url = Bundle.main.url(forResource: "collections_index", withExtension: "json") else {
+            guard let url = Bundle.module.url(forResource: "collections_index", withExtension: "json") else {
                 throw CollectionError.resourceNotFound("collections_index.json not found in app bundle")
             }
             
@@ -287,7 +287,7 @@ class CollectionManager: ObservableObject {
         
         // Load artwork metadata from bundled collections (production-ready!)
         do {
-            guard let url = Bundle.main.url(forResource: "collections/\(manifest.collectionId)/collection", withExtension: "json") else {
+            guard let url = Bundle.module.url(forResource: "collections/\(manifest.collectionId)/collection", withExtension: "json") else {
                 throw CollectionError.resourceNotFound("Collection \(manifest.collectionId) not found in app bundle")
             }
             
