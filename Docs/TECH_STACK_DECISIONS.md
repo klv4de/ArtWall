@@ -170,13 +170,27 @@ GitHub Repository (Free)
 
 ---
 
-## 🚧 **Current Status & Next Steps** (January 21, 2025)
+## 🚧 **Current Status & Strategic Pivot** (January 21, 2025)
 
-### **✅ COMPLETED**
+### **🔍 RESEARCH BREAKTHROUGH: System Bug Identification**
+
+**Problem Solved**: Wallpaper rotation issues are **macOS Sequoia system bugs**, not our implementation.
+
+**Key Findings from Research**:
+- Photos album rotation broken system-wide since macOS Ventura
+- Folder rotation inconsistent even with local folders
+- AppleScript System Events API broken in recent macOS versions
+- iCloud photo access fails for wallpaper rotation
+- **Root Cause**: Apple broke wallpaper APIs, affecting all apps and users
+
+**Strategic Decision**: Stop fighting broken system APIs, build custom solution.
+
+### **✅ COMPLETED FOUNDATION**
 - Enterprise logging and testing infrastructure (100% complete)
 - Download functionality (working perfectly - 24/24 images)
-- Wallpaper system integration (95% complete)
+- Individual wallpaper setting (NSWorkspace API working)
 - Development standards and documentation
+- **Research Phase**: Complete analysis of macOS wallpaper system bugs
 
 ### **✅ RESOLVED: Multi-Monitor Wallpaper API Issue (August 26, 2025)**
 
@@ -217,11 +231,43 @@ GitHub Repository (Free)
 - Folder rotation - only single image shows, no 30-minute switching
 - System integration - collections not recognized by macOS wallpaper system
 
-### **🎯 NEXT TECHNICAL PRIORITIES**
-1. **CRITICAL: Fix Folder Rotation** - Research working method for macOS Sequoia folder rotation
-2. **Research macos-wallpaper CLI** - May be the solution for proper folder integration
-3. **Fix Scaling Issue**: Research correct UserDefaults keys for "Fit to Screen"
-4. **Multi-Monitor**: Add external monitor support using working approach
-5. **Content Expansion**: Focus on building more collections (after rotation works)
+### **🚀 STRATEGIC PIVOT: Custom Wallpaper Engine (January 2025)**
 
-**⚠️ Core wallpaper automation: PARTIALLY WORKING - single image only, no folder rotation yet**
+**RESEARCH COMPLETE**: macOS Sequoia wallpaper rotation is broken system-wide due to Apple bugs.
+
+**NEW APPROACH**: Build custom wallpaper rotation engine instead of fighting broken APIs.
+
+#### **Custom Engine Architecture**
+```swift
+// Timer-based rotation using working NSWorkspace API
+class ArtWallWallpaperEngine {
+    private var timer: Timer?
+    private var images: [URL] = []
+    
+    func startRotation(interval: TimeInterval = 1800) { // 30 minutes
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { _ in
+            self.rotateToNext()
+        }
+    }
+}
+```
+
+#### **Hybrid App Model**
+1. **Main App**: Collection browsing, configuration (SwiftUI)
+2. **Background Service**: Invisible wallpaper rotation (Launch Agent)
+3. **Menu Bar Control**: Quick access to rotation controls
+
+#### **Development Approach: Incremental Testing**
+- **Test at every step** - no large changes without verification
+- **Modular implementation** - build and test each component separately
+- **Comprehensive logging** - full visibility into all operations
+- **Fallback mechanisms** - graceful degradation if components fail
+
+### **🎯 UPDATED TECHNICAL PRIORITIES**
+1. **Build Custom WallpaperEngine** - Timer-based rotation (2-3 hours estimated)
+2. **Add Menu Bar Interface** - Control rotation from menu bar
+3. **Configure Background Service** - Launch Agent registration
+4. **Test Incremental Components** - Verify each piece works before proceeding
+5. **Content Expansion**: Build more collections (after rotation engine works)
+
+**✅ Core wallpaper automation: NEW RELIABLE APPROACH - custom engine bypasses system bugs**

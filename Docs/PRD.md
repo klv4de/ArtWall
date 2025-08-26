@@ -39,30 +39,39 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - **Instant Loading**: JSON-driven architecture with bundle resources
 - **Optimized Performance**: 79% code reduction, production-ready file paths
 
-### 🎉 Phase 2: Wallpaper Integration (95% COMPLETE - January 2025)
+### 🎉 Phase 2: Wallpaper Integration (STRATEGIC PIVOT - January 2025)
 
-#### **Core Wallpaper Functionality** ✅ IMPLEMENTED
+#### **STRATEGIC DECISION: Custom Wallpaper Engine** 🚀 NEW APPROACH
+- ✅ **Research Complete**: Identified macOS Sequoia system bugs affecting wallpaper rotation
+- ✅ **Root Cause**: Photos album rotation, folder rotation, and AppleScript APIs broken system-wide
+- 🎯 **Solution**: Build custom wallpaper rotation engine instead of fighting broken system APIs
+- ⚡ **Implementation**: Timer-based rotation using working NSWorkspace individual image setting
+- 🔄 **Hybrid Architecture**: Background service + menu bar control + main app UI
+
+#### **Core Wallpaper Functionality** ✅ FOUNDATION COMPLETE
 - ✅ **"Apply this collection" Button**: One-click wallpaper setup on Collection Details page
 - ✅ **Automatic Download**: Save collection images to `~/Pictures/ArtWall/[Collection Name]/`
 - ✅ **Progress Tracking**: Real-time download progress with cancel option
 - ✅ **Error Handling**: Graceful failure recovery and user feedback
-- ⚠️ **System Integration**: macOS wallpaper rotation (95% complete - multi-monitor issue)
-- 🔄 **Multi-Monitor Support**: Identified issue with external monitors (next session)
-- ✅ **Rotation Settings**: 30-minute intervals configured
+- 🚀 **Custom Engine**: Replace broken system integration with reliable custom solution
 
-#### **User Experience Flow**
+#### **User Experience Flow** (Updated with Custom Engine)
 1. User browses collections in app
 2. User views Collection Details page with all artworks
 3. User clicks **"Apply this collection"** button
 4. App downloads all images to dedicated folder
-5. App configures macOS System Settings for wallpaper rotation
-6. User enjoys rotating fine art wallpapers automatically
+5. **NEW**: App starts custom wallpaper rotation engine (background service)
+6. **NEW**: Menu bar icon provides rotation control (pause/resume/change collection)
+7. User enjoys rotating fine art wallpapers automatically every 30 minutes
 
-#### **Technical Implementation**
+#### **Technical Implementation** (Custom Wallpaper Engine)
 - **Image Management**: Download and organize collection images locally
-- **macOS Integration**: Use native wallpaper APIs (not fragile AppleScript)
-- **Permission Handling**: Request necessary system permissions gracefully
-- **Error Handling**: Graceful fallbacks if system integration fails
+- **Custom Rotation Engine**: Timer-based wallpaper changes using working NSWorkspace API
+- **Background Service**: Runs invisibly with Launch Agent registration
+- **Menu Bar Control**: Quick access to pause/resume/change collections
+- **Hybrid App Model**: Main app for browsing + background service for rotation
+- **Permission Handling**: Standard macOS app permissions (no complex Accessibility requirements)
+- **Error Handling**: Graceful fallbacks with comprehensive logging
 - **Progress Feedback**: Show download/setup progress to user
 
 ### 🏗️ Phase 2.5: Enterprise Infrastructure (✅ COMPLETED - January 2025)

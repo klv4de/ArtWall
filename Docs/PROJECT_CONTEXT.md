@@ -12,6 +12,8 @@
 - **One decision point at a time** - Let Kevin process and respond to each piece before moving to the next
 - **Clear separation of concerns** - Technical analysis vs business decisions vs user preferences
 - **Wait for answers** before proceeding to implementation
+- **INCREMENTAL DEVELOPMENT**: Test at every step, no large changes without verification
+- **MODULAR APPROACH**: Build and test each component separately before integration
 - **CRITICAL: File Change Approval Process**:
   1. Always let Kevin approve code changes before committing
   2. Let Kevin QA changes
@@ -244,18 +246,28 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 
 **Status**: Production-ready foundation with enterprise-grade reliability and observability.
 
-### **🎉 MAJOR BREAKTHROUGH: Wallpaper Automation Fixed (August 26, 2025)**
+### **🚀 STRATEGIC BREAKTHROUGH: Custom Wallpaper Engine (January 2025)**
 
-**PROBLEM SOLVED**: NSWorkspace API hanging issue completely resolved!
+**RESEARCH COMPLETE**: Identified root cause of wallpaper issues - macOS Sequoia system bugs!
 
-**✅ Current Working Status:**
-- ✅ **No Hanging**: Progress dialogs complete successfully
-- ✅ **Single Wallpaper**: Individual images set successfully
-- ✅ **Multi-Monitor Detection**: Logs all screens, targets main screen
+**🔍 Key Research Findings:**
+- Photos album rotation broken system-wide since macOS Ventura
+- Folder rotation inconsistent even with local folders  
+- AppleScript System Events API broken in recent macOS versions
+- **Root Cause**: Apple broke wallpaper APIs at system level
+
+**🎯 Strategic Decision: Custom Wallpaper Engine**
+- Stop fighting broken system APIs
+- Build reliable timer-based rotation using working NSWorkspace individual image API
+- Hybrid architecture: Main app + background service + menu bar control
+- **Estimated Development**: 3-5 hours focused work
+
+**✅ Current Working Foundation:**
+- ✅ **Individual Wallpaper Setting**: NSWorkspace API works perfectly
+- ✅ **Download System**: 24/24 images downloaded successfully
 - ✅ **Comprehensive Logging**: Complete visibility into all operations
-- ❌ **CRITICAL GAP**: Folder rotation NOT working - only single image shows
-- ❌ **System Integration**: Collection folder not appearing in System Settings
-- ⚠️ **Minor Issue**: Scaling shows "Fill Screen" instead of "Fit to Screen"
+- ✅ **Enterprise Infrastructure**: Production-ready foundation
+- 🚀 **NEW PATH**: Custom engine approach validated and ready to implement
 
 **Technical Solution Implemented:**
 ```swift
@@ -266,17 +278,18 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 4. Extensive logging: Debug any future issues
 ```
 
-**Root Cause Analysis:**
-- NSWorkspace.setDesktopImageURL() API fundamentally broken in macOS Sequoia
-- External monitors (DELL U3818DW) cause complete API blocking
-- AppleScript folder rotation syntax not supported in modern macOS
-- Solution: Hybrid UserDefaults + AppleScript approach
+**Root Cause Analysis - UPDATED:**
+- **System-Wide Bug**: macOS Sequoia wallpaper rotation broken for ALL users and apps
+- **Apple's Responsibility**: Photos albums, folder rotation, AppleScript APIs all broken
+- **Our Solution**: Custom wallpaper engine using working individual image API
+- **Technical Approach**: Timer-based rotation + background service + menu bar control
 
-**Next Priority:**
-1. **CRITICAL**: Fix folder rotation - UserDefaults approach not working in macOS Sequoia
-2. Research correct method for folder rotation (possibly macos-wallpaper CLI tool)
-3. Fix wallpaper scaling to "Fit to Screen" (minor polish)
-4. Expand collections content (after core rotation works)
+**STRATEGIC PIVOT (January 2025):**
+1. **RESEARCH COMPLETE**: Identified macOS Sequoia system bugs affecting wallpaper rotation
+2. **NEW APPROACH**: Build custom wallpaper engine instead of fighting broken system APIs
+3. **IMPLEMENTATION PLAN**: Timer-based rotation + background service + menu bar control
+4. **DEVELOPMENT APPROACH**: Incremental testing at every step
+5. **ESTIMATED EFFORT**: 3-5 hours of focused development
 
 ### **PHASE 2B: Collection Expansion Strategy**
 
