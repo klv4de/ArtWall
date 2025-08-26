@@ -207,15 +207,21 @@ GitHub Repository (Free)
 - Complex AppleScript scaling commands - syntax errors
 
 **What Works Perfectly:**
-- UserDefaults folder configuration - reliable
 - Simple AppleScript image setting - no hanging
 - Main screen targeting - avoids multi-monitor issues
-- Hybrid approach - best of both worlds
+- Progress dialog completion - no more hanging
+- Comprehensive logging - complete visibility
+
+**What Doesn't Work Yet:**
+- UserDefaults folder configuration - folder not appearing in System Settings
+- Folder rotation - only single image shows, no 30-minute switching
+- System integration - collections not recognized by macOS wallpaper system
 
 ### **🎯 NEXT TECHNICAL PRIORITIES**
-1. **Fix Scaling Issue**: Research correct UserDefaults keys for "Fit to Screen"
-2. **Test Rotation**: Validate 30-minute folder rotation works
-3. **Multi-Monitor**: Add external monitor support using working approach
-4. **Content Expansion**: Focus on building more collections
+1. **CRITICAL: Fix Folder Rotation** - Research working method for macOS Sequoia folder rotation
+2. **Research macos-wallpaper CLI** - May be the solution for proper folder integration
+3. **Fix Scaling Issue**: Research correct UserDefaults keys for "Fit to Screen"
+4. **Multi-Monitor**: Add external monitor support using working approach
+5. **Content Expansion**: Focus on building more collections (after rotation works)
 
-**✅ Core wallpaper automation: COMPLETE AND WORKING!**
+**⚠️ Core wallpaper automation: PARTIALLY WORKING - single image only, no folder rotation yet**

@@ -250,10 +250,11 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 
 **✅ Current Working Status:**
 - ✅ **No Hanging**: Progress dialogs complete successfully
-- ✅ **Wallpaper Changes**: Images actually appear on desktop
-- ✅ **Folder Rotation**: 30-minute intervals configured via UserDefaults
+- ✅ **Single Wallpaper**: Individual images set successfully
 - ✅ **Multi-Monitor Detection**: Logs all screens, targets main screen
 - ✅ **Comprehensive Logging**: Complete visibility into all operations
+- ❌ **CRITICAL GAP**: Folder rotation NOT working - only single image shows
+- ❌ **System Integration**: Collection folder not appearing in System Settings
 - ⚠️ **Minor Issue**: Scaling shows "Fill Screen" instead of "Fit to Screen"
 
 **Technical Solution Implemented:**
@@ -272,9 +273,10 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 - Solution: Hybrid UserDefaults + AppleScript approach
 
 **Next Priority:**
-1. Fix wallpaper scaling to "Fit to Screen" (minor polish)
-2. Test 30-minute rotation functionality  
-3. Expand collections content (major feature work)
+1. **CRITICAL**: Fix folder rotation - UserDefaults approach not working in macOS Sequoia
+2. Research correct method for folder rotation (possibly macos-wallpaper CLI tool)
+3. Fix wallpaper scaling to "Fit to Screen" (minor polish)
+4. Expand collections content (after core rotation works)
 
 ### **PHASE 2B: Collection Expansion Strategy**
 
