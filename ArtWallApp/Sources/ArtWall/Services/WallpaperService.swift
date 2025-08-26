@@ -59,36 +59,44 @@ class WallpaperService: ObservableObject {
         
         logger.info("Found \(imageFiles.count) images in collection", category: .wallpaper)
         
-        // Set the first image as wallpaper for all screens to start
+        // Set the first image as wallpaper for main screen only (avoid multi-monitor issues)
         let firstImageURL = imageFiles.first!
         let screens = NSScreen.screens
         
-        logger.debug("Setting wallpaper for \(screens.count) screens", category: .wallpaper)
+        logger.debug("Found \(screens.count) screens, targeting main screen only", category: .wallpaper)
         
-        // Configure wallpaper for all screens with timeout protection
-        for (index, screen) in screens.enumerated() {
-            do {
-                logger.debug("Setting wallpaper for screen \(index + 1)/\(screens.count): \(screen.localizedName)", category: .wallpaper)
-                
-                // Set wallpaper with specific options
-                let options: [NSWorkspace.DesktopImageOptionKey: Any] = [
-                    .imageScaling: NSImageScaling.scaleProportionallyUpOrDown, // Fit to screen
-                    .allowClipping: false,
-                    .fillColor: NSColor.black // Black filler color
-                ]
-                
-                // Use Task.detached to avoid blocking the main actor
-                try await withTimeout(seconds: 10) {
-                    try await Task.detached { @MainActor in
-                        try NSWorkspace.shared.setDesktopImageURL(firstImageURL, for: screen, options: options)
-                    }.value
-                }
-                
-                logger.success("Set wallpaper for screen: \(screen.localizedName)", category: .wallpaper)
-            } catch {
-                logger.error("Failed to set wallpaper for screen \(screen.localizedName)", error: error, category: .wallpaper)
-                throw WallpaperError.failedToSetWallpaper(error.localizedDescription)
+        // Get main screen only to avoid external monitor API hanging issue
+        guard let mainScreen = NSScreen.main else {
+            logger.error("Could not identify main screen", category: .wallpaper)
+            throw WallpaperError.configurationFailed("Could not identify main screen")
+        }
+        
+        do {
+            logger.debug("Setting wallpaper for main screen: \(mainScreen.localizedName)", category: .wallpaper)
+            
+            // NSWorkspace API is unreliable - use UserDefaults + shell command approach
+            logger.info("Using UserDefaults + shell command approach for (\(mainScreen.localizedName))", category: .wallpaper)
+            
+            // Set UserDefaults for folder rotation
+            try setWallpaperFolderViaUserDefaults(collectionPath: collectionPath, firstImageURL: firstImageURL)
+            
+            // Use shell command to set first image (working approach)
+            try setWallpaperViaShellCommand(imageURL: firstImageURL)
+            
+            logger.success("Successfully set wallpaper using hybrid approach", category: .wallpaper)
+            
+            logger.success("Set wallpaper for main screen: \(mainScreen.localizedName)", category: .wallpaper)
+            
+            // Log info about other screens but don't configure them yet
+            if screens.count > 1 {
+                let otherScreens = screens.filter { $0 != mainScreen }.map { $0.localizedName }
+                logger.info("Additional screens detected but not configured: \(otherScreens.joined(separator: ", "))", category: .wallpaper)
+                logger.info("Multi-monitor support will be added in future update", category: .wallpaper)
             }
+            
+        } catch {
+            logger.error("Failed to set wallpaper for main screen", error: error, category: .wallpaper)
+            throw WallpaperError.failedToSetWallpaper(error.localizedDescription)
         }
         
         // Configure rotation settings using defaults (30 minutes = 1800 seconds)
@@ -152,6 +160,133 @@ class WallpaperService: ObservableObject {
             logger.error("Failed to configure screensaver", error: error, category: .wallpaper)
             throw WallpaperError.configurationFailed("Screensaver configuration failed: \(error.localizedDescription)")
         }
+    }
+    
+    /// Shell command method to set single wallpaper image (working approach)
+    private func setWallpaperViaShellCommand(imageURL: URL) throws {
+        logger.debug("Setting wallpaper via shell command: \(imageURL.path)", category: .wallpaper)
+        
+        let task = Process()
+        task.launchPath = "/usr/bin/osascript"
+        task.arguments = [
+            "-e",
+            "tell application \"System Events\" to tell every desktop to set picture to \"\(imageURL.path)\""
+        ]
+        
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.standardError = pipe
+        
+        do {
+            task.launch()
+            task.waitUntilExit()
+            
+            if task.terminationStatus == 0 {
+                logger.success("Shell command wallpaper setting succeeded", category: .wallpaper)
+            } else {
+                let data = pipe.fileHandleForReading.readDataToEndOfFile()
+                let output = String(data: data, encoding: .utf8) ?? "Unknown error"
+                logger.warning("Shell command failed with status \(task.terminationStatus): \(output)", category: .wallpaper)
+                throw WallpaperError.configurationFailed("Shell command failed: \(output)")
+            }
+        } catch {
+            logger.error("Shell command execution failed", error: error, category: .wallpaper)
+            throw error
+        }
+    }
+    
+    /// Set wallpaper folder rotation via UserDefaults
+    private func setWallpaperFolderViaUserDefaults(collectionPath: URL, firstImageURL: URL) throws {
+        let defaults = UserDefaults.standard
+        
+        logger.debug("Setting wallpaper folder rotation via UserDefaults: \(collectionPath.path)", category: .wallpaper)
+        
+        // Set the collection folder for rotation
+        defaults.set(collectionPath.path, forKey: "DesktopPictureFolderPath")
+        
+        // Enable rotation
+        defaults.set(true, forKey: "DesktopPictureChangeEnabled")
+        
+        // Set rotation interval (30 minutes = 1800 seconds)
+        defaults.set(1800, forKey: "DesktopPictureChangeInterval")
+        
+        // Set scaling to fit
+        defaults.set("Fit", forKey: "DesktopPictureImageScaling")
+        defaults.set(1, forKey: "DesktopPictureImageScalingType")  // 1 = Fit to Screen
+        
+        // Set filler color to black
+        defaults.set("0.0 0.0 0.0", forKey: "DesktopPictureFillerColor")
+        
+        // Apply changes
+        let syncSuccess = defaults.synchronize()
+        logger.debug("UserDefaults folder rotation synchronize result: \(syncSuccess)", category: .wallpaper)
+        
+        logger.success("Set wallpaper folder rotation via UserDefaults: \(collectionPath.lastPathComponent)", category: .wallpaper)
+    }
+    
+    /// Fallback method to set wallpaper using UserDefaults (more reliable for external monitors)
+    private func setWallpaperViaUserDefaults(imageURL: URL) throws {
+        let defaults = UserDefaults.standard
+        
+        logger.debug("Starting UserDefaults wallpaper setting for: \(imageURL.path)", category: .wallpaper)
+        
+        // Verify file exists first
+        guard FileManager.default.fileExists(atPath: imageURL.path) else {
+            logger.error("Image file does not exist: \(imageURL.path)", category: .wallpaper)
+            throw WallpaperError.configurationFailed("Image file not found: \(imageURL.path)")
+        }
+        logger.debug("✅ Confirmed image file exists: \(imageURL.lastPathComponent)", category: .wallpaper)
+        
+        // Try multiple approaches for macOS Sequoia compatibility
+        
+        // Method 1: Direct wallpaper setting (most reliable)
+        logger.debug("Setting DesktopPicturePath and DesktopImageURL", category: .wallpaper)
+        defaults.set(imageURL.path, forKey: "DesktopPicturePath")
+        defaults.set(imageURL.path, forKey: "DesktopImageURL")  // Alternative key
+        
+        // Method 2: Set for all spaces/screens
+        logger.debug("Setting DesktopPicture dictionary", category: .wallpaper)
+        let desktopPictureDict: [String: Any] = [
+            "ImageFilePath": imageURL.path,
+            "Change": false,
+            "TimerPopUpTag": 0,
+            "Placement": "Fit"
+        ]
+        defaults.set([desktopPictureDict], forKey: "DesktopPicture")
+        
+        // Method 3: System wallpaper database approach
+        logger.debug("Setting com.apple.desktop.picture", category: .wallpaper)
+        defaults.set(imageURL.path, forKey: "com.apple.desktop.picture")
+        
+        // Configure scaling and options
+        logger.debug("Configuring scaling and display options", category: .wallpaper)
+        defaults.set("Fit", forKey: "DesktopPictureImageScaling")
+        defaults.set(1, forKey: "DesktopPictureImageScalingType")  // 1 = Fit to Screen
+        defaults.set("0.0 0.0 0.0", forKey: "DesktopPictureFillerColor")
+        
+        // Disable rotation temporarily to ensure single image shows
+        defaults.set(false, forKey: "DesktopPictureChangeEnabled")
+        
+        // Force synchronization and system notification
+        logger.debug("Synchronizing UserDefaults", category: .wallpaper)
+        let syncSuccess = defaults.synchronize()
+        logger.debug("UserDefaults synchronize result: \(syncSuccess)", category: .wallpaper)
+        
+        // Notify system of wallpaper change
+        logger.debug("Posting system wallpaper change notification", category: .wallpaper)
+        DistributedNotificationCenter.default().postNotificationName(
+            NSNotification.Name("com.apple.desktop.wallpaper.changed"),
+            object: nil,
+            userInfo: ["path": imageURL.path]
+        )
+        
+        // Log what we actually set
+        let currentDesktopPath = defaults.string(forKey: "DesktopPicturePath")
+        let currentDesktopImage = defaults.string(forKey: "DesktopImageURL")
+        logger.debug("Verification - DesktopPicturePath: \(currentDesktopPath ?? "nil")", category: .wallpaper)
+        logger.debug("Verification - DesktopImageURL: \(currentDesktopImage ?? "nil")", category: .wallpaper)
+        
+        logger.success("Completed UserDefaults wallpaper setting: \(imageURL.lastPathComponent)", category: .wallpaper)
     }
     
     /// Execute a task with a timeout to prevent freezing
