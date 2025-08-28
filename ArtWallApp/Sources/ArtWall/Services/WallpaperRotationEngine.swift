@@ -224,26 +224,52 @@ class WallpaperRotationEngine: ObservableObject {
         try setWallpaper(url: currentImage)
     }
     
-    /// Set wallpaper using the proven macos-wallpaper approach (optimized for speed)
+    /// Set wallpaper using AppleScript for maximum rotation speed (configuration already set by WallpaperService)
     private func setWallpaper(url: URL) throws {
         // Minimal logging for speed - only log the essential info
-        logger.debug("Setting wallpaper: \(url.lastPathComponent)", category: .wallpaper)
+        logger.debug("Rotating wallpaper: \(url.lastPathComponent)", category: .wallpaper)
         
-        // Direct wallpaper setting without extra screen enumeration
+        // Use AppleScript for fast image-only rotation (scaling/fill already configured)
         do {
-            try Wallpaper.set(
-                url,
-                screen: .all,
-                scale: .fit,
-                fillColor: .black
-            )
+            try setWallpaperViaAppleScript(imageURL: url)
             
             // Minimal success logging for speed
-            logger.success("✅ Wallpaper set successfully", category: .wallpaper)
+            logger.success("✅ Wallpaper rotated successfully", category: .wallpaper)
             
         } catch {
-            logger.error("Failed to set wallpaper via macos-wallpaper", error: error, category: .wallpaper)
+            logger.error("Failed to rotate wallpaper via AppleScript", error: error, category: .wallpaper)
             throw WallpaperRotationError.failedToSetWallpaper(error.localizedDescription)
+        }
+    }
+    
+    /// Apply wallpaper image using AppleScript (fast image-only rotation)
+    private func setWallpaperViaAppleScript(imageURL: URL) throws {
+        let imagePath = imageURL.path
+        
+        // Simple AppleScript for fast image rotation - no configuration options
+        let appleScript = """
+        tell application "System Events"
+            tell every desktop
+                set picture to "\(imagePath)"
+            end tell
+        end tell
+        """
+        
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+        process.arguments = ["-e", appleScript]
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        
+        try process.run()
+        process.waitUntilExit()
+        
+        if process.terminationStatus != 0 {
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let errorOutput = String(data: data, encoding: .utf8) ?? "Unknown error"
+            throw WallpaperRotationError.failedToSetWallpaper("AppleScript rotation failed: \(errorOutput)")
         }
     }
     

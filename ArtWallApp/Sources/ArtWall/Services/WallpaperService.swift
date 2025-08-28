@@ -117,24 +117,63 @@ class WallpaperService: ObservableObject {
         }
     }
     
-    /// Set wallpaper using native macos-wallpaper Swift package (optimized for speed)
+    /// Set wallpaper using hybrid approach: macos-wallpaper for config + AppleScript for image application
     private func setWallpaperViaShellCommand(imageURL: URL) throws {
-        logger.debug("Setting wallpaper via native macos-wallpaper: \(imageURL.lastPathComponent)", category: .wallpaper)
+        logger.debug("Setting wallpaper via hybrid approach: \(imageURL.lastPathComponent)", category: .wallpaper)
         
-        // Direct wallpaper setting without extra operations for speed
         do {
+            // Step 1: Use macos-wallpaper to configure scaling and fill color (one-time setup)
+            logger.debug("Configuring wallpaper scaling and fill color...", category: .wallpaper)
             try Wallpaper.set(
-                imageURL,
+                imageURL, // Use the actual image to set initial config
                 screen: .all,
                 scale: .fit,
                 fillColor: .black
             )
+            logger.success("✅ Wallpaper configuration applied (fit-to-screen + black background)", category: .wallpaper)
             
-            logger.success("✅ Successfully set wallpaper with fit-to-screen scaling", category: .wallpaper)
+            // Step 2: Use AppleScript for fast image application (for future rotation)
+            logger.debug("Applying wallpaper image via AppleScript...", category: .wallpaper)
+            try setWallpaperViaAppleScript(imageURL: imageURL)
+            
+            logger.success("✅ Hybrid wallpaper setting completed successfully", category: .wallpaper)
         } catch {
-            logger.error("Failed to set wallpaper on all screens: \(error)", category: .wallpaper)
+            logger.error("Failed to set wallpaper via hybrid approach: \(error)", category: .wallpaper)
             throw error
         }
+    }
+    
+    /// Apply wallpaper image using AppleScript (fast image-only application)
+    private func setWallpaperViaAppleScript(imageURL: URL) throws {
+        let imagePath = imageURL.path
+        
+        // Simple AppleScript that worked well - just set the image without options
+        let appleScript = """
+        tell application "System Events"
+            tell every desktop
+                set picture to "\(imagePath)"
+            end tell
+        end tell
+        """
+        
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
+        process.arguments = ["-e", appleScript]
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.standardError = pipe
+        
+        try process.run()
+        process.waitUntilExit()
+        
+        if process.terminationStatus != 0 {
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let errorOutput = String(data: data, encoding: .utf8) ?? "Unknown error"
+            throw WallpaperError.failedToSetWallpaper("AppleScript failed: \(errorOutput)")
+        }
+        
+        logger.success("✅ AppleScript wallpaper application completed", category: .wallpaper)
     }
     
     /// Execute a task with a timeout to prevent freezing
