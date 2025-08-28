@@ -13,12 +13,14 @@ let package = Package(
         )
     ],
     dependencies: [
-        // Add any external dependencies here
+        .package(url: "https://github.com/sindresorhus/macos-wallpaper", from: "2.3.2")
     ],
     targets: [
         .executableTarget(
             name: "ArtWall",
-            dependencies: [],
+            dependencies: [
+                .product(name: "Wallpaper", package: "macos-wallpaper")
+            ],
             resources: [
                 .copy("Resources")
             ]

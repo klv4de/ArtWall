@@ -10,7 +10,7 @@
 - **Platform**: Native macOS application (macOS Sonoma 14.0+ required)
 - **Development**: Xcode (free)
 - **Tested on**: macOS Sequoia 15.6.1
-- **Multi-Monitor**: Partial support (main screen working, external monitor API issue identified)
+- **Multi-Monitor**: ✅ FULL SUPPORT (using macos-wallpaper Swift package)
 - **Total Cost**: $0
 
 ### **Why Swift/SwiftUI**
@@ -270,4 +270,16 @@ class ArtWallWallpaperEngine {
 4. **Test Incremental Components** - Verify each piece works before proceeding
 5. **Content Expansion**: Build more collections (after rotation engine works)
 
-**✅ Core wallpaper automation: NEW RELIABLE APPROACH - custom engine bypasses system bugs**
+### **🎉 BREAKTHROUGH: Wallpaper Management Solution (January 28, 2025)**
+**Decision**: Use `macos-wallpaper` Swift package by Sindre Sorhus
+- **Problem Solved**: Wallpaper scaling and multi-monitor support
+- **Replaces**: Failed attempts with NSWorkspace, AppleScript, and desktoppr
+- **Features**: 
+  - ✅ "Fit to screen" scaling with black background fill
+  - ✅ Multi-monitor support (all screens simultaneously)
+  - ✅ Native Swift integration (no shell commands)
+  - ✅ Reliable on macOS 15.6+
+- **Implementation**: `Wallpaper.set(imageURL, screen: .all, scale: .fit, fillColor: .black)`
+- **Status**: ✅ WORKING - Successfully tested on dual monitor setup
+
+**✅ Core wallpaper automation: SOLVED with native Swift package**
