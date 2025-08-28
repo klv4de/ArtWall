@@ -412,9 +412,30 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 - **User Experience**: Instant feedback, perfect scaling, smooth controls
 
 **Next Priority Phases**:
+- **Phase 2C**: Bottom player component for in-app wallpaper control (IMMEDIATE NEXT)
 - **Phase 3A**: Collection expansion using complete Chicago Art Institute database
 - **Phase 3B**: Menu bar control interface for system-wide rotation management  
 - **Phase 3C**: Background service for automatic wallpaper rotation
+
+### **Phase 2C: Bottom Player Component (January 2025)**
+
+**Goal**: Add Spotify-style bottom player for persistent wallpaper rotation control within the app.
+
+**User Experience**:
+- Fixed bottom bar that appears only when wallpaper rotation is active
+- Shows current artwork thumbnail, title, artist, collection name
+- Pause/Next/Stop controls for immediate rotation management
+- Countdown timer showing time until next wallpaper change
+- Provides visibility and control regardless of which app page user is viewing
+
+**Technical Implementation**:
+- Conditional rendering based on `WallpaperRotationEngine.shared.isRotating`
+- Fixed 80px height component integrated into main ContentView
+- Real-time state updates from singleton rotation engine
+- Dynamic app window resizing to accommodate player
+- Simple, non-collapsible design for maximum clarity
+
+**Estimated Development**: 2-3 hours iterative implementation
 
 ---
 **Remember**: Act as technical co-founder - challenge ideas, propose alternatives, think about scalability and user experience, not just implementation.
