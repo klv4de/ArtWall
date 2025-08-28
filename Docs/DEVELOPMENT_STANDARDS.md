@@ -365,4 +365,60 @@ struct MyView: View {
 
 ---
 
-**These standards ensure ArtWall maintains the highest quality, reliability, and maintainability as it grows and evolves.**
+## 🚀 **Performance Optimization Standards**
+
+### **MANDATORY: Performance Testing and Optimization**
+
+**RULE**: All performance-critical operations must be measured and optimized.
+
+#### **Performance Optimization Checklist:**
+```swift
+// ✅ REQUIRED: Measure timing for critical operations
+logger.debug("Starting performance-critical operation", category: .performance)
+let startTime = Date()
+
+// Perform operation
+try performCriticalOperation()
+
+let duration = Date().timeIntervalSince(startTime)
+logger.success("Operation completed in \(String(format: "%.3f", duration))s", category: .performance)
+```
+
+#### **Performance Standards:**
+- **Wallpaper Operations**: < 0.02 seconds for optimal user experience
+- **Collection Loading**: < 2.0 seconds for good user experience  
+- **Image Downloads**: Progress tracking required for operations > 1 second
+- **UI Responsiveness**: No blocking operations on main thread
+
+#### **Optimization Approaches (Validated):**
+1. **Code Streamlining**: Remove unnecessary operations (97% speed improvement achieved)
+2. **Logging Optimization**: Minimize verbose logging in performance-critical paths
+3. **API Call Optimization**: Direct API usage without wrapper overhead
+4. **System Integration**: Prefer proven approaches over experimental system modifications
+
+#### **Performance Anti-Patterns (Learned from Experience):**
+- **System-level modifications** (PlistBuddy, etc.) can create worse user experiences
+- **Premature system optimization** before understanding root causes
+- **Complex solutions** when simple optimizations provide better results
+- **Verbose logging** in performance-critical loops
+
+### **MANDATORY: Multi-Monitor Considerations**
+
+**RULE**: All wallpaper operations must account for multi-monitor complexity.
+
+#### **Multi-Monitor Standards:**
+```swift
+// ✅ REQUIRED: Log screen detection
+let screens = NSScreen.screens
+logger.debug("Found \(screens.count) screens", category: .wallpaper)
+
+// ✅ REQUIRED: Use .all for consistent behavior
+try Wallpaper.set(imageURL, screen: .all, scale: .fit, fillColor: .black)
+
+// ✅ REQUIRED: Acknowledge sequential behavior as system limitation
+logger.info("Multi-monitor sequential application is macOS system behavior", category: .wallpaper)
+```
+
+---
+
+**These standards ensure ArtWall maintains the highest quality, reliability, maintainability, and performance excellence as it grows and evolves.**

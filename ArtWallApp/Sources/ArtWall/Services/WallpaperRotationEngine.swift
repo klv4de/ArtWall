@@ -224,13 +224,12 @@ class WallpaperRotationEngine: ObservableObject {
         try setWallpaper(url: currentImage)
     }
     
-    /// Set wallpaper using the proven macos-wallpaper approach
+    /// Set wallpaper using the proven macos-wallpaper approach (optimized for speed)
     private func setWallpaper(url: URL) throws {
+        // Minimal logging for speed - only log the essential info
         logger.debug("Setting wallpaper: \(url.lastPathComponent)", category: .wallpaper)
         
-        let screens = NSScreen.screens
-        logger.debug("Setting wallpaper on \(screens.count) screens with fit-to-screen scaling", category: .wallpaper)
-        
+        // Direct wallpaper setting without extra screen enumeration
         do {
             try Wallpaper.set(
                 url,
@@ -239,8 +238,8 @@ class WallpaperRotationEngine: ObservableObject {
                 fillColor: .black
             )
             
-            let screenNames = screens.map { $0.localizedName }
-            logger.success("✅ Wallpaper set successfully on all \(screens.count) screens: \(screenNames.joined(separator: ", "))", category: .wallpaper)
+            // Minimal success logging for speed
+            logger.success("✅ Wallpaper set successfully", category: .wallpaper)
             
         } catch {
             logger.error("Failed to set wallpaper via macos-wallpaper", error: error, category: .wallpaper)
@@ -273,6 +272,7 @@ enum WallpaperRotationError: LocalizedError {
     case noImagesFound(String)
     case failedToSetWallpaper(String)
     case rotationNotActive
+    case configurationFailed(String)
     
     var errorDescription: String? {
         switch self {
@@ -282,6 +282,8 @@ enum WallpaperRotationError: LocalizedError {
             return "Failed to set wallpaper: \(reason)"
         case .rotationNotActive:
             return "Wallpaper rotation is not currently active"
+        case .configurationFailed(let reason):
+            return "Configuration failed: \(reason)"
         }
     }
 }

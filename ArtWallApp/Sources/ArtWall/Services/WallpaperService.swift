@@ -117,14 +117,11 @@ class WallpaperService: ObservableObject {
         }
     }
     
-    /// Set wallpaper using native macos-wallpaper Swift package with proper scaling
+    /// Set wallpaper using native macos-wallpaper Swift package (optimized for speed)
     private func setWallpaperViaShellCommand(imageURL: URL) throws {
-        logger.debug("Setting wallpaper via native macos-wallpaper: \(imageURL.path)", category: .wallpaper)
+        logger.debug("Setting wallpaper via native macos-wallpaper: \(imageURL.lastPathComponent)", category: .wallpaper)
         
-        let screens = NSScreen.screens
-        logger.debug("Found \(screens.count) screens, applying wallpaper with fit-to-screen scaling", category: .wallpaper)
-        
-        // Use the native Swift API to set wallpaper on all screens at once
+        // Direct wallpaper setting without extra operations for speed
         do {
             try Wallpaper.set(
                 imageURL,
@@ -133,9 +130,7 @@ class WallpaperService: ObservableObject {
                 fillColor: .black
             )
             
-            let screenNames = screens.map { $0.localizedName }
-            logger.success("✅ Successfully set wallpaper on all \(screens.count) screens: \(screenNames.joined(separator: ", "))", category: .wallpaper)
-            logger.success("Native Swift wallpaper setting completed with fit-to-screen scaling and black background", category: .wallpaper)
+            logger.success("✅ Successfully set wallpaper with fit-to-screen scaling", category: .wallpaper)
         } catch {
             logger.error("Failed to set wallpaper on all screens: \(error)", category: .wallpaper)
             throw error
