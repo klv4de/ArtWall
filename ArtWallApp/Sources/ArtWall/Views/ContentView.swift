@@ -69,7 +69,8 @@ struct ContentView: View {
             isPublicDomain: true,
             departmentTitle: "Painting and Sculpture of Europe",
             classificationTitle: "painting",
-            artworkTypeTitle: nil
+            artworkTypeTitle: nil,
+            githubImageURL: nil
         )
         
         await MainActor.run {

@@ -25,6 +25,7 @@ struct Artwork: Codable, Identifiable {
     let departmentTitle: String?
     let classificationTitle: String?
     let artworkTypeTitle: String?
+    let githubImageURL: String?
     
     enum CodingKeys: String, CodingKey {
         case id, title, dimensions
@@ -37,6 +38,7 @@ struct Artwork: Codable, Identifiable {
         case departmentTitle = "department_title"
         case classificationTitle = "classification_title"
         case artworkTypeTitle = "artwork_type_title"
+        case githubImageURL = "github_image_url"
     }
     
     // Computed properties for filtering
@@ -66,8 +68,13 @@ struct Artwork: Codable, Identifiable {
     }
     
     var imageURL: URL? {
+        // Use GitHub images first, fallback to Chicago Art Institute if needed
+        if let githubURL = githubImageURL {
+            return URL(string: githubURL)
+        }
+        
+        // Fallback to Chicago IIIF service
         guard let imageId = imageId else { return nil }
-        // For now, use Chicago IIIF service (will switch to GitHub once repo is created)
         return URL(string: "https://www.artic.edu/iiif/2/\(imageId)/full/843,/0/default.jpg")
     }
 }

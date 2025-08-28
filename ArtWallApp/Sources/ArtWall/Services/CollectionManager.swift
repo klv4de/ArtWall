@@ -321,7 +321,8 @@ class CollectionManager: ObservableObject {
                     isPublicDomain: true,
                     departmentTitle: "Painting and Sculpture of Europe",
                     classificationTitle: "painting",
-                    artworkTypeTitle: nil
+                    artworkTypeTitle: nil,
+                    githubImageURL: nil
                 )
                 artworks.append(artwork)
             }
@@ -351,7 +352,8 @@ class CollectionManager: ObservableObject {
                     isPublicDomain: true,
                     departmentTitle: "Painting and Sculpture of Europe",
                     classificationTitle: "painting",
-                    artworkTypeTitle: nil
+                    artworkTypeTitle: nil,
+                    githubImageURL: nil
                 )
                 artworks.append(artwork)
             }

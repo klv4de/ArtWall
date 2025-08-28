@@ -317,4 +317,52 @@ func testMyNewComponent() -> Bool {
 
 ---
 
+## 🏗️ **Architecture Standards (Updated August 2025)**
+
+### **Service Architecture Patterns**
+- **Single Responsibility**: Each service handles one domain (downloads, wallpapers, logging, testing)
+- **Singleton Pattern**: Use `static let shared` for services that need persistent state across navigation
+- **Dependency Injection**: Services should be injected rather than created inline
+- **Error Propagation**: Use structured error types, don't swallow exceptions
+- **State Management**: Use `@Published` properties for UI-observable state
+
+### **SwiftUI Integration Patterns**
+- **State Management**: Use `@StateObject` for owned objects, `@ObservedObject` for shared instances
+- **Singleton Integration**: Use `@ObservedObject` with `.shared` instances for persistent state
+- **View Composition**: Break complex views into smaller, reusable components
+- **Performance**: Use `LazyVGrid` for large collections, `AsyncImage` for network images
+- **Navigation**: Use SwiftUI's native navigation with proper dismissal handling
+
+### **Image Loading Architecture**
+- **GitHub CDN First**: Always prioritize GitHub-hosted images for reliability and performance
+- **Fallback Strategy**: Maintain Chicago Art Institute API as fallback in `Artwork.imageURL`
+- **URL Caching**: Use `URLCache.shared` configuration for system-level image caching
+- **Testing**: Verify GitHub image accessibility in automated tests
+
+### **Singleton Implementation Standards**
+```swift
+// ✅ CORRECT: Singleton with private init
+class MySharedService: ObservableObject {
+    static let shared = MySharedService()
+    
+    @Published var state: ServiceState = .idle
+    private let logger = ArtWallLogger.shared
+    
+    private init() {
+        logger.info("MySharedService shared instance initialized", category: .app)
+    }
+}
+
+// ✅ CORRECT: SwiftUI integration
+struct MyView: View {
+    @ObservedObject private var service = MySharedService.shared
+    
+    var body: some View {
+        // UI that reacts to shared service state
+    }
+}
+```
+
+---
+
 **These standards ensure ArtWall maintains the highest quality, reliability, and maintainability as it grows and evolves.**

@@ -4,6 +4,7 @@ struct CollectionDetailsView: View {
     let collection: ArtCollection
     @Environment(\.dismiss) private var dismiss
     @StateObject private var downloadService = ImageDownloadService()
+    @ObservedObject private var rotationEngine = WallpaperRotationEngine.shared
     @State private var showingDownloadProgress = false
     @State private var collectionApplied = false
     @State private var showingError = false
@@ -31,12 +32,81 @@ struct CollectionDetailsView: View {
                 
                 Spacer()
                 
-                if collectionApplied {
+                if rotationEngine.isRotating && rotationEngine.currentCollection == collection.title {
                     VStack(alignment: .trailing, spacing: 4) {
-                        Text("Collection Applied")
+                        HStack(spacing: 8) {
+                            Button(action: {
+                                logger.info("User clicked 'Next Wallpaper' for: \(collection.title)", category: .ui)
+                                rotationEngine.nextWallpaper()
+                            }) {
+                                Image(systemName: "forward.fill")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .padding(8)
+                                    .background(Color.green)
+                                    .cornerRadius(6)
+                            }
+                            .buttonStyle(.borderless)
+                            
+                            Button(action: {
+                                logger.info("User clicked 'Pause Rotation' for: \(collection.title)", category: .ui)
+                                rotationEngine.pauseRotation()
+                            }) {
+                                Image(systemName: "pause.fill")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .padding(8)
+                                    .background(Color.orange)
+                                    .cornerRadius(6)
+                            }
+                            .buttonStyle(.borderless)
+                            
+                            Button(action: {
+                                logger.info("User clicked 'Stop Rotation' for: \(collection.title)", category: .ui)
+                                rotationEngine.stopRotation()
+                                collectionApplied = false
+                            }) {
+                                Image(systemName: "stop.fill")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .padding(8)
+                                    .background(Color.red)
+                                    .cornerRadius(6)
+                            }
+                            .buttonStyle(.borderless)
+                        }
+                        
+                        Text("🔄 Rotating (\(rotationEngine.currentImageIndex + 1)/\(rotationEngine.totalImages))")
                             .font(.headline)
                             .foregroundColor(.green)
-                        Text("Wallpaper changes every 30 min")
+                        Text("Next in \(rotationEngine.formattedTimeUntilNext())")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                } else if collectionApplied && !rotationEngine.isRotating {
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Button(action: {
+                            logger.info("User clicked 'Resume Rotation' for: \(collection.title)", category: .ui)
+                            resumeRotation()
+                        }) {
+                            HStack(spacing: 4) {
+                                Image(systemName: "play.fill")
+                                    .font(.caption)
+                                Text("Resume")
+                                    .font(.headline)
+                            }
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                        }
+                        .buttonStyle(.borderless)
+                        
+                        Text("⏸️ Rotation Paused")
+                            .font(.headline)
+                            .foregroundColor(.orange)
+                        Text("Collection ready")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
@@ -92,7 +162,7 @@ struct CollectionDetailsView: View {
                 ], spacing: 16) {
                     ForEach(collection.allArtworks) { artwork in
                         NavigationLink(destination: ArtworkDetailView(artwork: artwork)) {
-                            ArtworkCard(artwork: artwork)
+                            ArtworkCard(artwork: artwork, collectionTitle: collection.title)
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
@@ -136,11 +206,15 @@ struct CollectionDetailsView: View {
             do {
                 try await downloadService.downloadCollection(collection)
                 
-                // Download and wallpaper setup complete
+                // Download complete - now start wallpaper rotation
                 await MainActor.run {
                     showingDownloadProgress = false
                     collectionApplied = true
-                    print("🎉 Collection applied successfully: \(collection.title)")
+                    
+                    // Start wallpaper rotation with the downloaded collection
+                    startWallpaperRotation()
+                    
+                    print("🎉 Collection applied and rotation started: \(collection.title)")
                 }
             } catch {
                 await MainActor.run {
@@ -152,32 +226,62 @@ struct CollectionDetailsView: View {
             }
         }
     }
+    
+    private func startWallpaperRotation() {
+        // Use the same path that ImageDownloadService uses
+        let collectionPath = downloadService.getCollectionPath(collection)
+        
+        logger.info("Starting wallpaper rotation for collection: \(collection.title)", category: .wallpaper)
+        rotationEngine.startRotation(collectionName: collection.title, collectionPath: collectionPath)
+    }
+    
+    private func resumeRotation() {
+        logger.info("Resuming wallpaper rotation for collection: \(collection.title)", category: .wallpaper)
+        rotationEngine.resumeRotation()
+    }
 }
 
 struct ArtworkCard: View {
     let artwork: Artwork
+    let collectionTitle: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            // Actual image loading with AsyncImage
-            AsyncImage(url: artwork.imageURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            } placeholder: {
-                Rectangle()
-                    .fill(Color.gray.opacity(0.2))
-                    .overlay(
-                        VStack(spacing: 8) {
+            // Use GitHub images for instant loading
+            AsyncImage(url: artwork.imageURL, transaction: Transaction(animation: .easeInOut(duration: 0.3))) { phase in
+                switch phase {
+                case .empty:
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.15))
+                        .overlay(
                             ProgressView()
-                                .scaleEffect(0.8)
-                            Text("Loading...")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
-                    )
+                                .scaleEffect(0.7)
+                        )
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .background(Color.black.opacity(0.05))
+                case .failure(_):
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.1))
+                        .overlay(
+                            VStack(spacing: 4) {
+                                Image(systemName: "photo")
+                                    .font(.title2)
+                                    .foregroundColor(.secondary)
+                                Text("Image unavailable")
+                                    .font(.caption2)
+                                    .foregroundColor(.secondary)
+                            }
+                        )
+                @unknown default:
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.15))
+                }
             }
             .frame(height: 140)
+            .frame(maxWidth: .infinity)
             .clipped()
             .cornerRadius(8)
             

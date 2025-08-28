@@ -3,6 +3,10 @@ import SwiftUI
 struct ArtWallApp: App {
     
     init() {
+        // Configure URL cache for better image caching
+        let cache = URLCache(memoryCapacity: 50 * 1024 * 1024, diskCapacity: 200 * 1024 * 1024)
+        URLCache.shared = cache
+        
         // Initialize logging and run system tests
         let logger = ArtWallLogger.shared
         logger.info("🚀 ArtWall starting up...", category: .app)

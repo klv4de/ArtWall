@@ -46,6 +46,12 @@ class AppTester {
             passedTests += 1
         }
         
+        // Test 6: GitHub Image Integration
+        totalTests += 1
+        if await testGitHubImageIntegration() {
+            passedTests += 1
+        }
+        
         // Test Results
         let successRate = Double(passedTests) / Double(totalTests) * 100
         
@@ -232,6 +238,223 @@ class AppTester {
         
         return canAccessAPI
     }
+    
+    /// Test wallpaper rotation engine functionality (non-destructive)
+    @MainActor
+    func testWallpaperRotationEngine() -> Bool {
+        logger.debug("Testing WallpaperRotationEngine functionality...", category: .wallpaper)
+        
+        let engine = WallpaperRotationEngine.shared
+        
+        // Test that we can access the shared instance
+        logger.debug("WallpaperRotationEngine shared instance accessed successfully", category: .wallpaper)
+        
+        // Test state management methods (without actually starting rotation)
+        engine.stopRotation() // Should handle being called when not running
+        engine.pauseRotation() // Should handle being called when not running
+        engine.resumeRotation() // Should handle being called when not running
+        
+        logger.success("✅ WallpaperRotationEngine test passed", category: .wallpaper)
+        return true
+    }
+    
+    /// Test GitHub image integration functionality
+    private func testGitHubImageIntegration() async -> Bool {
+        logger.debug("Testing GitHub image integration...", category: .app)
+        
+        var testsPassed = 0
+        var totalTests = 0
+        
+        // Test 1: Collection JSON files have GitHub URLs
+        totalTests += 1
+        if await testCollectionJSONHasGitHubURLs() {
+            testsPassed += 1
+        }
+        
+        // Test 2: Sample GitHub image accessibility
+        totalTests += 1
+        if await testSampleGitHubImageAccess() {
+            testsPassed += 1
+        }
+        
+        // Test 3: Artwork model prioritizes GitHub URLs
+        totalTests += 1
+        if testArtworkModelGitHubPriority() {
+            testsPassed += 1
+        }
+        
+        // Test 4: Fallback to Chicago Art Institute works
+        totalTests += 1
+        if testChicagoArtFallback() {
+            testsPassed += 1
+        }
+        
+        if testsPassed == totalTests {
+            logger.success("✅ GitHub image integration test passed (\(testsPassed)/\(totalTests))", category: .app)
+            return true
+        } else {
+            logger.warning("⚠️ GitHub image integration test partial failure: \(testsPassed)/\(totalTests)", category: .app)
+            return false
+        }
+    }
+    
+    /// Test that collections_index.json contains GitHub URLs
+    private func testCollectionJSONHasGitHubURLs() async -> Bool {
+        do {
+            guard let resourcesURL = Bundle.main.resourceURL else {
+                logger.error("❌ Could not find resources bundle", category: .app)
+                return false
+            }
+            
+            let indexURL = resourcesURL.appendingPathComponent("collections_index.json")
+            let data = try Data(contentsOf: indexURL)
+            let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+            
+            guard let collections = json?["collections"] as? [[String: Any]] else {
+                logger.error("❌ Could not parse collections from JSON", category: .app)
+                return false
+            }
+            
+            var githubURLCount = 0
+            var totalArtworks = 0
+            
+            for collection in collections {
+                if let artworks = collection["artworks"] as? [[String: Any]] {
+                    for artwork in artworks {
+                        totalArtworks += 1
+                        if let githubURL = artwork["github_image_url"] as? String,
+                           githubURL.contains("raw.githubusercontent.com/klv4de/ArtWall") {
+                            githubURLCount += 1
+                        }
+                    }
+                }
+            }
+            
+            let hasGitHubURLs = githubURLCount > 0
+            logger.debug("Found \(githubURLCount)/\(totalArtworks) artworks with GitHub URLs", category: .app)
+            
+            if hasGitHubURLs {
+                logger.success("✅ Collection JSON contains GitHub URLs: \(githubURLCount) found", category: .app)
+            } else {
+                logger.error("❌ Collection JSON missing GitHub URLs", category: .app)
+            }
+            
+            return hasGitHubURLs
+            
+        } catch {
+            logger.error("❌ Failed to test collection JSON", error: error, category: .app)
+            return false
+        }
+    }
+    
+    /// Test that a sample GitHub image is accessible
+    private func testSampleGitHubImageAccess() async -> Bool {
+        do {
+            // Test with a known image from our GitHub repository
+            let testURL = URL(string: "https://raw.githubusercontent.com/klv4de/ArtWall/main/github_collections/images/16237.jpg")!
+            let (_, response) = try await URLSession.shared.data(from: testURL)
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                let isAccessible = httpResponse.statusCode == 200
+                if isAccessible {
+                    logger.success("✅ Sample GitHub image accessible: \(httpResponse.statusCode)", category: .app)
+                } else {
+                    logger.error("❌ Sample GitHub image not accessible: \(httpResponse.statusCode)", category: .app)
+                }
+                return isAccessible
+            } else {
+                logger.error("❌ Invalid response type for GitHub image test", category: .app)
+                return false
+            }
+            
+        } catch {
+            logger.error("❌ Failed to access sample GitHub image", error: error, category: .app)
+            return false
+        }
+    }
+    
+    /// Test that Artwork model prioritizes GitHub URLs over Chicago Art Institute
+    private func testArtworkModelGitHubPriority() -> Bool {
+        // Test artwork with GitHub URL
+        let artworkWithGitHub = Artwork(
+            id: 12345,
+            title: "Test Artwork",
+            artistDisplay: "Test Artist",
+            dateDisplay: "2024",
+            mediumDisplay: "Oil on canvas",
+            dimensions: "10x10",
+            imageId: "test-image-id",
+            altText: nil,
+            isPublicDomain: true,
+            departmentTitle: "Test Department",
+            classificationTitle: "painting",
+            artworkTypeTitle: nil,
+            githubImageURL: "https://raw.githubusercontent.com/klv4de/ArtWall/main/github_collections/images/12345.jpg"
+        )
+        
+        // Test artwork without GitHub URL (should fallback to Chicago)
+        let artworkWithoutGitHub = Artwork(
+            id: 67890,
+            title: "Test Artwork 2",
+            artistDisplay: "Test Artist 2",
+            dateDisplay: "2024",
+            mediumDisplay: "Oil on canvas",
+            dimensions: "10x10",
+            imageId: "test-image-id-2",
+            altText: nil,
+            isPublicDomain: true,
+            departmentTitle: "Test Department",
+            classificationTitle: "painting",
+            artworkTypeTitle: nil,
+            githubImageURL: nil
+        )
+        
+        let githubPrioritized = artworkWithGitHub.imageURL?.absoluteString.contains("raw.githubusercontent.com") ?? false
+        let chicagoFallback = artworkWithoutGitHub.imageURL?.absoluteString.contains("artic.edu") ?? false
+        
+        if githubPrioritized && chicagoFallback {
+            logger.success("✅ Artwork model correctly prioritizes GitHub URLs with Chicago fallback", category: .app)
+            return true
+        } else {
+            logger.error("❌ Artwork model URL priority test failed - GitHub: \(githubPrioritized), Chicago: \(chicagoFallback)", category: .app)
+            return false
+        }
+    }
+    
+    /// Test Chicago Art Institute fallback functionality
+    private func testChicagoArtFallback() -> Bool {
+        let artworkWithoutGitHub = Artwork(
+            id: 16237,
+            title: "Test Fallback",
+            artistDisplay: "Test Artist",
+            dateDisplay: "2024",
+            mediumDisplay: "Oil on canvas",
+            dimensions: "10x10",
+            imageId: "3952a506-2776-5613-1693-e5c96c4708f2",
+            altText: nil,
+            isPublicDomain: true,
+            departmentTitle: "Test Department",
+            classificationTitle: "painting",
+            artworkTypeTitle: nil,
+            githubImageURL: nil
+        )
+        
+        guard let imageURL = artworkWithoutGitHub.imageURL else {
+            logger.error("❌ Chicago Art fallback failed: No image URL generated", category: .app)
+            return false
+        }
+        
+        let isChicagoURL = imageURL.absoluteString.contains("artic.edu/iiif")
+        let hasCorrectImageId = imageURL.absoluteString.contains("3952a506-2776-5613-1693-e5c96c4708f2")
+        
+        if isChicagoURL && hasCorrectImageId {
+            logger.success("✅ Chicago Art Institute fallback working correctly", category: .app)
+            return true
+        } else {
+            logger.error("❌ Chicago Art Institute fallback failed: \(imageURL.absoluteString)", category: .app)
+            return false
+        }
+    }
 }
 
 // MARK: - Convenience Extensions
@@ -263,6 +486,10 @@ extension AppTester {
             return await tester.testCollectionLoading()
         case .wallpaperAPI:
             return tester.testWallpaperAPIAccess()
+        case .wallpaperRotationEngine:
+            return await tester.testWallpaperRotationEngine()
+        case .githubImageIntegration:
+            return await tester.testGitHubImageIntegration()
         }
     }
 }
@@ -275,4 +502,6 @@ enum TestComponent: String, CaseIterable {
     case userDefaults = "UserDefaults"
     case collections = "Collections"
     case wallpaperAPI = "Wallpaper API"
+    case wallpaperRotationEngine = "Wallpaper Rotation Engine"
+    case githubImageIntegration = "GitHub Image Integration"
 }
