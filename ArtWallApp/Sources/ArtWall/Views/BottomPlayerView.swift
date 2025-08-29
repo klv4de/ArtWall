@@ -2,6 +2,7 @@ import SwiftUI
 
 struct BottomPlayerView: View {
     @ObservedObject private var rotationEngine = WallpaperRotationEngine.shared
+    @State private var showingArtworkDetail = false
     private let logger = ArtWallLogger.shared
     
     private func getCurrentArtworkURL() -> URL? {
@@ -30,13 +31,23 @@ struct BottomPlayerView: View {
         return String(format: "%d:%02d", minutes, remainingSeconds)
     }
     
+    private func handleDoubleClick() {
+        guard let currentArtwork = rotationEngine.getCurrentArtwork() else {
+            logger.warning("Double-click on artwork but no current artwork available", category: .ui)
+            return
+        }
+        
+        logger.info("User double-clicked artwork in bottom player - opening details for: \(currentArtwork.title)", category: .ui)
+        showingArtworkDetail = true
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             // Top divider
             Divider()
             
             HStack(spacing: 16) {
-                // Artwork thumbnail (left side) - made bigger
+                // Artwork thumbnail (left side) - made bigger - with double-click
                 AsyncImage(url: getCurrentArtworkURL()) { image in
                     image
                         .resizable()
@@ -53,8 +64,11 @@ struct BottomPlayerView: View {
                 .frame(width: 90, height: 90) // Increased from 60x60
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 1)
+                .onTapGesture(count: 2) {
+                    handleDoubleClick()
+                }
                 
-                // Artwork info (center) - using live data
+                // Artwork info (center) - using live data - with double-click
                 VStack(alignment: .leading, spacing: 1) {
                     Text(getCurrentArtworkTitle())
                         .font(.headline)
@@ -95,6 +109,9 @@ struct BottomPlayerView: View {
                             .foregroundColor(.secondary)
                     }
                 }
+                .onTapGesture(count: 2) {
+                    handleDoubleClick()
+                }
                 
                 Spacer()
                 
@@ -115,7 +132,7 @@ struct BottomPlayerView: View {
                 HStack(spacing: 12) {
                     Button(action: {
                         logger.info("User clicked Previous button in bottom player", category: .ui)
-                        // TODO: Implement previous image functionality
+                        rotationEngine.previousWallpaper()
                     }) {
                         Image(systemName: "backward.fill")
                             .font(.title2)
@@ -155,6 +172,13 @@ struct BottomPlayerView: View {
         .frame(height: 110) // Increased from 80 to accommodate larger image
         .onAppear {
             logger.info("BottomPlayerView appeared", category: .ui)
+        }
+        .sheet(isPresented: $showingArtworkDetail) {
+            if let artwork = rotationEngine.getCurrentArtwork() {
+                NavigationStack {
+                    ArtworkDetailView(artwork: artwork)
+                }
+            }
         }
     }
 }

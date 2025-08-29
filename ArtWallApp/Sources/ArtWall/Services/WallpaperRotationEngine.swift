@@ -166,6 +166,18 @@ class WallpaperRotationEngine: ObservableObject {
         timeUntilNext = Int(rotationInterval)
     }
     
+    /// Manually go back to previous wallpaper
+    func previousWallpaper() {
+        guard !images.isEmpty else { return }
+        
+        logger.info("Manual advance to previous wallpaper", category: .wallpaper)
+        
+        rotateToPrevious()
+        
+        // Reset countdown timer
+        timeUntilNext = Int(rotationInterval)
+    }
+    
     // MARK: - Private Methods
     
     /// Load image files from collection directory
@@ -226,6 +238,27 @@ class WallpaperRotationEngine: ObservableObject {
         
         do {
             try setWallpaper(url: nextImage)
+            
+            // Reset countdown
+            timeUntilNext = Int(rotationInterval)
+            
+        } catch {
+            logger.error("Failed to rotate wallpaper", error: error, category: .wallpaper)
+        }
+    }
+    
+    /// Rotate to the previous wallpaper
+    private func rotateToPrevious() {
+        guard !images.isEmpty else { return }
+        
+        // Go backward with wraparound (if at 0, go to last image)
+        currentImageIndex = currentImageIndex == 0 ? images.count - 1 : currentImageIndex - 1
+        
+        let previousImage = images[currentImageIndex]
+        logger.info("Rotating to image \(currentImageIndex + 1)/\(images.count): \(previousImage.lastPathComponent)", category: .wallpaper)
+        
+        do {
+            try setWallpaper(url: previousImage)
             
             // Reset countdown
             timeUntilNext = Int(rotationInterval)
