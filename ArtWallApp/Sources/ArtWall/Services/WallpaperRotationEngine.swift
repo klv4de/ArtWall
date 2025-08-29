@@ -2,6 +2,13 @@ import Foundation
 import AppKit
 import Wallpaper
 
+// MARK: - String Extensions
+extension String {
+    var nilIfEmpty: String? {
+        return self.isEmpty ? nil : self
+    }
+}
+
 /// Custom wallpaper rotation engine that provides reliable timer-based wallpaper changes
 /// Solves macOS Sequoia system bugs with folder rotation by using working NSWorkspace individual image API
 @MainActor
@@ -23,6 +30,8 @@ class WallpaperRotationEngine: ObservableObject {
     private var timer: Timer?
     private var countdownTimer: Timer?
     private var images: [URL] = []
+    private var artworks: [Artwork] = [] // Store full artwork metadata
+    private var currentCollectionData: ArtCollection? // Store collection data
     private let logger = ArtWallLogger.shared
     private let rotationInterval: TimeInterval = 1800 // 30 minutes (1800 seconds)
     
@@ -34,7 +43,7 @@ class WallpaperRotationEngine: ObservableObject {
     // MARK: - Public Interface
     
     /// Start wallpaper rotation for a collection
-    func startRotation(collectionName: String, collectionPath: URL) {
+    func startRotation(collectionName: String, collectionPath: URL, collection: ArtCollection? = nil) {
         let tracker = logger.startProcess("Start Wallpaper Rotation: \(collectionName)", category: .wallpaper)
         
         do {
@@ -51,6 +60,11 @@ class WallpaperRotationEngine: ObservableObject {
             
             // Set initial state
             self.currentCollection = collectionName
+            self.currentCollectionData = collection
+            
+            // Create ordered artwork array that matches the sorted image files
+            self.artworks = createOrderedArtworkArray(from: collection?.allArtworks ?? [], matchingImages: images)
+            
             self.totalImages = images.count
             self.currentImageIndex = 0
             self.timeUntilNext = Int(rotationInterval)
@@ -299,6 +313,99 @@ class WallpaperRotationEngine: ObservableObject {
         }
         
         return "\(collection) - Image \(currentImageIndex + 1)/\(totalImages) - Next in \(formattedTimeUntilNext())"
+    }
+    
+    // MARK: - Current Artwork Metadata
+    
+    /// Get the current artwork being displayed
+    func getCurrentArtwork() -> Artwork? {
+        guard currentImageIndex < artworks.count else { return nil }
+        return artworks[currentImageIndex]
+    }
+    
+    /// Get current artwork title
+    func getCurrentArtworkTitle() -> String {
+        return getCurrentArtwork()?.title ?? "Unknown Artwork"
+    }
+    
+    /// Get current artwork artist
+    func getCurrentArtworkArtist() -> String {
+        return getCurrentArtwork()?.artistDisplay ?? "Unknown Artist"
+    }
+    
+    /// Get current artwork date
+    func getCurrentArtworkDate() -> String {
+        return getCurrentArtwork()?.dateDisplay ?? "Date Unknown"
+    }
+    
+    /// Get current artwork source (always Chicago Art Institute for now)
+    func getCurrentArtworkSource() -> String {
+        return "Chicago Art Institute"
+    }
+    
+    // MARK: - Private Helper Methods
+    
+    /// Create an ordered artwork array that matches the sorted image files
+    private func createOrderedArtworkArray(from artworks: [Artwork], matchingImages images: [URL]) -> [Artwork] {
+        var orderedArtworks: [Artwork] = []
+        
+        // For each image file (in sorted order), find the matching artwork
+        for imageURL in images {
+            let filename = imageURL.lastPathComponent
+            
+            // Extract artwork ID from filename (format: "12345_Title.jpg")
+            if let underscoreIndex = filename.firstIndex(of: "_"),
+               let artworkIdString = String(filename.prefix(upTo: underscoreIndex)).nilIfEmpty,
+               let artworkId = Int(artworkIdString) {
+                
+                // Find artwork with matching ID
+                if let matchingArtwork = artworks.first(where: { $0.id == artworkId }) {
+                    orderedArtworks.append(matchingArtwork)
+                    logger.debug("Matched image \(filename) to artwork: \(matchingArtwork.title)", category: .wallpaper)
+                } else {
+                    logger.warning("No artwork found for image \(filename) with ID \(artworkId)", category: .wallpaper)
+                    // Create placeholder artwork for missing data
+                    let placeholderArtwork = createPlaceholderArtwork(id: artworkId, filename: filename)
+                    orderedArtworks.append(placeholderArtwork)
+                }
+            } else {
+                logger.warning("Could not extract artwork ID from filename: \(filename)", category: .wallpaper)
+                // Create placeholder for unparseable filename
+                let placeholderArtwork = createPlaceholderArtwork(id: 0, filename: filename)
+                orderedArtworks.append(placeholderArtwork)
+            }
+        }
+        
+        logger.info("Created ordered artwork array: \(orderedArtworks.count) artworks matched to \(images.count) images", category: .wallpaper)
+        return orderedArtworks
+    }
+    
+    /// Create placeholder artwork for missing data
+    private func createPlaceholderArtwork(id: Int, filename: String) -> Artwork {
+        // Extract title from filename
+        let nameWithoutExtension = String(filename.dropLast(4)) // Remove .jpg
+        let title = if let underscoreIndex = nameWithoutExtension.firstIndex(of: "_") {
+            String(nameWithoutExtension[nameWithoutExtension.index(after: underscoreIndex)...])
+                .replacingOccurrences(of: "_", with: " ")
+        } else {
+            nameWithoutExtension.replacingOccurrences(of: "_", with: " ")
+        }
+        
+        return Artwork(
+            id: id,
+            title: title.isEmpty ? "Unknown Artwork" : title,
+            artistDisplay: "Unknown Artist",
+            dateDisplay: "Date Unknown",
+            mediumDisplay: "Unknown Medium",
+            dimensions: nil,
+            imageId: nil,
+            altText: nil,
+            isPublicDomain: true,
+            departmentTitle: "Chicago Art Institute",
+            classificationTitle: "painting",
+            artworkTypeTitle: nil,
+            githubImageURL: nil
+        )
     }
 }
 

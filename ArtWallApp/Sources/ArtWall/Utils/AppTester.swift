@@ -52,6 +52,12 @@ class AppTester {
             passedTests += 1
         }
         
+        // Test 7: Artwork Metadata Matching
+        totalTests += 1
+        if await testArtworkMetadataMatching() {
+            passedTests += 1
+        }
+        
         // Test Results
         let successRate = Double(passedTests) / Double(totalTests) * 100
         
@@ -490,6 +496,68 @@ extension AppTester {
             return await tester.testWallpaperRotationEngine()
         case .githubImageIntegration:
             return await tester.testGitHubImageIntegration()
+        }
+    }
+    
+    /// Test artwork metadata matching functionality
+    private func testArtworkMetadataMatching() async -> Bool {
+        logger.info("🧪 Testing artwork metadata matching...", category: .app)
+        
+        // Load a test collection
+        let artService = ChicagoArtService()
+        let collectionManager = CollectionManager(artService: artService)
+        await collectionManager.loadAvailableCollections()
+        
+        guard let testManifest = collectionManager.availableCollections.first else {
+            logger.error("No collections available for testing", category: .app)
+            return false
+        }
+        
+        guard let testCollection = await collectionManager.buildCollection(from: testManifest) else {
+            logger.error("Failed to build test collection", category: .app)
+            return false
+        }
+        
+        // Create test image URLs (simulating sorted filenames)
+        let testImageURLs = [
+            URL(fileURLWithPath: "/test/102088_Assumption of the Virgin.jpg"),
+            URL(fileURLWithPath: "/test/16151_Portrait of a Gentleman.jpg"),
+            URL(fileURLWithPath: "/test/188974_Virgin and Child with the Young Saint John the Baptist, Saint Cecilia, and Angels.jpg")
+        ]
+        
+        // Test the ID extraction logic (same as in the private method)
+        var matchedCount = 0
+        var totalCount = 0
+        
+        for imageURL in testImageURLs {
+            totalCount += 1
+            let filename = imageURL.lastPathComponent
+            
+            // Test ID extraction logic (same as in the private method)
+            if let underscoreIndex = filename.firstIndex(of: "_"),
+               let artworkIdString = String(filename.prefix(upTo: underscoreIndex)).nilIfEmpty,
+               let artworkId = Int(artworkIdString) {
+                
+                // Check if we can find artwork with this ID
+                if testCollection.allArtworks.contains(where: { $0.id == artworkId }) {
+                    matchedCount += 1
+                    logger.debug("✅ Successfully matched artwork ID \(artworkId) from filename \(filename)", category: .app)
+                } else {
+                    logger.warning("⚠️ No artwork found for ID \(artworkId) from filename \(filename)", category: .app)
+                }
+            } else {
+                logger.error("❌ Failed to extract artwork ID from filename \(filename)", category: .app)
+            }
+        }
+        
+        let matchRate = Double(matchedCount) / Double(totalCount)
+        
+        if matchRate >= 0.8 { // 80% success rate required
+            logger.success("✅ Artwork metadata matching test passed: \(matchedCount)/\(totalCount) matched (\(Int(matchRate * 100))%)", category: .app)
+            return true
+        } else {
+            logger.error("❌ Artwork metadata matching test failed: \(matchedCount)/\(totalCount) matched (\(Int(matchRate * 100))%)", category: .app)
+            return false
         }
     }
 }

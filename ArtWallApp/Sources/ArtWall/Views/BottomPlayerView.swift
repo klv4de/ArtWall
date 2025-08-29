@@ -9,21 +9,19 @@ struct BottomPlayerView: View {
     }
     
     private func getCurrentArtworkTitle() -> String {
-        guard let url = rotationEngine.currentImageURL else { return "No Artwork" }
-        // Extract title from filename (remove ID prefix and extension)
-        let filename = url.lastPathComponent
-        let nameWithoutExtension = String(filename.dropLast(4)) // Remove .jpg
-        
-        // Remove ID prefix (numbers + underscore) if present
-        if let underscoreIndex = nameWithoutExtension.firstIndex(of: "_") {
-            return String(nameWithoutExtension[nameWithoutExtension.index(after: underscoreIndex)...])
-                .replacingOccurrences(of: "_", with: " ")
-        }
-        return nameWithoutExtension.replacingOccurrences(of: "_", with: " ")
+        return rotationEngine.getCurrentArtworkTitle()
     }
     
     private func getCurrentArtworkArtist() -> String {
-        return "From \(rotationEngine.currentCollection ?? "Collection")"
+        return rotationEngine.getCurrentArtworkArtist()
+    }
+    
+    private func getCurrentArtworkYear() -> String {
+        return rotationEngine.getCurrentArtworkDate()
+    }
+    
+    private func getCurrentArtworkSource() -> String {
+        return rotationEngine.getCurrentArtworkSource()
     }
     
     private func formatTime(_ seconds: Int) -> String {
@@ -62,8 +60,24 @@ struct BottomPlayerView: View {
                         .font(.headline)
                         .lineLimit(1)
                     
-                    Text(getCurrentArtworkArtist())
-                        .font(.subheadline)
+                    HStack(spacing: 8) {
+                        Text(getCurrentArtworkArtist())
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .lineLimit(1)
+                        
+                        Text("•")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
+                        Text(getCurrentArtworkYear())
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .lineLimit(1)
+                    }
+                    
+                    Text(getCurrentArtworkSource())
+                        .font(.caption)
                         .foregroundColor(.secondary)
                         .lineLimit(1)
                     

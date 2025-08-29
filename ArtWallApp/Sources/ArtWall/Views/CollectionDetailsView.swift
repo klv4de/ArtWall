@@ -184,7 +184,7 @@ struct CollectionDetailsView: View {
         let collectionPath = downloadService.getCollectionPath(collection)
         
         logger.info("Starting wallpaper rotation for collection: \(collection.title)", category: .wallpaper)
-        rotationEngine.startRotation(collectionName: collection.title, collectionPath: collectionPath)
+        rotationEngine.startRotation(collectionName: collection.title, collectionPath: collectionPath, collection: collection)
     }
     
     private func resumeRotation() {
