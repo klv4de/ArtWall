@@ -26,6 +26,7 @@ struct Artwork: Codable, Identifiable {
     let classificationTitle: String?
     let artworkTypeTitle: String?
     let githubImageURL: String?
+    let description: String?
     
     enum CodingKeys: String, CodingKey {
         case id, title, dimensions
@@ -39,6 +40,7 @@ struct Artwork: Codable, Identifiable {
         case classificationTitle = "classification_title"
         case artworkTypeTitle = "artwork_type_title"
         case githubImageURL = "github_image_url"
+        case description
     }
     
     // Computed properties for filtering

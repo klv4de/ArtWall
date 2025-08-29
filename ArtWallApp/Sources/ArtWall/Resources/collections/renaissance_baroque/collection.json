@@ -98,7 +98,9 @@
       "medium": "Oil on panel",
       "image_id": "16d830b7-d681-6c88-379b-9585c655b6b7",
       "image_url": "https://www.artic.edu/iiif/2/16d830b7-d681-6c88-379b-9585c655b6b7/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/188974.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/188974.jpg",
+      "description": "<p>One of the most unorthodox artists in Renaissance Florence, Piero di Cosimo created paintings full of imaginative inventions that enliven traditional themes. Here, John the Baptist offers plums to the infant Jesus, who eagerly devours one while another lies half-eaten on the ground. At right, Saint Cecilia, patron of musicians, sings from a book of music, while wingless angels look on in the background.</p>\n<p>The shadowed effect in the figures surrounding the Virgin and Child indicate that Piero altered his plans for the composition after he had begun painting: the artist painted them on top of the dark background color, which shows through the thin layers of paint on the surface.</p>\n",
+      "short_description": ""
     },
     {
       "id": 16151,
@@ -108,7 +110,9 @@
       "medium": "Oil, with tempera (?), on panel, transferred to canvas",
       "image_id": "db37b494-6b09-18ce-a618-0b16352f33a2",
       "image_url": "https://www.artic.edu/iiif/2/db37b494-6b09-18ce-a618-0b16352f33a2/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16151.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16151.jpg",
+      "description": "<p>Ridolfo Ghirlandaio transformed the large workshop he inherited from his famous, fresco-painter father, Domenico, into one that specialized in portraits and festival decorations. One of Ridolfo’s most celebrated pictures, this work reveals his careful study of the portraits of Leonardo da Vinci and Raphael in its calm, pyramidal, and expansive presentation of the sitter and in its active, searching light. The foreground parapet, or ledge, over which a hand projects illusionistically into the viewer’s space and the glimpse of landscape through the window are devices Ridolfo borrowed from Flemish painting. The headpiece (<em>cappuccio</em>) and fur-cuffed robe of the unidentified sitter were customary apparel for well-to-do Florentine merchants.</p>\n",
+      "short_description": ""
     },
     {
       "id": 102088,
@@ -118,7 +122,9 @@
       "medium": "Oil on panel",
       "image_id": "2f7bd26c-ffdf-0b4a-f1e2-8acd09554023",
       "image_url": "https://www.artic.edu/iiif/2/2f7bd26c-ffdf-0b4a-f1e2-8acd09554023/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/102088.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/102088.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 184371,
@@ -128,7 +134,9 @@
       "medium": "Oil on panel",
       "image_id": "40fdb1d6-93fe-2916-78fb-f56a1ac261f1",
       "image_url": "https://www.artic.edu/iiif/2/40fdb1d6-93fe-2916-78fb-f56a1ac261f1/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/184371.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/184371.jpg",
+      "description": "<p>The young Baccio della Porta came under the spell of the charismatic Dominican friar Girolamo Savonarola, joining his monastic order as Fra (Friar) Bartolommeo in 1500 and forsaking his painting career for several years. Returning to painting in 1504, he looked to the most lyrical and harmonious recent works of Leonardo da Vinci, Raphael, and Michelangelo to form his own style, which was characterized by a new, quiet spirituality. The palette of saturated blue, red, and green announces the Holy Family, while the muted tones of the angels’ garments establish an otherworldly presence. Here he treated the Nativity in a traditional, though especially intimate, manner. The Virgin kneels humbly as she gazes at the Christ Child, while Joseph assumes a pose of restrained wonderment, as if suddenly aware of the infant’s divine nature. The family shelters in a rustic stall erected within the ruins of an edifice understood to be the palace of David at Bethlehem. This juxtaposition of architecture symbolizes Christ’s establishment of his new church on the Old Testament order of the Jews. Reinforcing this device is a young tree springing from a remnant of ancient stones directly above the infant.</p>\n",
+      "short_description": "In 1500 Fra (Friar) Bartolommeo left behind his painting career to join a monastery. Four years later he returned to painting, looking to Da Vinci, Raphael, and Michelangelo to form his new, quietly spiritual style. Here, he depicted the Nativity in a traditional, though especially intimate manner. The Virgin kneels humbly gazing at the Christ Child while Joseph assumes a post of restrained wonderment."
     },
     {
       "id": 15496,
@@ -138,7 +146,9 @@
       "medium": "Oil on panel",
       "image_id": "c6962747-4875-eb15-f28c-523ce2d3d174",
       "image_url": "https://www.artic.edu/iiif/2/c6962747-4875-eb15-f28c-523ce2d3d174/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15496.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15496.jpg",
+      "description": "<p>Once thought to be by the young Albrecht Altdorfer, this painting is instead the work of a painter named after a winged altarpiece in the town of Pulkau, near the Austrian and Moravian border. Though the artist takes his name from the Pulkau altarpiece, he was probably active in Vienna. Like other loosely associated South German and Austrian artists of the early 16th century, who are now grouped together as the Danube School, the Master of Pulkau used exuberant natural forms to give a heightened emotional quality to his work. In this altarpiece wing, the swirling vegetation, excited angels, and oversized Virgin and animals direct the viewer’s attention to the vulnerable Christ Child, who is the focus of adoration.</p>\n",
+      "short_description": ""
     },
     {
       "id": 39851,
@@ -148,7 +158,9 @@
       "medium": "Oil on panel",
       "image_id": "0c840df0-6d98-46d2-9828-b23ddcd34081",
       "image_url": "https://www.artic.edu/iiif/2/0c840df0-6d98-46d2-9828-b23ddcd34081/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/39851.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/39851.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 59960,
@@ -158,7 +170,9 @@
       "medium": "Oil on parchment, mounted on panel",
       "image_id": "0f1b4de0-bf06-fd85-3646-9671e349efbb",
       "image_url": "https://www.artic.edu/iiif/2/0f1b4de0-bf06-fd85-3646-9671e349efbb/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59960.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59960.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 22862,
@@ -168,7 +182,9 @@
       "medium": "Oil on panel",
       "image_id": "bff0be75-0833-2ee1-993a-5934993e08fb",
       "image_url": "https://www.artic.edu/iiif/2/bff0be75-0833-2ee1-993a-5934993e08fb/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/22862.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/22862.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 22866,
@@ -178,7 +194,9 @@
       "medium": "Oil on panel",
       "image_id": "77afdb88-dd75-5dab-c58b-ef6ac91bee7a",
       "image_url": "https://www.artic.edu/iiif/2/77afdb88-dd75-5dab-c58b-ef6ac91bee7a/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/22866.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/22866.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 234781,
@@ -188,7 +206,9 @@
       "medium": "Oil on panel",
       "image_id": "13a251ba-2c7a-2d0c-3f65-820c0e1f1a39",
       "image_url": "https://www.artic.edu/iiif/2/13a251ba-2c7a-2d0c-3f65-820c0e1f1a39/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/234781.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/234781.jpg",
+      "description": "<p>This painting represents one of the most popular compositions invented by one of the most distinguished painters working in Rome during the High Renaissance. In the 1510s, following an early period in Venice, Sebastiano del Piombo traveled to Rome, where he was drawn into the lively atmosphere of competition between the two great luminaries of the period, <a href=\"https://www.artic.edu/artists/33808/michelangelo-buonarroti\">Michelangelo Buonarroti</a> and <a href=\"https://www.artic.edu/artists/36321/raphael\">Raphael</a>. Michelangelo took Sebastiano under his wing, teaching him his monumental style and providing drawings for some of Sebastiano’s major commissions. Following Raphael’s death in 1520, the painter and historian <a href=\"https://www.artic.edu/artists/37130/giorgio-vasari\">Giorgio Vasari</a> stated that “first place in the art of painting was unanimously granted by all, thanks to the favor of Michelangelo, to Sebastiano.”</p>\n<p><em>Christ Carrying the Cross</em> draws upon recent developments of an enormously popular iconography by artists including <a href=\"https://www.artic.edu/artists/33587/giovanni-bellini\">Giovanni Bellini</a>, <a href=\"https://www.artic.edu/artists/34665/giorgione\">Giorgione</a>, and <a href=\"https://www.artic.edu/artists/35584/andrea-mantegna\">Andrea Mantegna</a>, among others. Here, Simon of Cyrene assists Jesus, emphasizing the heavy weight of the cross on his shoulders. A Roman soldier stands behind, his jeering face just visible in the darkness. In the background, the tightly packed composition opens up onto a crowd assembling at the foot of the hill of Golgotha, with two crosses barely visible. The luminous landscape is a hallmark of the artist’s Venetian training. The painting’s dramatic visual impact is a result of the powerful diagonals of the cross; the dynamic, almost sculptural quality of Christ’s clothing; and the pathos of his expression.</p>\n<p>The popularity of Sebastiano’s composition is reflected in the number of surviving variants that he created over the course of his career. The Art Institute’s version is an autograph replica of a painting—now in the Museo del Prado, Madrid—made for Jerónimo Vich y Valterra, the Spanish ambassador to Rome. Other versions survive in the State Hermitage Museum, Saint Petersburg; the Monasterio de las Descalzas Reales, Madrid; and the Szépmüvészeti Múzeum, Budapest.</p>\n",
+      "short_description": "In the 1510s, Sebastiano del Piombo traveled to Rome, where he was drawn into the lively competition between the period's two great luminaries, Michelangelo and Raphael. Michelangelo took Sebastiano under his wing, teaching him his monumental style and providing drawings for commissions. This painting represents a popular composition by Piombo, who became one of the most distinguished painters working during the High Renaissance."
     },
     {
       "id": 16305,
@@ -198,7 +218,9 @@
       "medium": "Oil on panel",
       "image_id": "997c1a08-c922-ddd6-2b51-58ac4ddf7ec3",
       "image_url": "https://www.artic.edu/iiif/2/997c1a08-c922-ddd6-2b51-58ac4ddf7ec3/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16305.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16305.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 110527,
@@ -208,7 +230,9 @@
       "medium": "Oil on panel",
       "image_id": "4ac46654-f276-369f-f2fe-dadb30838b30",
       "image_url": "https://www.artic.edu/iiif/2/4ac46654-f276-369f-f2fe-dadb30838b30/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/110527.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/110527.jpg",
+      "description": "<p>Dutch painter Jan van Scorel was one of the first Northern European artists to make an extended trip to Italy to study antiquities and the new Renaissance style. This landscape must have been made during his stay in southern Europe as a young artist; the panel is made from poplar, a wood commonly used in Italy. The two aristocratic pastimes depicted, jousting and hunting, were frequent themes of Northern European landscapes, particularly in prints, and Italian patrons were drawn to these extravagant visions of courtly pursuits.</p>\n",
+      "short_description": ""
     },
     {
       "id": 79789,
@@ -218,7 +242,9 @@
       "medium": "Oil on panel",
       "image_id": "70d29ea7-d9c9-947c-dc2f-a79f11844ae1",
       "image_url": "https://www.artic.edu/iiif/2/70d29ea7-d9c9-947c-dc2f-a79f11844ae1/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/79789.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/79789.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 86441,
@@ -228,7 +254,9 @@
       "medium": "Oil on panel",
       "image_id": "1bb08195-44b0-030c-c610-9fb6bb45e9b0",
       "image_url": "https://www.artic.edu/iiif/2/1bb08195-44b0-030c-c610-9fb6bb45e9b0/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/86441.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/86441.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 236975,
@@ -238,7 +266,9 @@
       "medium": "Oil on panel",
       "image_id": "bbe2f986-077d-1308-bae3-99918ec8bbe7",
       "image_url": "https://www.artic.edu/iiif/2/bbe2f986-077d-1308-bae3-99918ec8bbe7/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/236975.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/236975.jpg",
+      "description": "<p>Saint Jerome, known for translating the Bible into Latin, was a popular subject for paintings in the Renaissance, a period of renewed interest in secular and religious learning. Artists typically depicted him as a scholar in his study or as an ascetic in the wilderness, but this portrait-like image combines both themes. The books before him on the desk suggest his learned character, while the crucifix and skull he contemplates as he beats his breast with a rock evoke his hermetic activities. The saint displays the nervous, exaggerated gestures often found in work by this artist, known as the Master of the Lille Adoration.</p>\n",
+      "short_description": ""
     },
     {
       "id": 111453,
@@ -248,7 +278,9 @@
       "medium": "Oil on panel",
       "image_id": "e88a2253-69a0-425e-32d1-e9640111ef39",
       "image_url": "https://www.artic.edu/iiif/2/e88a2253-69a0-425e-32d1-e9640111ef39/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111453.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/111453.jpg",
+      "description": "<p>In the midst of this expansive landscape, a tiny figure of the hermit Saint Jerome beats his breast with a rock in penance for his earlier worldly pursuits as he gazes at a sculpture of Jesus on the cross. In spite of this fervent activity in the foreground, the true subject of this painting is the vast landscape behind the saint. The artist rendered the mountains, valleys, rivers, and villages in successive bands of brown, green, and blue, the typical structure of the independent landscape that first emerged as a genre in this period. The roads that wind through the scene—metaphors for the journey of life—were a popular motif in Flemish painting and likely helped this work appeal to the growing number of art collectors in the booming city of Antwerp, a center of international trade.</p>\n",
+      "short_description": ""
     },
     {
       "id": 190405,
@@ -258,7 +290,9 @@
       "medium": "Oil on panel",
       "image_id": "33f100cf-7ebb-f1ae-a5ec-326c28088b02",
       "image_url": "https://www.artic.edu/iiif/2/33f100cf-7ebb-f1ae-a5ec-326c28088b02/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/190405.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/190405.jpg",
+      "description": "<p>Girolamo da Carpi was one of the most gifted artists at the court of the Este family of Ferrara, an important artistic center during the Italian Renaissance. This intimate work was painted for the Estes and adorned the oratory chapel of their palace. In the painting, Saint Luke draws the Virgin and Child while Saint Joseph watches unobtrusively from a doorway. As in many Renaissance works, Christ appears agitated—seemingly possessing foreknowledge of his death. He may be reacting to the spearlike yarnwinder, an attribute of the Three Fates and, consequently, a traditional symbol of death.</p>\n<p>After leaving the Estes, the painting came into the possession, successively, of two Roman cardinals, two Roman princes, the English Duke of Westminster, Baron Alfred de Rothschild, and the Earl of Carnavon, who famously paid for the excavation of the tomb of King Tutankhamen.</p>\n",
+      "short_description": ""
     },
     {
       "id": 269805,
@@ -268,7 +302,9 @@
       "medium": "Oil on panel",
       "image_id": "59f7fff6-d050-d160-fcdf-3c8d0e6aca01",
       "image_url": "https://www.artic.edu/iiif/2/59f7fff6-d050-d160-fcdf-3c8d0e6aca01/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/269805.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/269805.jpg",
+      "description": "<p>Mary holds the infant Jesus on her lap as she turns to her cousin Elizabeth, whose son, John the Baptist, kneels at her feet. John’s unlikely birth to the elderly Elizabeth prefigured the miraculous birth of Jesus, and John later preached to his divine cousin’s followers and baptized them into the faith. Here, the artist placed the biblical figures in a contemporary setting with recognizable elements of a 16th-century Florentine interior, including the portable terracotta vessel holding heated coals, called a brazier, and a fireplace made of gray sandstone (<em>pietra serena</em>).</p>\n<p>One of the most successful artists working in the Mannerist style, Jacopino del Conte had a long career in Florence and Rome that bridged the early and late 16th century. His paintings carried forward the vibrant, colorful palette; elegant and monumental figures; and energetic compositions of his stylistic origins in the Florentine circle of <a href=\"https://www.artic.edu/artists/40414/andrea-del-sarto\">Andrea del Sarto</a>, <a href=\"https://www.artic.edu/artists/40752/pontormo-jacopo-carrucci\">Jacopo Pontormo</a>, and <a href=\"https://www.artic.edu/artists/40535/agnolo-bronzino\">Agnolo Bronzino</a>.</p>\n",
+      "short_description": ""
     },
     {
       "id": 57829,
@@ -278,7 +314,9 @@
       "medium": "Oil on panel",
       "image_id": "8325eea9-542f-7d67-d085-3b55dce2f322",
       "image_url": "https://www.artic.edu/iiif/2/8325eea9-542f-7d67-d085-3b55dce2f322/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/57829.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/57829.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 59874,
@@ -288,7 +326,9 @@
       "medium": "Oil on panel",
       "image_id": "00ca7b9d-5cf8-6e05-aea6-bf10ae13e393",
       "image_url": "https://www.artic.edu/iiif/2/00ca7b9d-5cf8-6e05-aea6-bf10ae13e393/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59874.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/59874.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 24684,
@@ -298,7 +338,9 @@
       "medium": "Oil on panel",
       "image_id": "9a29cc5d-3779-c9ab-2aa2-0df7b6c3f391",
       "image_url": "https://www.artic.edu/iiif/2/9a29cc5d-3779-c9ab-2aa2-0df7b6c3f391/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/24684.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/24684.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 80540,
@@ -308,7 +350,9 @@
       "medium": "Oil on panel, transferred to canvas",
       "image_id": "b978b0e6-455e-8800-40c4-fe044f8196fe",
       "image_url": "https://www.artic.edu/iiif/2/b978b0e6-455e-8800-40c4-fe044f8196fe/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80540.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80540.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 10281,
@@ -318,7 +362,9 @@
       "medium": "Oil on panel",
       "image_id": "47a54a0c-99c2-7aa9-db29-8fbccac5f1e1",
       "image_url": "https://www.artic.edu/iiif/2/47a54a0c-99c2-7aa9-db29-8fbccac5f1e1/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/10281.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/10281.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 75974,
@@ -328,7 +374,9 @@
       "medium": "Oil on canvas",
       "image_id": "494a09fc-407c-8329-06b3-fbf364a594b2",
       "image_url": "https://www.artic.edu/iiif/2/494a09fc-407c-8329-06b3-fbf364a594b2/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/75974.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/75974.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 56133,
@@ -338,7 +386,9 @@
       "medium": "Oil on panel",
       "image_id": "474d2283-78fc-1dbe-1d45-f67908f69033",
       "image_url": "https://www.artic.edu/iiif/2/474d2283-78fc-1dbe-1d45-f67908f69033/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/56133.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/56133.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 29403,
@@ -348,7 +398,9 @@
       "medium": "Oil on panel",
       "image_id": "da911441-2b80-1b9f-e471-2359ffa51301",
       "image_url": "https://www.artic.edu/iiif/2/da911441-2b80-1b9f-e471-2359ffa51301/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/29403.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/29403.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 203330,
@@ -358,7 +410,9 @@
       "medium": "Oil on copper",
       "image_id": "b0b312cf-6b99-fc0a-e561-c60a700cf0cc",
       "image_url": "https://www.artic.edu/iiif/2/b0b312cf-6b99-fc0a-e561-c60a700cf0cc/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/203330.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/203330.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 93737,
@@ -368,7 +422,9 @@
       "medium": "Oil on panel",
       "image_id": "25bad661-3b81-9925-0832-1d43a4327288",
       "image_url": "https://www.artic.edu/iiif/2/25bad661-3b81-9925-0832-1d43a4327288/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/93737.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/93737.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 80553,
@@ -378,7 +434,9 @@
       "medium": "Oil on panel",
       "image_id": "0a991ed0-5816-1fbe-33d2-a12c384334ab",
       "image_url": "https://www.artic.edu/iiif/2/0a991ed0-5816-1fbe-33d2-a12c384334ab/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80553.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80553.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 67362,
@@ -388,7 +446,9 @@
       "medium": "Oil on canvas",
       "image_id": "52098776-6e2e-9683-e258-7b1cec8660dd",
       "image_url": "https://www.artic.edu/iiif/2/52098776-6e2e-9683-e258-7b1cec8660dd/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/67362.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/67362.jpg",
+      "description": "<p>This painting is a small replica of an altarpiece for the private family chapel of San José in Toledo, Spain. The production of smaller versions of commissioned altarpieces allowed El Greco to introduce his creations to a wide market. The composition here includes elements that would have resonated with his audience: Saint Martin wears fashionable contemporary armor, and the walls of Toledo are visible in the distant background. Martin was a popular saint during the period, when acts of charity like the gift of his cloak to a beggar were promoted by the Catholic Church as necessary for earning salvation.</p>\n",
+      "short_description": "This painting by El Greco depicts Saint Martin, a popular saint in the 1600s when the Catholic Church was promoting acts of charity, like Martin giving his cloak to a beggar, as necessary for salvation. The composition includes other elements that would have resonated with El Greco's local audience: Saint Martin wears fashionable armor, and the walls of Toledo are visible in the distant background."
     },
     {
       "id": 213758,
@@ -398,7 +458,9 @@
       "medium": "Oil on copper",
       "image_id": "50fdb185-fb4f-dad3-ed35-0add5467c780",
       "image_url": "https://www.artic.edu/iiif/2/50fdb185-fb4f-dad3-ed35-0add5467c780/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/213758.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/213758.jpg",
+      "description": "<p>Adam Elsheimer’s small paintings on copper show his remarkable ability to create imaginary, highly composed landscapes. On his arrival in Rome in 1600, Elsheimer was inspired by the city’s antique monuments and its extraordinary artistic environment. In this work, the wooded landscape teeming with wildlife is indebted to painting from Northern Europe, while the youthful saint echoes ancient Greek and Roman sculpture in a pose that reveals both his active mind and his physical strength. Though Elsheimer died in Rome at a relatively young age, his painting profoundly influenced his fellow artists, including <a href=\"https://www.artic.edu/artists/36487/peter-paul-rubens\">Peter Paul Rubens</a>.</p>\n",
+      "short_description": ""
     },
     {
       "id": 28857,
@@ -408,7 +470,9 @@
       "medium": "Oil on canvas",
       "image_id": "edf68284-ce38-4d0b-3c93-91b05d575e1b",
       "image_url": "https://www.artic.edu/iiif/2/edf68284-ce38-4d0b-3c93-91b05d575e1b/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28857.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28857.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 16340,
@@ -418,7 +482,9 @@
       "medium": "Oil on cradled panel",
       "image_id": "5f1fda6c-f116-c251-1cee-c6bad53d8d18",
       "image_url": "https://www.artic.edu/iiif/2/5f1fda6c-f116-c251-1cee-c6bad53d8d18/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16340.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16340.jpg",
+      "description": "<p>The landscape specialist Josse de Momper the Younger painted dramatic panoramas that framed the wildness of nature against grand vistas. On the right, adventurous travelers pause along a road winding through the hilly landscape, which would have been understood by contemporary viewers as a visual metaphor for the journey of life. Similar compositions can be found in earlier Northern landscapes, but De Momper populated his scenes with more figures, especially peasants, than his predecessors—a reflection, perhaps, of the increased popularity of paintings that depicted everyday life.</p>\n",
+      "short_description": ""
     },
     {
       "id": 100343,
@@ -428,7 +494,9 @@
       "medium": "Oil on copper",
       "image_id": "738fc402-53e4-83ad-f84d-556798754a51",
       "image_url": "https://www.artic.edu/iiif/2/738fc402-53e4-83ad-f84d-556798754a51/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100343.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100343.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 100344,
@@ -438,7 +506,9 @@
       "medium": "Oil on copper",
       "image_id": "e67c909b-6571-ced5-bec3-6c2d3dc291a8",
       "image_url": "https://www.artic.edu/iiif/2/e67c909b-6571-ced5-bec3-6c2d3dc291a8/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100344.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100344.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 48776,
@@ -448,7 +518,9 @@
       "medium": "Oil on canvas",
       "image_id": "e8c48b99-4c1f-7ecf-0747-c5957b48f4f7",
       "image_url": "https://www.artic.edu/iiif/2/e8c48b99-4c1f-7ecf-0747-c5957b48f4f7/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/48776.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/48776.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 256795,
@@ -458,7 +530,9 @@
       "medium": "Oil on canvas",
       "image_id": "1dae4ac9-d33c-56e4-06d5-985b6be3898c",
       "image_url": "https://www.artic.edu/iiif/2/1dae4ac9-d33c-56e4-06d5-985b6be3898c/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/256795.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/256795.jpg",
+      "description": "<p>A newly discovered work by Cornelis Cornelisz. van Haarlem, this colorful painting interprets the ancient witticism, “Without food and drink, love grows cold.” Venus, Roman goddess of love, is joined by Cupid and Ceres, goddess of grain; Bacchus, god of wine, is present symbolically through the grapes. The supple, translucent flesh demonstrates the interest in naturalism that blossomed in Northern Europe in the late 16th and early 17th centuries, which led artists to work increasingly “from life,” that is, from observation of models.</p>\n",
+      "short_description": "A newly discovered work by Cornelisz van Haarlem, this colorful painting interprets the ancient witticism, “Without food and drink, love grows cold.” The supple, translucent flesh demonstrates the interest in naturalism that blossomed in Northern Europe in the late 16th and early 17th centuries, which led artists to work increasingly “from life,” that is, from observation of models."
     },
     {
       "id": 64029,
@@ -468,7 +542,9 @@
       "medium": "Oil on panel",
       "image_id": "599e0546-ed58-0224-a623-39a8e3b51ef8",
       "image_url": "https://www.artic.edu/iiif/2/599e0546-ed58-0224-a623-39a8e3b51ef8/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/64029.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/64029.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 15260,
@@ -478,7 +554,9 @@
       "medium": "Oil on panel",
       "image_id": "d47db02e-de1b-0ba5-28f9-b4f7e8527016",
       "image_url": "https://www.artic.edu/iiif/2/d47db02e-de1b-0ba5-28f9-b4f7e8527016/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15260.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15260.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 100342,
@@ -488,7 +566,9 @@
       "medium": "Oil on panel",
       "image_id": "8df04a6e-cc79-491b-86d4-388c2b33d888",
       "image_url": "https://www.artic.edu/iiif/2/8df04a6e-cc79-491b-86d4-388c2b33d888/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100342.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100342.jpg",
+      "description": "<p>The Franciscans were among the reformed religious orders whose preaching and teaching activities helped revive the Roman Catholic Church in the Southern Netherlands following years of religious and political turmoil in the 1500s. Peter Paul Rubens here depicted the order’s founder, Saint Francis of Assisi, recognizable by the wound that imitates the pierced hands of the crucified Jesus. In this portrait-like image, which was likely made on commission, Rubens conveyed the saint’s spirituality through his meditative gaze and posture.</p>\n",
+      "short_description": "The Franciscans were among the reformed religious orders whose preaching and teaching activities helped revive the Roman Catholic Church in the Southern Netherlands following years of turmoil in the 1500s. Rubens here depicted the order’s founder, Saint Francis of Assisi, recognizable by the wound that imitates the pierced hands of the crucified Jesus. Rubens conveyed the saint’s spirituality through his meditative gaze and posture."
     },
     {
       "id": 21934,
@@ -498,7 +578,9 @@
       "medium": "Oil on canvas",
       "image_id": "68452725-eba5-06e3-46d2-50c678a5d672",
       "image_url": "https://www.artic.edu/iiif/2/68452725-eba5-06e3-46d2-50c678a5d672/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/21934.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/21934.jpg",
+      "description": "<p>In this modest kitchen scene, a type known as a <em>bodegón</em> (from the Spanish for <em>pantry</em>), Diego Velázquez depicted a young African woman at work, surrounded by exquisitely rendered pots, jugs, a mortar and pestle, and a crumpled paper wrapper for spices. Slavery was widespread in the young artist’s hometown of Seville: Velázquez, his father, and his teacher, Francisco Pacheco, were all enslavers. In creating this painting, Velázquez may have used an enslaved woman from one of these households as a model.</p>\n",
+      "short_description": "In this kitchen scene, a type known as a <em>bodegón</em> (Spanish for pantry), Diego Velázquez depicted a young African woman at work, surrounded by exquisitely rendered pots and jugs and a crumpled paper wrapper for spices. Slavery was widespread in the young artist’s hometown of Seville—Velázquez, his father, and his teacher were all enslavers. Velázquez may have used an enslaved woman from one of these households as a model for this painting."
     },
     {
       "id": 209969,
@@ -508,7 +590,9 @@
       "medium": "Oil on canvas",
       "image_id": "3b06a501-7b91-07b2-80f1-a683cbfeaad9",
       "image_url": "https://www.artic.edu/iiif/2/3b06a501-7b91-07b2-80f1-a683cbfeaad9/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/209969.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/209969.jpg",
+      "description": "<p>Paul Bril was one of the most prominent and financially successful Northern European landscape painters in Rome between 1590 and 1626. Here he incorporated the classical architecture, rolling hills, and vast expanses of sky found in earlier Italian landscapes into the forest views typical of Flanders in the late 1500s. Such classically inflected landscapes would become popular with collectors of Flemish art across Europe by the mid-17th century.</p>\n",
+      "short_description": ""
     },
     {
       "id": 28874,
@@ -518,7 +602,9 @@
       "medium": "Oil on panel",
       "image_id": "58f58363-f567-0e49-7956-d49400721b1c",
       "image_url": "https://www.artic.edu/iiif/2/58f58363-f567-0e49-7956-d49400721b1c/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28874.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28874.jpg",
+      "description": "<p>Peter Paul Rubens executed this study and 38 more as he prepared to decorate the ceiling of the Jesuit church in Antwerp. He presented such highly finished sketches to his patrons as proposals for major projects. This work shows a dramatically foreshortened saint gliding majestically on a cloud. The bold perspective would have furthered the illusion that the painting was a window in the ceiling of the church, offering a view to the open sky above. The man depicted here is the 12th-century martyr Albert of Louvain, patron saint of Archduke Albert, governor of the Spanish Netherlands.</p>\n",
+      "short_description": "Rubens executed this study and 38 more as he prepared to decorate the ceiling of the Jesuit church in Antwerp. It shows a foreshortened saint gliding majestically on a cloud. The bold perspective would have furthered the illusion that the painting was a window in the church's ceiling, offering a view to the sky. The man depicted is the 12th-century martyr Albert of Louvain, patron saint of Archduke Albert, governor of the Spanish Netherlands."
     },
     {
       "id": 80535,
@@ -528,7 +614,9 @@
       "medium": "Oil on canvas",
       "image_id": "a061fcd4-88da-53f4-726f-72e3d71757a3",
       "image_url": "https://www.artic.edu/iiif/2/a061fcd4-88da-53f4-726f-72e3d71757a3/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80535.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80535.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 15698,
@@ -538,7 +626,9 @@
       "medium": "Oil on panel",
       "image_id": "9420990e-602d-5b82-d82c-538c25bc7e53",
       "image_url": "https://www.artic.edu/iiif/2/9420990e-602d-5b82-d82c-538c25bc7e53/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15698.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/15698.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 866,
@@ -548,7 +638,9 @@
       "medium": "Oil on canvas",
       "image_id": "8f899167-2faf-bd0d-cf9c-9ca2fcb07a4b",
       "image_url": "https://www.artic.edu/iiif/2/8f899167-2faf-bd0d-cf9c-9ca2fcb07a4b/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/866.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/866.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 257287,
@@ -558,7 +650,9 @@
       "medium": "Oil on panel",
       "image_id": "c0a15a78-d295-f193-32b8-968b6d3c001d",
       "image_url": "https://www.artic.edu/iiif/2/c0a15a78-d295-f193-32b8-968b6d3c001d/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/257287.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/257287.jpg",
+      "description": "<p>This intimate painting depicts a scene from Ovid’s <em>The Metamorphoses</em>, an ancient Roman poem, in which the river god Alpheus menaces Arethusa, a nymph, as she bathes. Here, the hulking Alpheus climbs the riverbank in pursuit of the stout nymph, who looks back in fear as she flees. With his lush landscapes and unidealized figures, Uyttenbroeck belonged to the generation of artists who influenced the young <a href=\"https://www.artic.edu/artists/40769/rembrandt-van-rijn\">Rembrandt van Rijn</a>. Their work inspired the dramatic poses and gestures that Rembrandt adopted as a means of conveying emotion.</p>\n",
+      "short_description": ""
     },
     {
       "id": 41211,
@@ -568,7 +662,9 @@
       "medium": "Oil on canvas",
       "image_id": "a2450337-afed-2797-17e7-2e1f2158235c",
       "image_url": "https://www.artic.edu/iiif/2/a2450337-afed-2797-17e7-2e1f2158235c/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/41211.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/41211.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 80560,
@@ -578,7 +674,9 @@
       "medium": "Oil on canvas",
       "image_id": "0893821b-474d-c87c-b528-a059919089e7",
       "image_url": "https://www.artic.edu/iiif/2/0893821b-474d-c87c-b528-a059919089e7/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80560.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/80560.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 100356,
@@ -588,7 +686,9 @@
       "medium": "Oil on panel",
       "image_id": "e540512e-7bb1-e713-4ef9-fdea43ebbcd3",
       "image_url": "https://www.artic.edu/iiif/2/e540512e-7bb1-e713-4ef9-fdea43ebbcd3/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100356.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/100356.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 181702,
@@ -598,7 +698,9 @@
       "medium": "Oil on panel",
       "image_id": "571dac0d-3f2e-3463-814a-e56951bbe722",
       "image_url": "https://www.artic.edu/iiif/2/571dac0d-3f2e-3463-814a-e56951bbe722/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/181702.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/181702.jpg",
+      "description": "<p>Aelbert Cuyp never traveled to Italy, yet he employed the golden light typical of southern Europe to dramatize his distinctly Dutch pastoral subjects. He enhanced views of the meandering rivers and flat terrain with cows and sheep, animals that abounded in the local countryside. In this relatively early painting, his use of a warm, monochrome color palette reflects the influence of his older contemporary, <a href=\"https://www.artic.edu/artists/40616/jan-van-goyen\">Jan van Goyen</a>.</p>\n",
+      "short_description": ""
     },
     {
       "id": 16349,
@@ -608,7 +710,9 @@
       "medium": "Oil on panel",
       "image_id": "50931576-e0cd-3616-4668-7dbdcf6185de",
       "image_url": "https://www.artic.edu/iiif/2/50931576-e0cd-3616-4668-7dbdcf6185de/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16349.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16349.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 27309,
@@ -618,7 +722,9 @@
       "medium": "Oil on canvas",
       "image_id": "0f1d3bfb-cbd3-80cb-dfb9-d157e77d1542",
       "image_url": "https://www.artic.edu/iiif/2/0f1d3bfb-cbd3-80cb-dfb9-d157e77d1542/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/27309.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/27309.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 238272,
@@ -628,7 +734,9 @@
       "medium": "Oil on panel",
       "image_id": "10429355-e9c3-c48d-1d2a-6fef025d140e",
       "image_url": "https://www.artic.edu/iiif/2/10429355-e9c3-c48d-1d2a-6fef025d140e/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/238272.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/238272.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 11022,
@@ -638,7 +746,9 @@
       "medium": "Oil on canvas",
       "image_id": "d0cbcbff-7858-c6a4-e12a-4b691f21ca6d",
       "image_url": "https://www.artic.edu/iiif/2/d0cbcbff-7858-c6a4-e12a-4b691f21ca6d/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/11022.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/11022.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 16413,
@@ -648,7 +758,9 @@
       "medium": "Oil on canvas",
       "image_id": "292c2b1e-90cb-3539-7527-819a7875218d",
       "image_url": "https://www.artic.edu/iiif/2/292c2b1e-90cb-3539-7527-819a7875218d/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16413.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/16413.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 24677,
@@ -658,7 +770,9 @@
       "medium": "Oil on canvas",
       "image_id": "f621af47-1f60-d479-0be5-7e3a3700041a",
       "image_url": "https://www.artic.edu/iiif/2/f621af47-1f60-d479-0be5-7e3a3700041a/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/24677.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/24677.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 257286,
@@ -668,7 +782,9 @@
       "medium": "Oil on panel",
       "image_id": "c3adfaeb-c058-0246-0e0c-07891837d995",
       "image_url": "https://www.artic.edu/iiif/2/c3adfaeb-c058-0246-0e0c-07891837d995/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/257286.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/257286.jpg",
+      "description": "<p>Willem Claesz. Heda’s still life may look like a snapshot of an abandoned meal, but the scene is carefully arranged, revealing the artist’s ability to create complex but harmonious compositions. Heda used the pewter chargers as horizontal elements in the foreground and the glass vessels and salt-cellar as verticals in the background, with the overturned ewer positioned diagonally to connect the two planes. Faint creases in the tablecloth, plates hanging precariously off the table’s edge, and the window reflected on the pitcher’s surface demonstrate the artist’s observant eye as well as his virtuosity in handling paint. Executed in a limited palette of silvers, grays, and browns, this work is an example of the “tonal trend” in Dutch 17th-century painting.</p>\n",
+      "short_description": ""
     },
     {
       "id": 57643,
@@ -678,7 +794,9 @@
       "medium": "Oil on panel",
       "image_id": "09820b6f-dc56-87e8-649d-874c0b0fa0db",
       "image_url": "https://www.artic.edu/iiif/2/09820b6f-dc56-87e8-649d-874c0b0fa0db/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/57643.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/57643.jpg",
+      "description": "<p>One of the great chroniclers of gaiety and folly in the latter half of the 17th century, Adraien van Ostade established the Dutch taste for small-scale scenes of figures drinking and smoking at windows. This image of a man leaning jauntily against a window frame with a tankard in his hand demonstrates the amused character and casual pose the artist applied to many of his subjects. Picturesque details like the vines and leaded glass above the man’s head can be found in other small paintings by Van Ostade of women at windows, suggesting that he may have conceived of these cheerful works in pairs.</p>\n",
+      "short_description": ""
     },
     {
       "id": 35195,
@@ -688,7 +806,9 @@
       "medium": "Oil on canvas",
       "image_id": "76017100-be7f-4c3c-2622-064f1472c889",
       "image_url": "https://www.artic.edu/iiif/2/76017100-be7f-4c3c-2622-064f1472c889/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35195.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/35195.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 84096,
@@ -698,7 +818,9 @@
       "medium": "Oil on canvas",
       "image_id": "add1be75-4581-568d-0751-ae2fbb61ebf3",
       "image_url": "https://www.artic.edu/iiif/2/add1be75-4581-568d-0751-ae2fbb61ebf3/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/84096.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/84096.jpg",
+      "description": "<p>Arranged in sinuous poses to emphasize individual feathers and decorative patterns in the plumage, the lifeless birds in this painting demonstrate the artist’s careful attention to reproducing the natural world. Pieter Boel, who specialized in the game still lifes popularized in the Southern Netherlands by <a href=\"https://www.artic.edu/artists/24418/frans-snyders\">Frans Snyders</a>, executed highly naturalistic representations of fowl and canines during his years in Antwerp. The heightened shadows in this work reflect Boel’s study of Italian painting during a stay there in the 1640s.</p>\n",
+      "short_description": ""
     },
     {
       "id": 30365,
@@ -708,7 +830,9 @@
       "medium": "Oil on canvas",
       "image_id": "5510e671-04eb-e498-51b1-09e177bb5b46",
       "image_url": "https://www.artic.edu/iiif/2/5510e671-04eb-e498-51b1-09e177bb5b46/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/30365.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/30365.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 5304,
@@ -718,7 +842,9 @@
       "medium": "Oil on canvas",
       "image_id": "8eed2fbf-5090-4fb2-8f7a-74e97c8e6eaf",
       "image_url": "https://www.artic.edu/iiif/2/8eed2fbf-5090-4fb2-8f7a-74e97c8e6eaf/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/5304.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/5304.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 198905,
@@ -728,7 +854,9 @@
       "medium": "Oil on canvas",
       "image_id": "a3bfd218-9b88-f59b-5ade-f39b45f3ec4f",
       "image_url": "https://www.artic.edu/iiif/2/a3bfd218-9b88-f59b-5ade-f39b45f3ec4f/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/198905.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/198905.jpg",
+      "description": "<p>Trained in the Dutch Republic before making his career in London, Pieter van Roestraeten specialized in compositions populated with luxury goods crafted from rare, imported materials like those seen here. On the right stands a lidded agate cup with detailed silver mounts, counterbalanced to the left of the grouping by another cup, which has been overturned to reveal its mother-of-pearl lining. A piece of valuable and versatile coral, sourced from the coasts of Italy and France, dangles over the front edge of the table. The central item in this still life, the ostrich egg cup, is in the collection of the Art Institute. Known as the <a href=\" https://www.artic.edu/artworks/198902/ostrich-cup\"> Whitfield Cup</a>, it was created in 1590 by the royal jeweler John Spilman.</p>\n",
+      "short_description": ""
     },
     {
       "id": 258490,
@@ -738,7 +866,9 @@
       "medium": "Oil on canvas",
       "image_id": "2b9bef7f-d495-24e9-e856-8db0be2827b4",
       "image_url": "https://www.artic.edu/iiif/2/2b9bef7f-d495-24e9-e856-8db0be2827b4/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/258490.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/258490.jpg",
+      "description": "<p>Edwaert Collier was well known in his own time for his still lifes, which replicated in intricate detail actual maps and globes. Here, he reproduced a portion of Frederik de Wit’s 1660 map of the Americas and Jodocus Hondius’s terrestrial globe with a view of Mexico, both of which allude to the Dutch Republic’s international trade networks and the ambition to possess the world through cartographic knowledge. The extinguished candle and hourglass, in contrast, reference the fleeting nature of time. Through such highly illusionistic renderings of the symbols of worldly pursuits, Collier evoked the tension between humanity’s lasting contributions to the fields of art and science and the brevity of an individual life.</p>\n",
+      "short_description": "Collier was well known in his own time for his still lifes, which replicated in intricate detail actual maps and globes. Here, he reproduced a portion of Frederik de Wit’s 1660 map of the Americas and Jodocus Hondius’s terrestrial globe with a view of Mexico, both of which allude to the Dutch Republic’s international trade networks and the ambition to possess the world through cartographic knowledge."
     },
     {
       "id": 4770,
@@ -748,7 +878,9 @@
       "medium": "Oil on canvas",
       "image_id": "b68961a6-eed0-da9d-2196-fe5732503064",
       "image_url": "https://www.artic.edu/iiif/2/b68961a6-eed0-da9d-2196-fe5732503064/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/4770.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/4770.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 44826,
@@ -758,7 +890,9 @@
       "medium": "Oil on canvas",
       "image_id": "26ec4ba5-0571-aded-9bbb-601973682b07",
       "image_url": "https://www.artic.edu/iiif/2/26ec4ba5-0571-aded-9bbb-601973682b07/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/44826.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/44826.jpg",
+      "description": "<p>This painting and its companion piece recount the story of the Greek king Polycrates, as told by the ancient historian Herodotus. Polycrates, ruler of the island of Samos, worried that he was tempting fate with his great prosperity. He tried to introduce some counterbalancing misfortune into his life by throwing a precious signet ring into the sea, but it was swallowed by a large fish and returned to the king by a fisherman, the episode shown here. Polycrates’s good fortune came to an end when he was entrapped by Oroetus of Sardis and put to death, the event illustrated in <a href=\"https://www.artic.edu/artworks/44829/polycrates-crucifixion\"><em>Polycrates’ Crucifixion</em></a>.</p>\n",
+      "short_description": ""
     },
     {
       "id": 44829,
@@ -768,7 +902,9 @@
       "medium": "Oil on canvas",
       "image_id": "118eacd7-3e92-a96d-7b0e-160eb0c0bf20",
       "image_url": "https://www.artic.edu/iiif/2/118eacd7-3e92-a96d-7b0e-160eb0c0bf20/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/44829.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/44829.jpg",
+      "description": "<p>A native of Naples, Salvator Rosa settled in Rome in 1649, producing dramatic works regarded as counterparts to the calm, classical landscapes of his contemporaries <a href=\"https://www.artic.edu/artists/31257/claude-lorrain\">Claude Lorrain</a> and <a href=\"https://www.artic.edu/artists/36259/nicolas-poussin\">Nicolas Poussin</a>. Rosa’s landscapes present nature as wild, filled with striking effects of light, jagged cliffs, and dark grottoes. These qualities underline the eerie mood in his depiction of the death of Polycrates, ruler of the Greek island of Samos. Together with its companion piece <a href=\"https://www.artic.edu/artworks/44826/polycrates-and-the-fisherman\"><em>Polycrates and the Fisherman</em></a>, it illustrates the king’s inability to escape the ups and downs of fortune to which all humans are subject.</p>\n",
+      "short_description": ""
     },
     {
       "id": 11142,
@@ -778,7 +914,9 @@
       "medium": "Oil on panel",
       "image_id": "12d3265d-c9fc-ca4c-ca25-59032b3227de",
       "image_url": "https://www.artic.edu/iiif/2/12d3265d-c9fc-ca4c-ca25-59032b3227de/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/11142.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/11142.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 86994,
@@ -788,7 +926,9 @@
       "medium": "Oil on canvas",
       "image_id": "e1e58d46-02e9-092f-b9ef-56ad14668056",
       "image_url": "https://www.artic.edu/iiif/2/e1e58d46-02e9-092f-b9ef-56ad14668056/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/86994.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/86994.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 58050,
@@ -798,7 +938,9 @@
       "medium": "Oil on canvas",
       "image_id": "19110464-eec1-5e0a-7015-1972f63b9f07",
       "image_url": "https://www.artic.edu/iiif/2/19110464-eec1-5e0a-7015-1972f63b9f07/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/58050.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/58050.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 12876,
@@ -808,7 +950,9 @@
       "medium": "Oil on canvas",
       "image_id": "ab49fdd2-5acc-981e-f11e-c631bbd5487f",
       "image_url": "https://www.artic.edu/iiif/2/ab49fdd2-5acc-981e-f11e-c631bbd5487f/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12876.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12876.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 12879,
@@ -818,7 +962,9 @@
       "medium": "Oil on canvas",
       "image_id": "59ce4cb2-beae-5492-0d83-345cbc0745c2",
       "image_url": "https://www.artic.edu/iiif/2/59ce4cb2-beae-5492-0d83-345cbc0745c2/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12879.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12879.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 12883,
@@ -828,7 +974,9 @@
       "medium": "Oil on canvas",
       "image_id": "ea80056a-5db8-b4b8-6110-3d12902b99cc",
       "image_url": "https://www.artic.edu/iiif/2/ea80056a-5db8-b4b8-6110-3d12902b99cc/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12883.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/12883.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 105698,
@@ -838,7 +986,9 @@
       "medium": "Oil on panel",
       "image_id": "02f89de9-0b05-fb1c-fc15-bc48787debfb",
       "image_url": "https://www.artic.edu/iiif/2/02f89de9-0b05-fb1c-fc15-bc48787debfb/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/105698.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/105698.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 4092,
@@ -848,7 +998,9 @@
       "medium": "Oil on canvas",
       "image_id": "60a6eba1-7d17-796d-df04-7d1f8b0f1f94",
       "image_url": "https://www.artic.edu/iiif/2/60a6eba1-7d17-796d-df04-7d1f8b0f1f94/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/4092.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/4092.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 28876,
@@ -858,7 +1010,9 @@
       "medium": "Oil on canvas",
       "image_id": "e6a3f16b-321a-2d47-bfea-fbc1c6f584c0",
       "image_url": "https://www.artic.edu/iiif/2/e6a3f16b-321a-2d47-bfea-fbc1c6f584c0/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28876.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/28876.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 101077,
@@ -868,7 +1022,9 @@
       "medium": "Oil on canvas",
       "image_id": "eba4ff21-3b90-801b-0f0a-1bd913b49049",
       "image_url": "https://www.artic.edu/iiif/2/eba4ff21-3b90-801b-0f0a-1bd913b49049/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/101077.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/101077.jpg",
+      "description": "",
+      "short_description": ""
     },
     {
       "id": 52177,
@@ -878,7 +1034,9 @@
       "medium": "Oil on canvas",
       "image_id": "e9855650-5773-cddc-34ac-7240cd634a2f",
       "image_url": "https://www.artic.edu/iiif/2/e9855650-5773-cddc-34ac-7240cd634a2f/full/843,/0/default.jpg",
-      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/52177.jpg"
+      "github_image_url": "https://raw.githubusercontent.com/USER/ArtWall-Collections/main/images/52177.jpg",
+      "description": "",
+      "short_description": ""
     }
   ],
   "filters_applied": {

@@ -437,7 +437,8 @@ class WallpaperRotationEngine: ObservableObject {
             departmentTitle: "Chicago Art Institute",
             classificationTitle: "painting",
             artworkTypeTitle: nil,
-            githubImageURL: nil
+            githubImageURL: nil,
+            description: nil
         )
     }
 }

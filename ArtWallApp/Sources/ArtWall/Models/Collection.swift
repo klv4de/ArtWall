@@ -82,9 +82,10 @@ struct GitHubArtwork: Codable {
     let imageId: String
     let imageUrl: String
     let githubImageUrl: String
+    let description: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, title, artist, date, medium
+        case id, title, artist, date, medium, description
         case imageId = "image_id"
         case imageUrl = "image_url"
         case githubImageUrl = "github_image_url"

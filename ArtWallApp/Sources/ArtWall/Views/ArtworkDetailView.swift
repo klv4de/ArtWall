@@ -4,6 +4,24 @@ struct ArtworkDetailView: View {
     let artwork: Artwork
     @Environment(\.dismiss) private var dismiss
     
+    /// Parse HTML description to plain text for display
+    private func parseHTMLDescription(_ htmlString: String) -> String {
+        // Remove HTML tags and decode entities for display
+        let withoutTags = htmlString.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        let withoutNewlines = withoutTags.replacingOccurrences(of: "\n", with: " ")
+        let cleaned = withoutNewlines.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Basic HTML entity decoding
+        let decoded = cleaned
+            .replacingOccurrences(of: "&amp;", with: "&")
+            .replacingOccurrences(of: "&lt;", with: "<")
+            .replacingOccurrences(of: "&gt;", with: ">")
+            .replacingOccurrences(of: "&quot;", with: "\"")
+            .replacingOccurrences(of: "&#39;", with: "'")
+        
+        return decoded
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             // Header with back button and centered title
@@ -92,6 +110,23 @@ struct ArtworkDetailView: View {
                             Text("Dimensions: \(dimensions)")
                                 .font(.caption)
                                 .foregroundColor(.secondary)
+                        }
+                        
+                        // Artwork description
+                        if let description = artwork.description, !description.isEmpty {
+                            Divider()
+                                .padding(.vertical, 8)
+                            
+                            Text("About this artwork")
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                                .padding(.bottom, 4)
+                            
+                            // Display HTML description as attributed text
+                            Text(parseHTMLDescription(description))
+                                .font(.body)
+                                .lineSpacing(2)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                     }
                 }

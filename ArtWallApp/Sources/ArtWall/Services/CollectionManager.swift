@@ -322,7 +322,8 @@ class CollectionManager: ObservableObject {
                     departmentTitle: "Painting and Sculpture of Europe",
                     classificationTitle: "painting",
                     artworkTypeTitle: nil,
-                    githubImageURL: nil
+                    githubImageURL: nil,
+                    description: githubArtwork.description
                 )
                 artworks.append(artwork)
             }
@@ -353,7 +354,8 @@ class CollectionManager: ObservableObject {
                     departmentTitle: "Painting and Sculpture of Europe",
                     classificationTitle: "painting",
                     artworkTypeTitle: nil,
-                    githubImageURL: nil
+                    githubImageURL: nil,
+                    description: nil
                 )
                 artworks.append(artwork)
             }

@@ -70,7 +70,8 @@ struct ContentView: View {
             departmentTitle: "Painting and Sculpture of Europe",
             classificationTitle: "painting",
             artworkTypeTitle: nil,
-            githubImageURL: nil
+            githubImageURL: nil,
+            description: nil
         )
         
         await MainActor.run {
