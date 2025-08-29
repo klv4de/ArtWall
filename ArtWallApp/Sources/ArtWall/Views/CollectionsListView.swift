@@ -76,8 +76,9 @@ struct CollectionsListView: View {
                             }
                         }
                         .padding(.horizontal, 20)
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 30)
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 
                 if let error = collectionManager.errorMessage ?? artService.errorMessage {
@@ -86,6 +87,7 @@ struct CollectionsListView: View {
                         .padding()
                 }
             }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // Make VStack fill entire available space
         .toolbar(.hidden)
         .task {
             logger.info("CollectionsListView appeared - loading collections", category: .ui)

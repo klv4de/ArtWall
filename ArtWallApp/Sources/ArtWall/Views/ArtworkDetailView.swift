@@ -6,8 +6,9 @@ struct ArtworkDetailView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Header with back button
+            // Header with back button and centered title
             HStack {
+                // Back button on left
                 Button(action: { dismiss() }) {
                     HStack(spacing: 6) {
                         Image(systemName: "chevron.left")
@@ -19,11 +20,23 @@ struct ArtworkDetailView: View {
                 
                 Spacer()
                 
+                // Centered title
                 Text("Artwork Details")
                     .font(.title2)
                     .fontWeight(.semibold)
                 
                 Spacer()
+                
+                // Invisible spacer to balance the back button for perfect centering
+                Button(action: {}) {
+                    HStack(spacing: 6) {
+                        Image(systemName: "chevron.left")
+                        Text("Back to Collection")
+                    }
+                    .font(.headline)
+                }
+                .opacity(0)
+                .disabled(true)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
@@ -85,5 +98,6 @@ struct ArtworkDetailView: View {
                 .padding(20)
             }
         }
+        .toolbar(.hidden)
     }
 }

@@ -1,5 +1,23 @@
 import SwiftUI
 
+struct AppWithBottomPlayer: View {
+    @ObservedObject private var rotationEngine = WallpaperRotationEngine.shared
+    private let logger = ArtWallLogger.shared
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            // Main app content
+            ContentView()
+                .frame(width: 1000, height: 800)
+            
+            // Bottom player (only show when rotation is active)
+            if rotationEngine.isRotating {
+                BottomPlayerView()
+            }
+        }
+    }
+}
+
 struct ArtWallApp: App {
     
     init() {
@@ -22,10 +40,12 @@ struct ArtWallApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppWithBottomPlayer()
         }
         .windowStyle(.titleBar)
         .windowResizability(.contentSize)
+        .defaultSize(width: 1000, height: 800) // Force even shorter height
+        .windowToolbarStyle(.unifiedCompact)
     }
 }
 

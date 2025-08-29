@@ -7,47 +7,47 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-        VStack(spacing: 20) {
-            // Featured artwork or placeholder
-            if let artwork = featuredArtwork {
-                AsyncImage(url: artwork.imageURL) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } placeholder: {
-                    Rectangle()
-                        .fill(Color.gray.opacity(0.2))
-                        .overlay(
-                            ProgressView()
-                                .scaleEffect(1.2)
-                        )
+            VStack(spacing: 20) {
+                    // Featured artwork or placeholder
+                    if let artwork = featuredArtwork {
+                        AsyncImage(url: artwork.imageURL) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.2))
+                                .overlay(
+                                    ProgressView()
+                                        .scaleEffect(1.2)
+                                )
+                        }
+                        .frame(width: 400, height: 300)
+                        .cornerRadius(12)
+                        .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 4)
+                    } else {
+                        Image(systemName: "photo.artframe")
+                            .font(.system(size: 64))
+                            .foregroundColor(.blue)
+                    }
+                    
+                    Text("ArtWall")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    
+                    Text("Curated Fine Art for Your Desktop")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                    
+                    NavigationLink(destination: CollectionsListView()) {
+                        Text("Browse Collections")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
                 }
-                .frame(width: 400, height: 300)
-                .cornerRadius(12)
-                .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 4)
-            } else {
-                Image(systemName: "photo.artframe")
-                    .font(.system(size: 64))
-                    .foregroundColor(.blue)
-            }
-            
-            Text("ArtWall")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            Text("Curated Fine Art for Your Desktop")
-                .font(.headline)
-                .foregroundColor(.secondary)
-            
-            NavigationLink(destination: CollectionsListView()) {
-                Text("Browse Collections")
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-        }
-        .padding(40)
-        .frame(minWidth: 1000, minHeight: 700)
-        .toolbar(.hidden)
+                .padding(40)
+            .frame(minWidth: 1000, minHeight: 700)
+            .toolbar(.hidden)
         }
         .task {
             logger.info("ContentView appeared - loading featured artwork", category: .app)

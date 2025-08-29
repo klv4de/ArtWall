@@ -421,4 +421,35 @@ logger.info("Multi-monitor sequential application is macOS system behavior", cat
 
 ---
 
+## 🚀 **App Launch Standards (CRITICAL)**
+
+### **MANDATORY: Correct Launch Procedure**
+
+**ALWAYS use this exact command sequence to launch ArtWall:**
+
+```bash
+cd ArtWallApp && swift run
+```
+
+**Why This Matters:**
+- The terminal often defaults to the parent `ArtWall` directory
+- `Package.swift` is located in the `ArtWallApp` subdirectory
+- Launching from the wrong directory causes "Could not find Package.swift" errors
+- This has been a recurring issue that wastes development time
+
+**Common Mistakes to AVOID:**
+- ❌ `swift run` from parent directory (will fail)
+- ❌ Assuming you're in the right directory without checking
+- ❌ Using relative paths without explicit directory change
+
+**Verification Steps:**
+1. Check current directory: `pwd`
+2. If not in `ArtWallApp`, use: `cd ArtWallApp`
+3. Verify Package.swift exists: `ls Package.swift`
+4. Launch: `swift run`
+
+**This procedure must be documented and followed every single time.**
+
+---
+
 **These standards ensure ArtWall maintains the highest quality, reliability, maintainability, and performance excellence as it grows and evolves.**

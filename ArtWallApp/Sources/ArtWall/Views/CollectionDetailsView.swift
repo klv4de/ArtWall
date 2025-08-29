@@ -32,58 +32,10 @@ struct CollectionDetailsView: View {
                 
                 Spacer()
                 
-                if rotationEngine.isRotating && rotationEngine.currentCollection == collection.title {
-                    VStack(alignment: .trailing, spacing: 4) {
-                        HStack(spacing: 8) {
-                            Button(action: {
-                                logger.info("User clicked 'Next Wallpaper' for: \(collection.title)", category: .ui)
-                                rotationEngine.nextWallpaper()
-                            }) {
-                                Image(systemName: "forward.fill")
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                                    .padding(8)
-                                    .background(Color.green)
-                                    .cornerRadius(6)
-                            }
-                            .buttonStyle(.borderless)
-                            
-                            Button(action: {
-                                logger.info("User clicked 'Pause Rotation' for: \(collection.title)", category: .ui)
-                                rotationEngine.pauseRotation()
-                            }) {
-                                Image(systemName: "pause.fill")
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                                    .padding(8)
-                                    .background(Color.orange)
-                                    .cornerRadius(6)
-                            }
-                            .buttonStyle(.borderless)
-                            
-                            Button(action: {
-                                logger.info("User clicked 'Stop Rotation' for: \(collection.title)", category: .ui)
-                                rotationEngine.stopRotation()
-                                collectionApplied = false
-                            }) {
-                                Image(systemName: "stop.fill")
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                                    .padding(8)
-                                    .background(Color.red)
-                                    .cornerRadius(6)
-                            }
-                            .buttonStyle(.borderless)
-                        }
-                        
-                        Text("🔄 Rotating (\(rotationEngine.currentImageIndex + 1)/\(rotationEngine.totalImages))")
-                            .font(.headline)
-                            .foregroundColor(.green)
-                        Text("Next in \(rotationEngine.formattedTimeUntilNext())")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                } else if collectionApplied && !rotationEngine.isRotating {
+                // Old rotation controls removed - now handled by bottom player
+                
+                // Resume functionality is now handled by bottom player
+                if false { // Disabled - using bottom player instead
                     VStack(alignment: .trailing, spacing: 4) {
                         Button(action: {
                             logger.info("User clicked 'Resume Rotation' for: \(collection.title)", category: .ui)

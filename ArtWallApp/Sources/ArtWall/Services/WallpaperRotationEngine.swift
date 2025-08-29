@@ -12,8 +12,10 @@ class WallpaperRotationEngine: ObservableObject {
     
     // MARK: - Published Properties
     @Published var isRotating = false
+    @Published var isPaused = false
     @Published var currentCollection: String?
     @Published var currentImageIndex = 0
+    @Published var currentImageURL: URL?
     @Published var totalImages = 0
     @Published var timeUntilNext: Int = 0
     
@@ -67,6 +69,7 @@ class WallpaperRotationEngine: ObservableObject {
             startCountdownTimer()
             
             self.isRotating = true
+            logger.debug("DEBUG: Set isRotating = true for \(collectionName)", category: .wallpaper)
             
             tracker.complete()
             logger.success("Started wallpaper rotation: \(collectionName) (\(images.count) images, \(Int(rotationInterval/60))min intervals)", category: .wallpaper)
@@ -94,8 +97,10 @@ class WallpaperRotationEngine: ObservableObject {
         countdownTimer = nil
         
         isRotating = false
+        isPaused = false
         currentCollection = nil
         currentImageIndex = 0
+        currentImageURL = nil
         totalImages = 0
         timeUntilNext = 0
         images.removeAll()
@@ -115,20 +120,22 @@ class WallpaperRotationEngine: ObservableObject {
         countdownTimer?.invalidate()
         countdownTimer = nil
         
-        isRotating = false
+        isPaused = true
+        // Keep isRotating = true so bottom player stays visible
         
         logger.success("Wallpaper rotation paused", category: .wallpaper)
     }
     
     /// Resume wallpaper rotation
     func resumeRotation() {
-        guard !isRotating, !images.isEmpty else { return }
+        guard isPaused, !images.isEmpty else { return }
         
         logger.info("Resuming wallpaper rotation", category: .wallpaper)
         
         startRotationTimer()
         startCountdownTimer()
-        isRotating = true
+        isPaused = false
+        // isRotating stays true
         
         logger.success("Wallpaper rotation resumed", category: .wallpaper)
     }
@@ -228,6 +235,9 @@ class WallpaperRotationEngine: ObservableObject {
     private func setWallpaper(url: URL) throws {
         // Minimal logging for speed - only log the essential info
         logger.debug("Rotating wallpaper: \(url.lastPathComponent)", category: .wallpaper)
+        
+        // Update current image URL for bottom player
+        self.currentImageURL = url
         
         // Use AppleScript for fast image-only rotation (scaling/fill already configured)
         do {
