@@ -329,3 +329,57 @@ private func setWallpaperViaShellCommand(imageURL: URL) throws {
 4. **System-level approaches** (PlistBuddy) can create worse user experiences than the original problem
 
 **✅ Wallpaper performance: OPTIMIZED with 97% speed improvement**
+
+### **🎨 FEATURE ENHANCEMENT: Artwork Descriptions Integration (January 2025)**
+
+**Decision**: Integrate rich artwork descriptions from museum databases into the app experience.
+
+**Technical Implementation**:
+1. **Data Model Extension**: Extended `GitHubArtwork` model with `description: String?` field
+2. **JSON Schema Update**: Updated collection JSON files with comprehensive artwork descriptions
+3. **Data Pipeline**: Modified `CollectionManager` to properly pass through descriptions
+4. **UI Enhancement**: Enhanced `ArtworkDetailView` with "About this artwork" section
+5. **Content Processing**: Implemented HTML parsing for clean text display
+
+**Architecture Decisions**:
+```swift
+// Data Model
+struct GitHubArtwork: Codable {
+    let description: String?  // Museum-provided artwork descriptions
+    
+    enum CodingKeys: String, CodingKey {
+        case description  // Direct mapping from collection JSON
+    }
+}
+
+// UI Display
+if let description = artwork.description, !description.isEmpty {
+    Text("About this artwork")
+        .font(.headline)
+        .fontWeight(.semibold)
+    
+    Text(parseHTMLDescription(description))
+        .font(.body)
+        .lineSpacing(2)
+}
+```
+
+**Content Processing Standards**:
+- **HTML Parsing**: Remove `<p>`, `<em>`, and other HTML tags for clean display
+- **Entity Decoding**: Convert HTML entities (`&amp;`, `&quot;`, etc.) to readable text
+- **Typography**: Proper line spacing and font sizing for optimal readability
+- **Graceful Handling**: Only display description section when content is available
+
+**Data Quality**:
+- **Source**: Chicago Art Institute comprehensive artwork database
+- **Coverage**: Museum-quality descriptions for major artworks (e.g., African Chief, Monet masterpieces)
+- **Format**: Rich text with cultural context, historical background, and artistic analysis
+- **Validation**: Automated testing ensures description coverage and accuracy
+
+**User Experience Enhancement**:
+- **Educational Value**: Users gain deeper understanding of artworks and cultural context
+- **Seamless Integration**: Descriptions appear naturally within artwork detail pages
+- **Clean Interface**: No visual clutter when descriptions are unavailable
+- **Museum Quality**: Professional-level content matching institution standards
+
+**✅ Artwork descriptions: IMPLEMENTED with museum-quality content integration**

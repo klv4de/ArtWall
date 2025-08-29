@@ -460,6 +460,13 @@ cd ArtWallApp && swift run
 - ✅ **AppTester**: Simplified testing framework for system validation
 - ✅ **Automated Tests**: Added tests for metadata matching, navigation controls, and double-click functionality
 
+### **Artwork Descriptions Feature (January 2025):**
+- ✅ **Data Model Extension**: Added `description` field to `GitHubArtwork` model with proper JSON decoding
+- ✅ **Data Pipeline Fix**: Updated `CollectionManager` to pass through descriptions instead of hardcoding `nil`
+- ✅ **UI Enhancement**: Enhanced `ArtworkDetailView` with "About this artwork" section and HTML parsing
+- ✅ **Content Processing**: Implemented HTML tag removal and entity decoding for clean display
+- ✅ **Quality Assurance**: Comprehensive testing across all collections with graceful handling
+
 **Verification Steps:**
 1. Check current directory: `pwd`
 2. If not in `ArtWallApp`, use: `cd ArtWallApp`

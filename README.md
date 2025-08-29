@@ -22,9 +22,10 @@ python3 -c "import sqlite3; conn = sqlite3.connect('chicago_artworks_complete.db
 ## Features
 
 - **Complete Art Database**: 134,078 artworks from Chicago Art Institute with full metadata
+- **Rich Artwork Descriptions**: Museum-quality descriptions with cultural context and historical analysis
 - **Instant Queries**: Lightning-fast local database searches with optimized indexes
 - **Advanced Filtering**: Query by department, artist, color, material, technique, date, and more
-- **Native macOS App**: SwiftUI application with professional UI/UX
+- **Native macOS App**: SwiftUI application with professional UI/UX and educational content
 - **Offline Operation**: No API dependencies, works without internet
 - **Public Domain Focus**: High-quality, legally usable artwork
 
