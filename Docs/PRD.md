@@ -53,7 +53,8 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ✅ **Automatic Download**: Save collection images to `~/Pictures/ArtWall/[Collection Name]/`
 - ✅ **Progress Tracking**: Real-time download progress with cancel option
 - ✅ **Error Handling**: Graceful failure recovery and user feedback
-- 🚀 **Custom Engine**: Replace broken system integration with reliable custom solution
+- ✅ **Custom Engine**: Replace broken system integration with reliable custom solution
+- ✅ **Menu Bar Integration**: System-wide wallpaper control with compact player interface
 
 #### **User Experience Flow** (Updated with Custom Engine)
 1. User browses collections in app
