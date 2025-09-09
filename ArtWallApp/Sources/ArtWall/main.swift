@@ -18,7 +18,57 @@ struct AppWithBottomPlayer: View {
     }
 }
 
+class AppDelegate: NSObject, NSApplicationDelegate {
+    private let logger = ArtWallLogger.shared
+    static var shared: AppDelegate?
+    
+    override init() {
+        super.init()
+        AppDelegate.shared = self
+    }
+    
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        logger.info("AppDelegate: Application finished launching", category: .app)
+    }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        // Choice 3A: Hide to background when window closes (don't quit)
+        logger.info("Main window closed - entering background mode", category: .app)
+        
+        // Choice 2A: Hide Dock icon when entering background mode
+        NSApp.setActivationPolicy(.accessory)
+        logger.info("Dock icon hidden - app now in background mode", category: .app)
+        
+        return false // Don't quit, keep running in background
+    }
+    
+    func showMainWindow() {
+        logger.info("Showing main window - exiting background mode", category: .app)
+        
+        // Choice 2A: Show Dock icon when main window opens
+        NSApp.setActivationPolicy(.regular)
+        logger.info("Dock icon restored - app now in foreground mode", category: .app)
+        
+        // Bring app to front and activate
+        NSApp.activate(ignoringOtherApps: true)
+        
+        // Try to find existing window first
+        for window in NSApp.windows {
+            if window.contentViewController != nil {
+                window.makeKeyAndOrderFront(nil)
+                logger.success("Existing main window restored and brought to front", category: .app)
+                return
+            }
+        }
+        
+        // If no window exists, we need to create one
+        // This will be handled by the WindowGroup with the openWindow environment
+        logger.info("No existing window found - will create new one", category: .app)
+    }
+}
+
 struct ArtWallApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
         // Configure URL cache for better image caching
@@ -39,7 +89,7 @@ struct ArtWallApp: App {
     }
     
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("ArtWall", id: "main") {
             AppWithBottomPlayer()
         }
         .windowStyle(.titleBar)

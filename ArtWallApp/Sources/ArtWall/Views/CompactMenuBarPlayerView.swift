@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CompactMenuBarPlayerView: View {
     @ObservedObject private var rotationEngine = WallpaperRotationEngine.shared
+    @Environment(\.openWindow) private var openWindow
     private let logger = ArtWallLogger.shared
     
     private func getCurrentArtworkURL() -> URL? {
@@ -217,7 +218,26 @@ struct CompactMenuBarPlayerView: View {
                         VStack(spacing: 8) {
                             Button(action: {
                                 logger.info("User clicked 'Open ArtWall' in menu bar", category: .ui)
+                                
+                                // Restore Dock icon and activate app
+                                NSApp.setActivationPolicy(.regular)
                                 NSApp.activate(ignoringOtherApps: true)
+                                
+                                // Try to show existing window or open new one
+                                var windowFound = false
+                                for window in NSApp.windows {
+                                    if window.contentViewController != nil && !window.isKind(of: NSPanel.self) {
+                                        window.makeKeyAndOrderFront(nil)
+                                        windowFound = true
+                                        logger.success("Existing main window restored", category: .ui)
+                                        break
+                                    }
+                                }
+                                
+                                if !windowFound {
+                                    logger.info("No existing window found - opening new main window", category: .ui)
+                                    openWindow(id: "main")
+                                }
                             }) {
                                 HStack {
                                     Image(systemName: "app.badge")
@@ -299,7 +319,26 @@ struct CompactMenuBarPlayerView: View {
                     VStack(spacing: 8) {
                         Button(action: {
                             logger.info("User clicked 'Open ArtWall' in menu bar (no rotation)", category: .ui)
+                            
+                            // Restore Dock icon and activate app
+                            NSApp.setActivationPolicy(.regular)
                             NSApp.activate(ignoringOtherApps: true)
+                            
+                            // Try to show existing window or open new one
+                            var windowFound = false
+                            for window in NSApp.windows {
+                                if window.contentViewController != nil && !window.isKind(of: NSPanel.self) {
+                                    window.makeKeyAndOrderFront(nil)
+                                    windowFound = true
+                                    logger.success("Existing main window restored (no rotation)", category: .ui)
+                                    break
+                                }
+                            }
+                            
+                            if !windowFound {
+                                logger.info("No existing window found - opening new main window (no rotation)", category: .ui)
+                                openWindow(id: "main")
+                            }
                         }) {
                             HStack {
                                 Image(systemName: "app.badge")

@@ -476,9 +476,9 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 
 **Impact**: Users now have access to museum-quality descriptions for artworks, significantly enriching the educational and cultural value of the ArtWall experience.
 
-### **Phase 2F: Menu Bar Artwork Details & Background App (September 2025)** ✅ **MENU BAR DETAILS COMPLETED**
+### **Phase 2F: Menu Bar Artwork Details & Background App (September 2025)** ✅ **COMPLETED**
 
-**Status**: Menu bar artwork details completely solved, background app configuration ready for implementation.
+**Status**: Both menu bar artwork details and background app configuration successfully implemented.
 
 #### **✅ Menu Bar Artwork Details - SOLVED**
 - **Problem**: Menu bar artwork details appeared in tiny constrained window due to MenuBarExtra popover size constraints
@@ -489,15 +489,15 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
   - Identical UI experience to main app artwork details
 - **Result**: Professional, full-size artwork details accessible from menu bar with clean presentation
 
-#### **🔄 Background App Configuration - READY FOR IMPLEMENTATION**
-- **Goal**: Configure ArtWall as background utility app (Option 2 approach)
-- **Implementation Plan**:
-  - Hide from Dock by default (`NSApp.setActivationPolicy(.accessory)`)
-  - Don't show main window on startup
-  - Show main window + Dock icon only when "Open ArtWall" clicked
-  - Hide Dock icon when main window closes
-- **Benefits**: Cleaner system integration, professional utility feel, same functionality
-- **Estimated Effort**: 15-20 minutes implementation
+#### **✅ Background App Configuration - IMPLEMENTED**
+- **Goal**: Transform ArtWall into professional background utility app ✅ ACHIEVED
+- **Implementation Completed**:
+  - Hybrid launch behavior (starts with main window, transitions to background when closed)
+  - Dynamic Dock icon management using `NSApp.setActivationPolicy()`
+  - SwiftUI WindowGroup with ID-based window management
+  - Menu bar "Open ArtWall" functionality with proper window restoration
+- **Benefits Realized**: Cleaner system integration, professional utility feel, seamless background operation
+- **User Experience**: Menu bar (🎨) as primary interface, main window available on-demand
 
 **Goal**: Transform ArtWall into professional background utility while maintaining all current functionality.
 
@@ -516,6 +516,75 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 - Simple, non-collapsible design for maximum clarity
 
 **Estimated Development**: 2-3 hours iterative implementation
+
+---
+
+## 🚀 **PHASE 3: COLLECTION EXPANSION & DISTRIBUTION (September 2025)**
+
+### **Current Status: Ready for Phase 3A**
+**All Phase 2 objectives completed successfully:**
+- ✅ **Phase 2A**: Wallpaper automation functionality with custom rotation engine
+- ✅ **Phase 2E**: Artwork descriptions and educational content integration
+- ✅ **Phase 2F**: Menu bar artwork details & background app configuration
+
+**Foundation is production-ready for scaling to comprehensive collections and public distribution.**
+
+### **Phase 3A: Collection Expansion (IMMEDIATE NEXT)**
+
+#### **Strategic Goal**
+Maximize content value by utilizing the complete Chicago Art Institute database (803 European paintings) to create comprehensive collections before public distribution.
+
+#### **Implementation Strategy**
+- **Database-Driven Curation**: Use existing SQLite database for intelligent artwork filtering
+- **Proven Architecture**: Extend current JSON-driven collection system
+- **GitHub CDN Integration**: Host all new images for scalability and performance
+- **Quality Maintenance**: Maintain 100% wallpaper suitability standards
+
+#### **Target Collections (15-20 total)**
+1. **Artist-Focused Collections** (Priority 1):
+   - Monet Masterpieces (47 available works)
+   - Renoir Collection (23 available works)
+   - Degas Collection (19 available works)
+   - Cézanne Collection (15 available works)
+   - Van Gogh Highlights, Toulouse-Lautrec Collection
+
+2. **Style & Movement Collections** (Priority 2):
+   - Impressionist Masters, Post-Impressionist Works
+   - Baroque Masterpieces, Dutch Golden Age
+   - French Academic Art
+
+3. **Thematic Collections** (Priority 3):
+   - Landscapes & Seascapes, Portraits & Figures
+   - Still Life Paintings, Religious Art
+   - Mythology & Classical Themes
+
+#### **Success Metrics**
+- **Content**: 360-480 total artworks across 15-20 collections
+- **Performance**: Instant thumbnail loading via GitHub CDN
+- **Quality**: 100% wallpaper suitability maintained
+- **Coverage**: Major art movements and famous artists represented
+
+### **Phase 3B: Distribution Preparation**
+
+#### **Distribution Strategy**
+- **Platform**: Direct download via GitHub Releases (.dmg files)
+- **Website**: GitHub Pages landing page with collection previews
+- **Cost Structure**: $0 ongoing costs (GitHub hosting + CDN)
+- **Target Audience**: Art enthusiasts, design professionals, general Mac users
+
+#### **Launch Readiness Checklist**
+- ✅ **Core Functionality**: Wallpaper automation, menu bar control, background operation
+- ✅ **Professional UI/UX**: Polished interface with consistent design system
+- ✅ **Enterprise Infrastructure**: Comprehensive logging, automated testing, error handling
+- 🔄 **Comprehensive Collections**: 15-20 curated collections (Phase 3A target)
+- 🔄 **User Documentation**: Installation guide, feature overview, troubleshooting
+- 🔄 **App Signing & Security**: Code signing for user trust and security
+- 🔄 **Professional Installer**: .dmg package with drag-to-install experience
+
+#### **Timeline Estimate**
+- **Phase 3A**: Collection expansion (1-2 weeks)
+- **Phase 3B**: Distribution preparation (1 week)
+- **Phase 3C**: Public launch (Feature-complete MVP)
 
 ---
 **Remember**: Act as technical co-founder - challenge ideas, propose alternatives, think about scalability and user experience, not just implementation.

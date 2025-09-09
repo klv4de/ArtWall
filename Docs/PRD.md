@@ -103,24 +103,82 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ✅ **Zero Compilation Tolerance**: Immediate fixing of compilation errors required
 - ✅ **Complete Documentation**: All changes must update relevant documentation
 
-### 🎨 Phase 2B: Collection Expansion (PRE-DISTRIBUTION)
+## 🚀 **NEXT PHASE: Collection Expansion & Distribution (Phase 3)**
+
+**Status**: Ready to Execute - All Infrastructure Complete ✅
+
+### 🎨 Phase 3A: Collection Expansion (IMMEDIATE NEXT - September 2025)
 
 #### **Content Maximization Strategy**
-- **Goal**: Utilize most/all suitable Chicago Art Institute paintings before MVP distribution
+- **Goal**: Utilize comprehensive Chicago Art Institute database before distribution
 - **Current**: 8 collections, 267 artworks (historical periods focus)
-- **Target**: Comprehensive coverage using existing database of 803 European oil paintings
+- **Available**: 803 European oil paintings in complete database
+- **Target**: 15-20 comprehensive collections covering major artists, styles, and themes
 
-#### **Expansion Categories**
-1. **Artist Collections**: Monet (47 works), Renoir (23), Degas (19), Cézanne (15), Van Gogh, Toulouse-Lautrec
-2. **Style Collections**: Impressionist Masters, Post-Impressionist, Baroque, Dutch Golden Age
-3. **Theme Collections**: Landscapes, Portraits, Still Life, Religious Art, Classical Mythology
+#### **Expansion Categories (Priority Order)**
+1. **Artist Collections** (High Priority):
+   - Monet Masterpieces (47 available works)
+   - Renoir Collection (23 available works)
+   - Degas Collection (19 available works)
+   - Cézanne Collection (15 available works)
+   - Van Gogh Highlights
+   - Toulouse-Lautrec Collection
 
-#### **Distribution Readiness**
-- **Phase 2A**: Wallpaper automation functionality ✅ COMPLETED
-- **Phase 2B**: Comprehensive collections (maximize content)
-- **Phase 2E**: Artwork descriptions and educational content ✅ COMPLETED
-- **Phase 2F**: Menu bar artwork details & background app configuration ✅ MENU BAR DETAILS COMPLETED
-- **Phase 3**: Package and distribute feature-complete MVP
+2. **Style Collections** (Medium Priority):
+   - Impressionist Masters
+   - Post-Impressionist Works
+   - Baroque Masterpieces
+   - Dutch Golden Age
+   - French Academic Art
+
+3. **Theme Collections** (Medium Priority):
+   - Landscapes & Seascapes
+   - Portraits & Figures
+   - Still Life Paintings
+   - Religious Art
+   - Mythology & Classical Themes
+
+#### **Implementation Approach**
+- **Database-Driven Curation**: Use existing SQLite database for intelligent filtering
+- **JSON-Driven Architecture**: Extend proven collection manifest system
+- **GitHub CDN Integration**: Host all new images on GitHub for scalability
+- **Automated Pipeline**: Build scripts to generate collections from database queries
+
+#### **Success Metrics**
+- **Target**: 15-20 collections with 360-480 total artworks
+- **Quality**: Maintain current 100% wallpaper suitability
+- **Performance**: Instant thumbnail loading via GitHub CDN
+- **Coverage**: Represent major art movements and famous artists
+
+### 📦 Phase 3B: Distribution Preparation (Following Collection Expansion)
+
+#### **Distribution Strategy**
+- **Platform**: Direct download via GitHub Releases (.dmg files)
+- **Website**: GitHub Pages landing page with collection previews
+- **Cost**: $0 ongoing costs (GitHub hosting + CDN)
+- **Target**: Feature-complete MVP ready for public use
+
+#### **Distribution Checklist**
+- ✅ **Core Functionality**: Wallpaper automation, menu bar control, background operation
+- ✅ **Professional UI/UX**: Polished interface with consistent design system
+- ✅ **Enterprise Infrastructure**: Comprehensive logging, automated testing, error handling
+- 🔄 **Comprehensive Collections**: 15-20 curated collections (Phase 3A)
+- 🔄 **Documentation**: User guide, installation instructions, feature overview
+- 🔄 **App Signing**: Code signing for security and user trust
+- 🔄 **Installer Package**: Professional .dmg with drag-to-install experience
+
+#### **Launch Readiness Timeline**
+- **Phase 3A**: Collection expansion (Estimated: 1-2 weeks)
+- **Phase 3B**: Distribution prep (Estimated: 1 week)
+- **Phase 3C**: Public launch (Feature-complete MVP)
+
+### 🎯 **Current Status: Ready for Phase 3A**
+**All Phase 2 objectives completed successfully:**
+- ✅ **Phase 2A**: Wallpaper automation functionality
+- ✅ **Phase 2E**: Artwork descriptions and educational content
+- ✅ **Phase 2F**: Menu bar artwork details & background app configuration
+
+**Foundation is production-ready for scaling to comprehensive collections and public distribution.**
 
 ### 🎨 Phase 2E: Artwork Descriptions Feature (✅ COMPLETED - January 2025)
 
@@ -143,7 +201,7 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ✅ **HTML Processing**: Custom parsing function for clean text rendering
 - ✅ **Automated Testing**: Added test coverage for description functionality
 
-### 🎨 Phase 2F: Menu Bar Artwork Details & Background App (✅ MENU BAR DETAILS COMPLETED - September 2025)
+### 🎨 Phase 2F: Menu Bar Artwork Details & Background App (✅ COMPLETED - September 2025)
 
 #### **Menu Bar Artwork Details Enhancement** ✅ IMPLEMENTED
 - ✅ **Problem Solved**: Menu bar artwork details appeared in tiny constrained window due to MenuBarExtra popover size constraints
@@ -151,15 +209,13 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ✅ **User Experience**: Auto-dismiss menu bar popover to prevent UI overlap, smart positioning near menu bar
 - ✅ **Professional Result**: Identical UI experience to main app artwork details, accessible from menu bar
 
-#### **Background App Configuration** 🔄 READY FOR IMPLEMENTATION
-- **Goal**: Transform ArtWall into professional background utility app
-- **Implementation Plan**:
-  - Hide from Dock by default (`NSApp.setActivationPolicy(.accessory)`)
-  - Don't show main window on startup
-  - Show main window + Dock icon only when "Open ArtWall" clicked from menu bar
-  - Hide Dock icon when main window closes
-- **Benefits**: Cleaner system integration, professional utility feel, identical functionality
-- **User Experience**: Menu bar (🎨) as primary interface, main window available on demand
+#### **Background App Configuration** ✅ IMPLEMENTED
+- ✅ **Professional Utility App**: ArtWall now functions as background utility with dynamic Dock behavior
+- ✅ **Hybrid Launch**: App starts normally with main window, transitions to background when closed
+- ✅ **Dynamic Dock Icon**: Shows when main window open, hides in background mode
+- ✅ **Menu Bar Primary Interface**: 🎨 icon provides system-wide wallpaper control
+- ✅ **Window Restoration**: "Open ArtWall" properly restores Dock icon and main window
+- ✅ **Seamless Operation**: Wallpaper rotation continues uninterrupted in background mode
 
 ### 4. Collection Management (Updated MVP Scope)
 - **MVP Target**: 24 high-quality images per collection for optimal browsing experience

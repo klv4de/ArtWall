@@ -373,15 +373,36 @@ func testWallpaperEngine() -> Bool {
 - **✅ SOLVED: Menu bar artwork details sizing issue** - Implemented separate NSWindow approach
 - **✅ SOLVED: Menu bar UI overlap** - Auto-dismiss menu bar popover when artwork details window opens
 
-### **🔄 In Progress**
-- **CURRENT**: Background app configuration (Option 2 approach)
+### **✅ Completed (Phase 2F - September 9, 2025)**
+- Core wallpaper rotation engine with timer-based switching
+- Image download service with progress tracking
+- **Menu bar integration with compact player view - FULLY FUNCTIONAL** 🎉
+- Collection management system
+- Comprehensive logging and testing framework
+- **Complete menu bar functionality** (rotation controls, artwork display, navigation)
+- **Main app artwork details UI fixes** (centered title, standardized buttons)
+- **✅ SOLVED: Menu bar artwork details sizing issue** - Implemented separate NSWindow approach
+- **✅ SOLVED: Menu bar UI overlap** - Auto-dismiss menu bar popover when artwork details window opens
+- **✅ COMPLETED: Background app configuration** - Professional utility app with dynamic Dock behavior
 
-### **📅 Next Priority**
-- **IMMEDIATE**: Configure ArtWall as background app (hide from Dock by default, show main window on demand)
-- Expand collection library (Phase 2B)
-- Performance optimization
+### **🔄 Current Focus (Phase 3A)**
+- **IMMEDIATE NEXT**: Collection expansion using complete Chicago Art Institute database (803 European paintings)
+
+### **📅 Next Priority Phases**
+- **Phase 3A**: Collection expansion (15-20 comprehensive collections)
+- **Phase 3B**: Distribution preparation (app signing, installer, documentation)
+- **Phase 3C**: Public launch (feature-complete MVP)
 
 ### **🎉 Recent Achievements (Sep 9, 2025)**
+**✅ Background App Configuration - COMPLETELY IMPLEMENTED**
+- **Challenge**: Transform ArtWall into professional utility app while maintaining functionality
+- **Solution Implemented**: 
+  - Hybrid launch behavior (starts with main window, transitions to background when closed)
+  - Dynamic Dock icon management (shows/hides based on window state)
+  - SwiftUI WindowGroup integration with proper window restoration
+  - Menu bar "Open ArtWall" functionality with `@Environment(\.openWindow)`
+- **Result**: Professional utility app experience with seamless background operation
+
 **✅ Menu Bar Artwork Details - COMPLETELY SOLVED**
 - **Problem**: Menu bar artwork details appeared in tiny constrained window
 - **Root Cause**: MenuBarExtraStyle.window popover size constraints
