@@ -48,13 +48,14 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ⚡ **Implementation**: Timer-based rotation using working NSWorkspace individual image setting
 - 🔄 **Hybrid Architecture**: Background service + menu bar control + main app UI
 
-#### **Core Wallpaper Functionality** ✅ FOUNDATION COMPLETE
+#### **Core Wallpaper Functionality** ✅ COMPLETE
 - ✅ **"Apply this collection" Button**: One-click wallpaper setup on Collection Details page
 - ✅ **Automatic Download**: Save collection images to `~/Pictures/ArtWall/[Collection Name]/`
 - ✅ **Progress Tracking**: Real-time download progress with cancel option
 - ✅ **Error Handling**: Graceful failure recovery and user feedback
 - ✅ **Custom Engine**: Replace broken system integration with reliable custom solution
 - ✅ **Menu Bar Integration**: System-wide wallpaper control with compact player interface
+- ✅ **Menu Bar Artwork Details**: Full-size artwork details via dedicated NSWindow (September 2025)
 
 #### **User Experience Flow** (Updated with Custom Engine)
 1. User browses collections in app
@@ -115,9 +116,10 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 3. **Theme Collections**: Landscapes, Portraits, Still Life, Religious Art, Classical Mythology
 
 #### **Distribution Readiness**
-- **Phase 2A**: Wallpaper automation functionality
+- **Phase 2A**: Wallpaper automation functionality ✅ COMPLETED
 - **Phase 2B**: Comprehensive collections (maximize content)
-- **Phase 2E**: Artwork descriptions and educational content (COMPLETED)
+- **Phase 2E**: Artwork descriptions and educational content ✅ COMPLETED
+- **Phase 2F**: Menu bar artwork details & background app configuration ✅ MENU BAR DETAILS COMPLETED
 - **Phase 3**: Package and distribute feature-complete MVP
 
 ### 🎨 Phase 2E: Artwork Descriptions Feature (✅ COMPLETED - January 2025)
@@ -140,6 +142,24 @@ ArtWall is a macOS application that automatically fetches fine art from museum A
 - ✅ **JSON Schema Update**: Extended collection files with comprehensive descriptions
 - ✅ **HTML Processing**: Custom parsing function for clean text rendering
 - ✅ **Automated Testing**: Added test coverage for description functionality
+
+### 🎨 Phase 2F: Menu Bar Artwork Details & Background App (✅ MENU BAR DETAILS COMPLETED - September 2025)
+
+#### **Menu Bar Artwork Details Enhancement** ✅ IMPLEMENTED
+- ✅ **Problem Solved**: Menu bar artwork details appeared in tiny constrained window due to MenuBarExtra popover size constraints
+- ✅ **Technical Solution**: Created `ArtworkDetailWindowController` with dedicated NSWindow (800x900 size)
+- ✅ **User Experience**: Auto-dismiss menu bar popover to prevent UI overlap, smart positioning near menu bar
+- ✅ **Professional Result**: Identical UI experience to main app artwork details, accessible from menu bar
+
+#### **Background App Configuration** 🔄 READY FOR IMPLEMENTATION
+- **Goal**: Transform ArtWall into professional background utility app
+- **Implementation Plan**:
+  - Hide from Dock by default (`NSApp.setActivationPolicy(.accessory)`)
+  - Don't show main window on startup
+  - Show main window + Dock icon only when "Open ArtWall" clicked from menu bar
+  - Hide Dock icon when main window closes
+- **Benefits**: Cleaner system integration, professional utility feel, identical functionality
+- **User Experience**: Menu bar (🎨) as primary interface, main window available on demand
 
 ### 4. Collection Management (Updated MVP Scope)
 - **MVP Target**: 24 high-quality images per collection for optimal browsing experience

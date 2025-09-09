@@ -360,7 +360,7 @@ func testWallpaperEngine() -> Bool {
 
 ## 📋 **Current Status & Next Steps**
 
-**Last Updated**: January 21, 2025
+**Last Updated**: September 9, 2025
 
 ### **✅ Completed**
 - Core wallpaper rotation engine with timer-based switching
@@ -368,23 +368,29 @@ func testWallpaperEngine() -> Bool {
 - **Menu bar integration with compact player view - FULLY FUNCTIONAL** 🎉
 - Collection management system
 - Comprehensive logging and testing framework
-- **NEW**: Complete menu bar functionality (rotation controls, artwork display, navigation)
-- **NEW**: Main app artwork details UI fixes (centered title, standardized buttons)
-- **NEW**: Menu bar artwork details investigation and root cause analysis
+- **Complete menu bar functionality** (rotation controls, artwork display, navigation)
+- **Main app artwork details UI fixes** (centered title, standardized buttons)
+- **✅ SOLVED: Menu bar artwork details sizing issue** - Implemented separate NSWindow approach
+- **✅ SOLVED: Menu bar UI overlap** - Auto-dismiss menu bar popover when artwork details window opens
 
 ### **🔄 In Progress**
-- **PRIORITY**: Menu bar artwork details modal sizing - identified root cause as MenuBarExtra popover constraints
+- **CURRENT**: Background app configuration (Option 2 approach)
 
 ### **📅 Next Priority**
-- **IMMEDIATE**: Implement separate NSWindow for menu bar artwork details (bypasses popover size constraints)
-- Complete menu bar functionality polish
+- **IMMEDIATE**: Configure ArtWall as background app (hide from Dock by default, show main window on demand)
 - Expand collection library (Phase 2B)
 - Performance optimization
 
-### **🔍 Recent Investigation Results (Jan 21, 2025)**
-**Problem**: Menu bar artwork details appear smaller than main app version despite identical code
-**Root Cause**: MenuBarExtraStyle.window creates popover with inherent size constraints that cascade to presented sheets
-**Solution**: Create dedicated NSWindow for menu bar artwork details - independent of popover constraints
+### **🎉 Recent Achievements (Sep 9, 2025)**
+**✅ Menu Bar Artwork Details - COMPLETELY SOLVED**
+- **Problem**: Menu bar artwork details appeared in tiny constrained window
+- **Root Cause**: MenuBarExtraStyle.window popover size constraints
+- **Solution Implemented**: 
+  - Created `ArtworkDetailWindowController` with dedicated NSWindow (800x900)
+  - Auto-dismiss menu bar popover to prevent overlap
+  - Positioned near menu bar in upper-right area
+  - Identical UI experience to main app artwork details
+- **Result**: Professional, full-size artwork details accessible from menu bar
 
 ---
 

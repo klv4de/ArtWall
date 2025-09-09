@@ -2,7 +2,6 @@ import SwiftUI
 
 struct CompactMenuBarPlayerView: View {
     @ObservedObject private var rotationEngine = WallpaperRotationEngine.shared
-    @State private var showingArtworkDetail = false
     private let logger = ArtWallLogger.shared
     
     private func getCurrentArtworkURL() -> URL? {
@@ -38,7 +37,9 @@ struct CompactMenuBarPlayerView: View {
         }
         
         logger.info("User double-clicked artwork in menu bar - opening details for: \(currentArtwork.title)", category: .ui)
-        showingArtworkDetail = true
+        
+        // Use dedicated window controller instead of sheet
+        ArtworkDetailWindowController.showArtworkDetails(for: currentArtwork)
     }
     
     var body: some View {
@@ -334,13 +335,6 @@ struct CompactMenuBarPlayerView: View {
         }
         .onAppear {
             logger.info("CompactMenuBarPlayerView appeared", category: .ui)
-        }
-        .sheet(isPresented: $showingArtworkDetail) {
-            if let artwork = rotationEngine.getCurrentArtwork() {
-                NavigationStack {
-                    ArtworkDetailView(artwork: artwork)
-                }
-            }
         }
     }
 }

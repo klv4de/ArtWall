@@ -415,10 +415,9 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 - **User Experience**: Instant feedback, perfect scaling, smooth controls
 
 **Next Priority Phases**:
-- **Phase 2C**: Bottom player component for in-app wallpaper control (IMMEDIATE NEXT)
+- **Phase 2F**: Background app configuration (IMMEDIATE NEXT - September 2025)
 - **Phase 3A**: Collection expansion using complete Chicago Art Institute database
-- **Phase 3B**: Menu bar control interface for system-wide rotation management  
-- **Phase 3C**: Background service for automatic wallpaper rotation
+- **Phase 3B**: Distribution preparation with comprehensive collections
 
 ### **Phase 2C: Bottom Player Component (January 2025)**
 
@@ -477,7 +476,30 @@ chicago_artworks_complete.db         # SQLite database with ALL metadata
 
 **Impact**: Users now have access to museum-quality descriptions for artworks, significantly enriching the educational and cultural value of the ArtWall experience.
 
-**Goal**: Add Spotify-style bottom player for persistent wallpaper rotation control within the app.
+### **Phase 2F: Menu Bar Artwork Details & Background App (September 2025)** ✅ **MENU BAR DETAILS COMPLETED**
+
+**Status**: Menu bar artwork details completely solved, background app configuration ready for implementation.
+
+#### **✅ Menu Bar Artwork Details - SOLVED**
+- **Problem**: Menu bar artwork details appeared in tiny constrained window due to MenuBarExtra popover size constraints
+- **Solution Implemented**: 
+  - Created `ArtworkDetailWindowController` with dedicated NSWindow (800x900 size)
+  - Auto-dismiss menu bar popover to prevent UI overlap
+  - Smart positioning near menu bar in upper-right area
+  - Identical UI experience to main app artwork details
+- **Result**: Professional, full-size artwork details accessible from menu bar with clean presentation
+
+#### **🔄 Background App Configuration - READY FOR IMPLEMENTATION**
+- **Goal**: Configure ArtWall as background utility app (Option 2 approach)
+- **Implementation Plan**:
+  - Hide from Dock by default (`NSApp.setActivationPolicy(.accessory)`)
+  - Don't show main window on startup
+  - Show main window + Dock icon only when "Open ArtWall" clicked
+  - Hide Dock icon when main window closes
+- **Benefits**: Cleaner system integration, professional utility feel, same functionality
+- **Estimated Effort**: 15-20 minutes implementation
+
+**Goal**: Transform ArtWall into professional background utility while maintaining all current functionality.
 
 **User Experience**:
 - Fixed bottom bar that appears only when wallpaper rotation is active
